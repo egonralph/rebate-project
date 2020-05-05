@@ -1,0 +1,5 @@
+<div class="row tile_count">
+<div class="col-xs-4 offset-xs-8 col-sm-4 offset-sm-8 col-md-4 offset-md-8"><select class="browser-default custom-select"><option selected="select" value="1">Days</option><option value="2">Weeks</option><option value="3">Months</option> </select>
+    
+</div>
+</div>
