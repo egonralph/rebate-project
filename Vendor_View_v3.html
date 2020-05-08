@@ -4136,7 +4136,7 @@ function selectDashboardChart2(){
       $('#checkBrandDateVend5').is(':checked'),
       $('#checkBrandDateVend6').is(':checked'),
     ];
-    updateDatasetBC_new(active,dataBrandVendorsData);
+    updateDatasetBC_New(active,dataBrandVendorsData);
     console.log($(this).attr('id')+$(this).is(":checked"));	  
   }
 
@@ -4232,7 +4232,7 @@ function selectDashboardChart2(){
   }
 
   function chooseEarnVendorChbxNew(){
-    $('#date_brand_vendor_dd_menu').on('click','#checkBrandDateVend1, #checkBrandDateVend2, #checkBrandDateVend3, #checkBrandDateVend4, #checkBrandDateVend5, #checkBrandDateVend6', updateEarnVendors);
+    $('#date_brand_vendor_dd_menu').on('click','#checkBrandDateVend1, #checkBrandDateVend2, #checkBrandDateVend3, #checkBrandDateVend4, #checkBrandDateVend5, #checkBrandDateVend6', updateEarnVendors_new);
     
     $('#date_brand_vendor_dd_menu').on('click','#default_checkBrandDateVend',function () {
       $('#checkBrandDateVend1').prop('checked',true);
@@ -4241,14 +4241,14 @@ function selectDashboardChart2(){
       $('#checkBrandDateVend4').prop('checked',true);
       $('#checkBrandDateVend5').prop('checked',true);
       $('#checkBrandDateVend6').prop('checked',true);
-      updateEarnVendors();
-      updateEarnVendors2();
-      updateEarnVendors3();
-      updateEarnVendors4();
-      updateEarnVendors5();
-      updateEarnVendors6();
-      updateEarnVendors7();
-      console.log('click default');	  
+      updateEarnVendors_new();
+      // updateEarnVendors2();
+      // updateEarnVendors3();
+      // updateEarnVendors4();
+      // updateEarnVendors5();
+      // updateEarnVendors6();
+      // updateEarnVendors7();
+      console.log('click default_new');	  
     });
   };
 
@@ -4374,7 +4374,7 @@ function selectDashboardChart2(){
         barChart_new.data.datasets[0].data.push(dataBrandVendorsData.datasets[0].data[i]);
         barChart_new.data.datasets[0].backgroundColor.push(dataBrandVendorsData.datasets[0].backgroundColor[i]);
         barChart_new.data.datasets[0].borderColor.push(dataBrandVendorsData.datasets[0].borderColor[i]);
-        console.log('update chart' + i);
+        console.log('update chart_new' + i);
       }
     }
 
