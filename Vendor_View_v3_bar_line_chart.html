@@ -1728,8 +1728,11 @@
 
 	<script>
     Chart.defaults.global.legend = {
-      display: false
+      enabled: false
     };
+    Chart.defaults.global = {
+    	showLines: true;
+    }
 
     // Bar chart earn i3
     var ctx = document.getElementById('barChart').getContext('2d');
@@ -2063,7 +2066,9 @@
 
   // Line chart week i3
   var ctx = document.getElementById("lineChart2");
-  var brandVendorsDataWeekI3 = {
+  var lineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
       labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11",],
       datasets: [
       {
@@ -2114,10 +2119,7 @@
         data: [242, 158, 923, 755, 737, 260, 978, 793, 122, 384, 501]
       }
       ]
-  };
-  var lineChart = new Chart(ctx, {
-    type: 'line',
-    data: $.extend(true,{},brandVendorsDataWeekI3),
+    },
   });
 
   // Line chart month i3
@@ -4080,7 +4082,6 @@ function selectDashboardChart2(){
         }
         else if(selectedFreq == 2){
             selectDashboardChart2();
-            chooseBrandVendorChbxWeekI3();
         }else if(selectedFreq == 3){
             selectDashboardChart3();
         }else if(selectedFreq == 4){
@@ -4129,97 +4130,6 @@ function selectDashboardChart2(){
     });
   };
 
-  function updateEarnVendors() {
-    var active = [
-        $('#checkVend1').is(':checked'),
-        $('#checkVend2').is(':checked'),
-        $('#checkVend3').is(':checked'),
-        $('#checkVend4').is(':checked'),
-        $('#checkVend5').is(':checked'),
-        $('#checkVend6').is(':checked'),
-      ];
-    updateDatasetBC(active,earnVendorsData);
-    console.log($(this).attr('id')+$(this).is(":checked"));	  
-  }
-
-  function updateEarnVendors2() {
-    var active = [
-        $('#checkVend1').is(':checked'),
-        $('#checkVend2').is(':checked'),
-        $('#checkVend3').is(':checked'),
-        $('#checkVend4').is(':checked'),
-        $('#checkVend5').is(':checked'),
-        $('#checkVend6').is(':checked'),
-      ];
-    updateDatasetBC2(active,earnVendorsData2);
-    console.log($(this).attr('id')+$(this).is(":checked"));	  
-  }
-
-  function updateEarnVendors3() {
-    var active = [
-        $('#checkVend1').is(':checked'),
-        $('#checkVend2').is(':checked'),
-        $('#checkVend3').is(':checked'),
-        $('#checkVend4').is(':checked'),
-        $('#checkVend5').is(':checked'),
-        $('#checkVend6').is(':checked'),
-      ];
-    updateDatasetBC3(active,earnVendorsData3);
-    console.log($(this).attr('id')+$(this).is(":checked"));	  
-  }
-
-  function updateEarnVendors4() {
-    var active = [
-        $('#checkVend1').is(':checked'),
-        $('#checkVend2').is(':checked'),
-        $('#checkVend3').is(':checked'),
-        $('#checkVend4').is(':checked'),
-        $('#checkVend5').is(':checked'),
-        $('#checkVend6').is(':checked'),
-      ];
-    updateDatasetBC4(active,earnVendorsData4);
-    console.log($(this).attr('id')+$(this).is(":checked"));	  
-  }
-
-  function updateEarnVendors5() {
-    var active = [
-        $('#checkVend1').is(':checked'),
-        $('#checkVend2').is(':checked'),
-        $('#checkVend3').is(':checked'),
-        $('#checkVend4').is(':checked'),
-        $('#checkVend5').is(':checked'),
-        $('#checkVend6').is(':checked'),
-      ];
-    updateDatasetBC5(active,earnVendorsData5);
-    console.log($(this).attr('id')+$(this).is(":checked"));	  
-  }
-
-  function updateEarnVendors6() {
-    var active = [
-        $('#checkVend1').is(':checked'),
-        $('#checkVend2').is(':checked'),
-        $('#checkVend3').is(':checked'),
-        $('#checkVend4').is(':checked'),
-        $('#checkVend5').is(':checked'),
-        $('#checkVend6').is(':checked'),
-      ];
-    updateDatasetBC6(active,earnVendorsData6);
-    console.log($(this).attr('id')+$(this).is(":checked"));	  
-  }
-
-  function updateEarnVendors7() {
-    var active = [
-        $('#checkVend1').is(':checked'),
-        $('#checkVend2').is(':checked'),
-        $('#checkVend3').is(':checked'),
-        $('#checkVend4').is(':checked'),
-        $('#checkVend5').is(':checked'),
-        $('#checkVend6').is(':checked'),
-      ];
-    updateDatasetBC7(active,earnVendorsData7);
-    console.log($(this).attr('id')+$(this).is(":checked"));	  
-  }
-
   function updateEarnVendors_new() {
     var active = [
       $('#checkBrandDateVend1').is(':checked'),
@@ -4233,18 +4143,21 @@ function selectDashboardChart2(){
     console.log($(this).attr('id')+$(this).is(":checked"));	  
   }
 
-  function updateBrandVendorsDataWeekI3() {
+  function updateEarnVendors() {
     var active = [
-      $('#checkBrandDateVend1').is(':checked'),
-      $('#checkBrandDateVend2').is(':checked'),
-      $('#checkBrandDateVend3').is(':checked'),
-      $('#checkBrandDateVend4').is(':checked'),
-      $('#checkBrandDateVend5').is(':checked'),
-      $('#checkBrandDateVend6').is(':checked'),
-    ];
-    updateDatasetLCBrandWeekI3(active,brandVendorsDataWeekI3);
+        $('#checkVend1').is(':checked'),
+        $('#checkVend2').is(':checked'),
+        $('#checkVend3').is(':checked'),
+        $('#checkVend4').is(':checked'),
+        $('#checkVend5').is(':checked'),
+        $('#checkVend6').is(':checked'),
+      ];
+    updateDatasetBC(active,earnVendorsData);
     console.log($(this).attr('id')+$(this).is(":checked"));	  
   }
+
+
+  
 
   function chooseEarnVendorChbxNew(){
     $('#date_brand_vendor_dd_menu').on('click','#checkBrandDateVend1, #checkBrandDateVend2, #checkBrandDateVend3, #checkBrandDateVend4, #checkBrandDateVend5, #checkBrandDateVend6', updateEarnVendors_new);
@@ -4257,34 +4170,13 @@ function selectDashboardChart2(){
       $('#checkBrandDateVend5').prop('checked',true);
       $('#checkBrandDateVend6').prop('checked',true);
       updateEarnVendors_new();
-      updateBrandVendorsDataWeekI3();
+      // updateEarnVendors2();
       // updateEarnVendors3();
       // updateEarnVendors4();
       // updateEarnVendors5();
       // updateEarnVendors6();
       // updateEarnVendors7();
       console.log('click default_new');	  
-    });
-  };
-
-  function chooseBrandVendorChbxWeekI3(){
-    $('#date_brand_vendor_dd_menu').on('click','#checkBrandDateVend1, #checkBrandDateVend2, #checkBrandDateVend3, #checkBrandDateVend4, #checkBrandDateVend5, #checkBrandDateVend6', updateBrandVendorsDataWeekI3);
-    
-    $('#date_brand_vendor_dd_menu').on('click','#default_checkBrandDateVend',function () {
-      $('#checkBrandDateVend1').prop('checked',true);
-      $('#checkBrandDateVend2').prop('checked',true);
-      $('#checkBrandDateVend3').prop('checked',true);
-      $('#checkBrandDateVend4').prop('checked',true);
-      $('#checkBrandDateVend5').prop('checked',true);
-      $('#checkBrandDateVend6').prop('checked',true);
-      updateEarnVendors_new();
-      updateBrandVendorsDataWeekI3();
-      // updateEarnVendors3();
-      // updateEarnVendors4();
-      // updateEarnVendors5();
-      // updateEarnVendors6();
-      // updateEarnVendors7();
-      console.log('click default_new_line');	  
     });
   };
 
@@ -4399,139 +4291,6 @@ function selectDashboardChart2(){
     });
   };
 
-  function updateDatasetBC(active,earnVendorsData) {
-    barChart.data.labels.splice(0,barChart.data.labels.length);
-    barChart.data.datasets[0].data.splice(0,barChart.data.datasets[0].data.length);
-    barChart.data.datasets[0].backgroundColor.splice(0,barChart.data.datasets[0].backgroundColor.length);
-    barChart.data.datasets[0].borderColor.splice(0,barChart.data.datasets[0].borderColor.length);
-
-    for (var i = 0; i < active.length; i++){
-      if (active[i]){
-        barChart.data.labels.push(earnVendorsData.labels[i]);
-        barChart.data.datasets[0].data.push(earnVendorsData.datasets[0].data[i]);
-        barChart.data.datasets[0].backgroundColor.push(earnVendorsData.datasets[0].backgroundColor[i]);
-        barChart.data.datasets[0].borderColor.push(earnVendorsData.datasets[0].borderColor[i]);
-        console.log('update chart' + i);
-      }
-    }
-    barChart.update();
-    console.log('update chart function');
-  }
-
-  function updateDatasetBC2(active,earnVendorsData2) {
-    barChart2.data.labels.splice(0,barChart2.data.labels.length);
-    barChart2.data.datasets[0].data.splice(0,barChart2.data.datasets[0].data.length);
-    barChart2.data.datasets[0].backgroundColor.splice(0,barChart2.data.datasets[0].backgroundColor.length);
-    barChart2.data.datasets[0].borderColor.splice(0,barChart2.data.datasets[0].borderColor.length);
-
-    for (var i = 0; i < active.length; i++){
-      if (active[i]){
-        barChart2.data.labels.push(earnVendorsData2.labels[i]);
-        barChart2.data.datasets[0].data.push(earnVendorsData2.datasets[0].data[i]);
-        barChart2.data.datasets[0].backgroundColor.push(earnVendorsData2.datasets[0].backgroundColor[i]);
-        barChart2.data.datasets[0].borderColor.push(earnVendorsData2.datasets[0].borderColor[i]);
-        console.log('update chart2_' + i);
-      }
-    }
-    barChart2.update();
-    console.log('update chart2 function');
-  }
-
-  function updateDatasetBC3(active,earnVendorsData3) {
-      barChart3.data.labels.splice(0,barChart3.data.labels.length);
-      barChart3.data.datasets[0].data.splice(0,barChart3.data.datasets[0].data.length);
-      barChart3.data.datasets[0].backgroundColor.splice(0,barChart3.data.datasets[0].backgroundColor.length);
-      barChart3.data.datasets[0].borderColor.splice(0,barChart3.data.datasets[0].borderColor.length);
-
-    for (var i = 0; i < active.length; i++){
-      if (active[i]){
-        barChart3.data.labels.push(earnVendorsData3.labels[i]);
-        barChart3.data.datasets[0].data.push(earnVendorsData3.datasets[0].data[i]);
-        barChart3.data.datasets[0].backgroundColor.push(earnVendorsData3.datasets[0].backgroundColor[i]);
-        barChart3.data.datasets[0].borderColor.push(earnVendorsData3.datasets[0].borderColor[i]);
-        console.log('update chart3_' + i);
-      }
-    }
-    barChart3.update();
-    console.log('update chart3 function');
-  }
-
-  function updateDatasetBC4(active,earnVendorsData4) {
-    barChart4.data.labels.splice(0,barChart4.data.labels.length);
-    barChart4.data.datasets[0].data.splice(0,barChart4.data.datasets[0].data.length);
-    barChart4.data.datasets[0].backgroundColor.splice(0,barChart4.data.datasets[0].backgroundColor.length);
-    barChart4.data.datasets[0].borderColor.splice(0,barChart4.data.datasets[0].borderColor.length);
-
-    for (var i = 0; i < active.length; i++){
-      if (active[i]){
-        barChart4.data.labels.push(earnVendorsData4.labels[i]);
-        barChart4.data.datasets[0].data.push(earnVendorsData4.datasets[0].data[i]);
-        barChart4.data.datasets[0].backgroundColor.push(earnVendorsData4.datasets[0].backgroundColor[i]);
-        barChart4.data.datasets[0].borderColor.push(earnVendorsData4.datasets[0].borderColor[i]);
-        console.log('update chart4_' + i);
-      }
-    }
-    barChart4.update();
-    console.log('update chart4 function');
-  }
-
-  function updateDatasetBC5(active,earnVendorsData5) {
-    barChart5.data.labels.splice(0,barChart5.data.labels.length);
-    barChart5.data.datasets[0].data.splice(0,barChart5.data.datasets[0].data.length);
-    barChart5.data.datasets[0].backgroundColor.splice(0,barChart5.data.datasets[0].backgroundColor.length);
-    barChart5.data.datasets[0].borderColor.splice(0,barChart5.data.datasets[0].borderColor.length);
-      
-    for (var i = 0; i < active.length; i++){
-      if (active[i]){
-        barChart5.data.labels.push(earnVendorsData5.labels[i]);
-        barChart5.data.datasets[0].data.push(earnVendorsData5.datasets[0].data[i]);
-        barChart5.data.datasets[0].backgroundColor.push(earnVendorsData5.datasets[0].backgroundColor[i]);
-        barChart5.data.datasets[0].borderColor.push(earnVendorsData5.datasets[0].borderColor[i]);
-        console.log('update chart5_' + i);
-      }
-    }
-    barChart5.update();
-    console.log('update chart5 function');
-  }
-
-  function updateDatasetBC6(active,earnVendorsData6) {
-    barChart6.data.labels.splice(0,barChart6.data.labels.length);
-    barChart6.data.datasets[0].data.splice(0,barChart6.data.datasets[0].data.length);
-    barChart6.data.datasets[0].backgroundColor.splice(0,barChart6.data.datasets[0].backgroundColor.length);
-    barChart6.data.datasets[0].borderColor.splice(0,barChart6.data.datasets[0].borderColor.length);
-
-    for (var i = 0; i < active.length; i++){
-      if (active[i]){
-        barChart6.data.labels.push(earnVendorsData6.labels[i]);
-        barChart6.data.datasets[0].data.push(earnVendorsData6.datasets[0].data[i]);
-        barChart6.data.datasets[0].backgroundColor.push(earnVendorsData6.datasets[0].backgroundColor[i]);
-        barChart6.data.datasets[0].borderColor.push(earnVendorsData6.datasets[0].borderColor[i]);
-        console.log('update chart6_' + i);
-      }
-    }
-    barChart6.update();
-    console.log('update chart6 function');
-  }
-
-  function updateDatasetBC7(active,earnVendorsData7) {
-    barChart7.data.labels.splice(0,barChart7.data.labels.length);
-    barChart7.data.datasets[0].data.splice(0,barChart7.data.datasets[0].data.length);
-    barChart7.data.datasets[0].backgroundColor.splice(0,barChart7.data.datasets[0].backgroundColor.length);
-    barChart7.data.datasets[0].borderColor.splice(0,barChart7.data.datasets[0].borderColor.length);
-
-    for (var i = 0; i < active.length; i++){
-      if (active[i]){
-        barChart7.data.labels.push(earnVendorsData7.labels[i]);
-        barChart7.data.datasets[0].data.push(earnVendorsData7.datasets[0].data[i]);
-        barChart7.data.datasets[0].backgroundColor.push(earnVendorsData7.datasets[0].backgroundColor[i]);
-        barChart7.data.datasets[0].borderColor.push(earnVendorsData7.datasets[0].borderColor[i]);
-        console.log('update chart7_' + i);
-      }
-    }
-    barChart7.update();
-    console.log('update chart7 function');
-  }
-
   function updateDatasetBC_New(active,dataBrandVendorsData) {
     barChart_new.data.labels.splice(0,barChart_new.data.labels.length);
     barChart_new.data.datasets[0].data.splice(0,barChart_new.data.datasets[0].data.length);
@@ -4551,31 +4310,32 @@ function selectDashboardChart2(){
     console.log('update chart_new function');
   }
 
-  function updateDatasetLCBrandWeekI3(active,brandVendorsDataWeekI3) {
-    lineChart.data.labels.splice(0,lineChart.data.labels.length);
-    lineChart.data.datasets[0].data.splice(0,lineChart.data.datasets[0].data.length);
-    lineChart.data.datasets[0].backgroundColor.splice(0,lineChart.data.datasets[0].backgroundColor.length);
-    lineChart.data.datasets[0].borderColor.splice(0,lineChart.data.datasets[0].borderColor.length);
+
+  function updateDatasetBC(active,earnVendorsData) {
+    barChart.data.labels.splice(0,barChart.data.labels.length);
+    barChart.data.datasets[0].data.splice(0,barChart.data.datasets[0].data.length);
+    barChart.data.datasets[0].backgroundColor.splice(0,barChart.data.datasets[0].backgroundColor.length);
+    barChart.data.datasets[0].borderColor.splice(0,barChart.data.datasets[0].borderColor.length);
+
     for (var i = 0; i < active.length; i++){
       if (active[i]){
-        lineChart.data.labels.push(brandVendorsDataWeekI3.labels[i]);
-        lineChart.data.datasets[0].data.push(brandVendorsDataWeekI3.datasets[0].data[i]);
-        lineChart.data.datasets[0].backgroundColor.push(brandVendorsDataWeekI3.datasets[0].backgroundColor[i]);
-        lineChart.data.datasets[0].borderColor.push(brandVendorsDataWeekI3.datasets[0].borderColor[i]);
-        console.log('update line_chart_new' + i);
+        barChart.data.labels.push(earnVendorsData.labels[i]);
+        barChart.data.datasets[0].data.push(earnVendorsData.datasets[0].data[i]);
+        barChart.data.datasets[0].backgroundColor.push(earnVendorsData.datasets[0].backgroundColor[i]);
+        barChart.data.datasets[0].borderColor.push(earnVendorsData.datasets[0].borderColor[i]);
+        console.log('update chart' + i);
       }
     }
-
-    lineChart.update();
-    console.log('update line_chart_new function');
+    barChart.update();
+    console.log('update chart function');
   }
 
+ 
   $(document).ready(function(){
     selectEarnBarChart();
     selectVendorBrand();
     chooseRadioButtons();
     chooseEarnVendorChbxNew();
-    chooseBrandVendorChbxWeekI3();
     chooseEarnVendorChbx();
     chooseEarnVendorChbx2();
     chooseEarnVendorChbx3();
