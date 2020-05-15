@@ -33,7 +33,345 @@
     <!-- /top tiles -->
 
     <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="x_panel tile fixed_height_360 overflow_hidden">
+                <div class="x_title">
+                    <h2>Points To Date By Brand Category</h2>
+
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>&nbsp;</li>
+                        <li class="dropdown">
+                            <ul class="dropdown-menu" role="menu">
+                                <li><em><a href="#">Settings 1</a></em></li>
+                                <li><em><a href="#">Settings 2</a></em></li>
+                            </ul>
+                        </li>
+                        <li>&nbsp;</li>
+                    </ul>
+
+                    <div class="clearfix">&nbsp;</div>
+                </div>
+
+                <div class="x_content">
+                    <table class="table table-fixed no_margin_bottom">
+                        <tbody>
+                            <tr class="table_col_30">
+                                <td class="no_border center">
+                                    <em>
+                                        <canvas height="160" id="canvas1" style="margin: 5px 5px 5px 0"
+                                            width="160"></canvas>
+                                    </em>
+                                </td>
+
+                                <td class="no_border">
+                                    <table id="points-to-date-by-brand-category-main-chart" class="table table-hover table-sm table-fixed no_margin_bottom">
+                                        <thead>
+                                            <tr>
+                                                <th class="table_col_10"></th>
+                                                <th class="table_col_30">Brand</th>
+                                                <th class="table_col_30">Points</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="no_border">
+                                                    <div
+                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate1"></div>
+                                                </td>
+                                                <td class="no_border">Core i3</td>
+                                                <td class="no_border">462</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="no_border">
+                                                    <div
+                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate2"></div>
+                                                </td>
+                                                <td class="no_border">Core i5</td>
+                                                <td class="no_border">1419</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="no_border">
+                                                    <div
+                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate3"></div>
+                                                </td>
+                                                <td class="no_border">Core i7</td>
+                                                <td class="no_border">1496</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="no_border">
+                                                    <div
+                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate4"></div>
+                                                </td>
+                                                <td class="no_border">Core i9</td>
+                                                <td class="no_border">836</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="no_border">
+                                                    <div
+                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate5"></div>
+                                                </td>
+                                                <td class="no_border">Core m3</td>
+                                                <td class="no_border">11</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="no_border">
+                                                    <div
+                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate6"></div>
+                                                </td>
+                                                <td class="no_border">Pentium</td>
+                                                <td class="no_border">22</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="no_border">
+                                                    <div
+                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate7"></div>
+                                                </td>
+                                                <td class="no_border">Xeon</td>
+                                                <td class="no_border">176</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="clearfix clearfix_small_height">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Points To Date vs Missed</h2>
+
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>&nbsp;</li>
+                        <li class="dropdown">
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Settings 1</a></li>
+                                <li><a href="#">Settings 2</a></li>
+                            </ul>
+                        </li>
+                        <li>&nbsp;</li>
+                    </ul>
+
+                    <div class="clearfix">&nbsp;</div>
+                </div>
+
+                <div class="x_content">
+                    <div id="echart_mini_pie" style="height:280px;">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Choose chart panel-->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-12 dashboard_filter_panel dashboard__filter-rebate">
+                <div class="col-md-6 col-sm-6 col-xs-6 dash_ratio_container" id="dash_ratio_container">
+                    <div class="radio" id="point_to_earn_radio">
+                        <label class="radio_label">
+                            <input name="points_chart" type="radio" value="PTE" />
+                            Units sold
+                        </label>
+                    </div>
+
+                    <div class="radio" id="point_to_date_radio">
+                        <label class="radio_label">
+                            <input checked="checked" name="points_chart" type="radio" value="PTD" />
+                            Units outstanding
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Points To Earn per Category -->
+                <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq half_top_margin hide"
+                    id="points_to_earn_vendor_dropdownmenu">
+                    <div class="row">
+                        <label class="titled_component one_margin_left">Category &nbsp;</label>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuVendor"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose Category
+                        </button>
+                        <ul class="dropdown-menu" id="earn_vendor_dd_menu">
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend1" checked>
+                                <label class="form-check-label" for="checkVend1">
+                                    Core i3
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend2" checked>
+                                <label class="form-check-label" for="checkVend2">
+                                    Core i5
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend3" checked>
+                                <label class="form-check-label" for="checkVend3">
+                                    Core i7
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend4" checked>
+                                <label class="form-check-label" for="checkVend4">
+                                    Core i9
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend5" checked>
+                                <label class="form-check-label" for="checkVend5">
+                                    Core m3
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend6" checked>
+                                <label class="form-check-label" for="checkVend6">
+                                    Pentium
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend7" checked>
+                                <label class="form-check-label" for="checkVend7">
+                                    Xeon
+                                </label>
+                            </li>
+                            <li class="not-sortable columns-li-padding">
+                                <button class="btn btn-primary btn-xs btn-block" id="default_checkVend">Show
+                                    All</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq hide" id="points_to_earn_category_combobox">
+                    <div class="row">
+                        <label class="titled_component">Frequency</label>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <select class="browser-default custom-select country" id="earn_point_activity_graph">
+                            <option value="1">Weekly</option>
+                            <option value="2">Monthly</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Points To Date By Brand Category -->
+                <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq" id="points_to_date_vendor_combobox">
+
+                    <div class="row">
+                        <label class="titled_component one_margin_left">Category &nbsp;</label>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuBrandDateVendor"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose Brand
+                        </button>
+                        <ul class="dropdown-menu" id="date_brand_vendor_dd_menu">
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend1"
+                                    checked>
+                                <label class="form-check-label" for="checkBrandDateVend1">
+                                    Core i3
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend2"
+                                    checked>
+                                <label class="form-check-label" for="checkBrandDateVend2">
+                                    Core i5
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend3"
+                                    checked>
+                                <label class="form-check-label" for="checkBrandDateVend3">
+                                    Core i7
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend4"
+                                    checked>
+                                <label class="form-check-label" for="checkBrandDateVend4">
+                                    Core i9
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend5"
+                                    checked>
+                                <label class="form-check-label" for="checkBrandDateVend5">
+                                    Core m3
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend6"
+                                    checked>
+                                <label class="form-check-label" for="checkBrandDateVend6">
+                                    Pentium
+                                </label>
+                            </li>
+                            <li class="dropdown_list">
+                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend7"
+                                    checked>
+                                <label class="form-check-label" for="checkBrandDateVend7">
+                                    Xeon
+                                </label>
+                            </li>
+                            <li class="not-sortable columns-li-padding">
+                                <button class="btn btn-primary btn-xs btn-block" id="default_checkBrandDateVend">Show
+                                    All</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-2 col-sm-3 col-xs-3 dashboard_freq" id="points_to_date_category_combobox">
+                <div class="row">
+                <label class="titled_component">Category</label>
+                </div>
+                <br>
+                <div class="row">
+                <select class="browser-default custom-select" id="brand_date_point_activity_graph">
+                    <option value="1">Core i3</option>
+                    <option value="2">Core i5</option>
+                    <option value="3">Core i7</option>
+                    <option value="4">Core i9</option>
+                    <option value="5">Core m3</option>
+                    <option value="6">Pentium</option>
+                    <option value="7">Xeon</option>
+                </select>
+                </div>
+            </div> -->
+
+                <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq" id="points_to_date_freq_combobox">
+                    <div class="row">
+                        <label class="titled_component">Frequency</label>
+                    </div>
+
+                    <div class="row">
+                        <select class="browser-default custom-select country" id="freq_point_activity_graph">
+                            <option value="1">Weekly</option>
+                            <option value="2">Monthly</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Choose chart panel-->
+
+    <!-- Units sold section -->
+    <!-- endUnits sold section -->
+
+    <!-- Units outdtanding section -->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel tile fixed_height_360">
                 <div class="x_title">
                     <h2>Points To Earn per Category</h2>
@@ -159,125 +497,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="x_panel tile fixed_height_360 overflow_hidden">
-                <div class="x_title">
-                    <h2>Points To Date By Brand Category</h2>
-
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li>&nbsp;</li>
-                        <li class="dropdown">
-                            <ul class="dropdown-menu" role="menu">
-                                <li><em><a href="#">Settings 1</a></em></li>
-                                <li><em><a href="#">Settings 2</a></em></li>
-                            </ul>
-                        </li>
-                        <li>&nbsp;</li>
-                    </ul>
-
-                    <div class="clearfix">&nbsp;</div>
-                </div>
-
-                <div class="x_content">
-                    <table style="width:100%">
-                        <tbody>
-                            <tr>
-                                <th style="width:37%;">&nbsp;</th>
-                                <th>
-                                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-                                        <p><em>Brand</em></p>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-5 col-sm-5 col-xs-5">
-                                        <p><em>Points</em></p>
-                                    </div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <td><em><canvas height="140" id="canvas1" style="margin: 5px 5px 5px 0"
-                                            width="140"></canvas></em></td>
-                                <td>
-                                    <table class="tile_info">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <p>Core i3</p>
-                                                </td>
-                                                <td>462</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Core i5</p>
-                                                </td>
-                                                <td>1419</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Core i7</p>
-                                                </td>
-                                                <td>1496</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Core i9</p>
-                                                </td>
-                                                <td>836</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Core m3</p>
-                                                </td>
-                                                <td>11</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Pentium</p>
-                                                </td>
-                                                <td>22</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Xeon</p>
-                                                </td>
-                                                <td>176</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div class="clearfix">&nbsp;</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="x_panel">
-                <div class="x_title">
-                    <h2>Points To Date vs Missed</h2>
-
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li>&nbsp;</li>
-                        <li class="dropdown">
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Settings 1</a></li>
-                                <li><a href="#">Settings 2</a></li>
-                            </ul>
-                        </li>
-                        <li>&nbsp;</li>
-                    </ul>
-
-                    <div class="clearfix">&nbsp;</div>
-                </div>
-
-                <div class="x_content">
-                    <div id="echart_mini_pie" style="height:280px;">&nbsp;</div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -290,8 +509,8 @@
             trigger: '.tooltip-test',
             position: 'right',
             'font-size': '30px;'
-       }).render();
-});
+        }).render();
+    });
 
 //Tooltip
 //	    AUI().ready('aui-tooltip', 'aui-io-plugin', function(A) {
