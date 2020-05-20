@@ -1,516 +1,567 @@
 <!-- iCheck -->
 <link href="/o/gentelella-theme/vendors/iCheck/skins/flat/green.css" rel="stylesheet" /><!-- bootstrap-progressbar -->
 <link href="/o/gentelella-theme/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css"
-    rel="stylesheet" /><!-- JQVMap -->
+  rel="stylesheet" /><!-- JQVMap -->
 <link href="/o/gentelella-theme/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
 <!-- bootstrap-daterangepicker -->
 <link href="/o/gentelella-theme/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
 <!-- page content -->
 <div class="row tile_count">
-    <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>You Have
-                Earned <i class="fa fa-question-circle"
-                    title="These are the points you have earned this quater">&nbsp;</i></b> </span>
-        <div class="count green"><span style="display: none;">&nbsp;</span>1447 <small>pts</small></div>
-    </div>
+  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>You Have
+        Earned <i class="fa fa-question-circle" title="These are the points you have earned this quater">&nbsp;</i></b>
+    </span>
+    <div class="count green"><span style="display: none;">&nbsp;</span>1447 <small>pts</small></div>
+  </div>
 
-    <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>More To
-                Earn <i class="fa fa-question-circle" title="">&nbsp;</i></b></span>
+  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>More To
+        Earn <i class="fa fa-question-circle" title="">&nbsp;</i></b></span>
 
-        <div class="count red">2195 <small>pts</small></div>
-    </div>
+    <div class="count red">2195 <small>pts</small></div>
+  </div>
 
-    <!-- <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>Pending To
+  <!-- <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>Pending To
                 Confirm <i class="fa fa-question-circle" title="">&nbsp;</i></b></span>
 
         <div class="count orange">2195 <small>pts</small></div>
     </div> -->
 
-    <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>Points To
-                Date <i class="fa fa-question-circle" title="">&nbsp;</i></b></span>
+  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>Points To
+        Date <i class="fa fa-question-circle" title="">&nbsp;</i></b></span>
 
-        <div class="count">4567 <small>pts</small></div>
-    </div>
-    <!-- /top tiles -->
+    <div class="count">4567 <small>pts</small></div>
+  </div>
+  <!-- /top tiles -->
 
-    <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="x_panel tile fixed_height_360 overflow_hidden">
-                <div class="x_title">
-                    <h2>Points To Date By Brand Category</h2>
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="x_panel tile fixed_height_360 overflow_hidden">
+        <div class="x_title">
+          <h2>Points To Date By Brand Category</h2>
 
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li>&nbsp;</li>
-                        <li class="dropdown">
-                            <ul class="dropdown-menu" role="menu">
-                                <li><em><a href="#">Settings 1</a></em></li>
-                                <li><em><a href="#">Settings 2</a></em></li>
-                            </ul>
-                        </li>
-                        <li>&nbsp;</li>
-                    </ul>
+          <ul class="nav navbar-right panel_toolbox">
+            <li>&nbsp;</li>
+            <li class="dropdown">
+              <ul class="dropdown-menu" role="menu">
+                <li><em><a href="#">Settings 1</a></em></li>
+                <li><em><a href="#">Settings 2</a></em></li>
+              </ul>
+            </li>
+            <li>&nbsp;</li>
+          </ul>
 
-                    <div class="clearfix">&nbsp;</div>
-                </div>
-
-                <div class="x_content">
-                    <table class="table table-fixed no_margin_bottom">
-                        <tbody>
-                            <tr class="table_col_30">
-                                <td class="no_border center">
-                                    <em>
-                                        <canvas height="160" id="canvas1" style="margin: 5px 5px 5px 0"
-                                            width="160"></canvas>
-                                    </em>
-                                </td>
-
-                                <td class="no_border">
-                                    <table id="points-to-date-by-brand-category-main-chart" class="table table-hover table-sm table-fixed no_margin_bottom">
-                                        <thead>
-                                            <tr>
-                                                <th class="table_col_10"></th>
-                                                <th class="table_col_30">Brand</th>
-                                                <th class="table_col_30">Points</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="no_border">
-                                                    <div
-                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate1"></div>
-                                                </td>
-                                                <td class="no_border">Core i3</td>
-                                                <td class="no_border">462</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="no_border">
-                                                    <div
-                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate2"></div>
-                                                </td>
-                                                <td class="no_border">Core i5</td>
-                                                <td class="no_border">1419</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="no_border">
-                                                    <div
-                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate3"></div>
-                                                </td>
-                                                <td class="no_border">Core i7</td>
-                                                <td class="no_border">1496</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="no_border">
-                                                    <div
-                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate4"></div>
-                                                </td>
-                                                <td class="no_border">Core i9</td>
-                                                <td class="no_border">836</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="no_border">
-                                                    <div
-                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate5"></div>
-                                                </td>
-                                                <td class="no_border">Core m3</td>
-                                                <td class="no_border">11</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="no_border">
-                                                    <div
-                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate6"></div>
-                                                </td>
-                                                <td class="no_border">Pentium</td>
-                                                <td class="no_border">22</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="no_border">
-                                                    <div
-                                                        class="date__by__brand__category__legend-rebate dbbcl-rebate7"></div>
-                                                </td>
-                                                <td class="no_border">Xeon</td>
-                                                <td class="no_border">176</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div class="clearfix clearfix_small_height">&nbsp;</div>
-                </div>
-            </div>
+          <div class="clearfix">&nbsp;</div>
         </div>
 
-        <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="x_panel">
-                <div class="x_title">
-                    <h2>Points To Date vs Missed</h2>
+        <div class="x_content">
+          <table class="table table-fixed no_margin_bottom">
+            <tbody>
+              <tr class="table_col_30">
+                <td class="no_border center">
+                  <em>
+                    <canvas height="160" id="canvas1" style="margin: 5px 5px 5px 0" width="160"></canvas>
+                  </em>
+                </td>
 
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li>&nbsp;</li>
-                        <li class="dropdown">
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Settings 1</a></li>
-                                <li><a href="#">Settings 2</a></li>
-                            </ul>
-                        </li>
-                        <li>&nbsp;</li>
-                    </ul>
+                <td class="no_border">
+                  <table id="points-to-date-by-brand-category-main-chart"
+                    class="table table-hover table-sm table-fixed no_margin_bottom">
+                    <thead>
+                      <tr>
+                        <th class="table_col_10"></th>
+                        <th class="table_col_30">Brand</th>
+                        <th class="table_col_30">Points</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="no_border">
+                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate1">
+                          </div>
+                        </td>
+                        <td class="no_border">Core i3</td>
+                        <td class="no_border">462</td>
+                      </tr>
+                      <tr>
+                        <td class="no_border">
+                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate2">
+                          </div>
+                        </td>
+                        <td class="no_border">Core i5</td>
+                        <td class="no_border">1419</td>
+                      </tr>
+                      <tr>
+                        <td class="no_border">
+                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate3">
+                          </div>
+                        </td>
+                        <td class="no_border">Core i7</td>
+                        <td class="no_border">1496</td>
+                      </tr>
+                      <tr>
+                        <td class="no_border">
+                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate4">
+                          </div>
+                        </td>
+                        <td class="no_border">Core i9</td>
+                        <td class="no_border">836</td>
+                      </tr>
+                      <tr>
+                        <td class="no_border">
+                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate5">
+                          </div>
+                        </td>
+                        <td class="no_border">Core m3</td>
+                        <td class="no_border">11</td>
+                      </tr>
+                      <tr>
+                        <td class="no_border">
+                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate6">
+                          </div>
+                        </td>
+                        <td class="no_border">Pentium</td>
+                        <td class="no_border">22</td>
+                      </tr>
+                      <tr>
+                        <td class="no_border">
+                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate7">
+                          </div>
+                        </td>
+                        <td class="no_border">Xeon</td>
+                        <td class="no_border">176</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                    <div class="clearfix">&nbsp;</div>
-                </div>
-
-                <div class="x_content">
-                    <div id="echart_mini_pie" style="height:280px;">&nbsp;</div>
-                </div>
-            </div>
+          <div class="clearfix clearfix_small_height">&nbsp;</div>
         </div>
+      </div>
     </div>
 
-    <!--Choose chart panel-->
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="col-xs-12 dashboard_filter_panel dashboard__filter-rebate">
-                <div class="col-md-6 col-sm-6 col-xs-6 dash_ratio_container" id="dash_ratio_container">
-                    <div class="radio" id="point_to_earn_radio">
-                        <label class="radio_label">
-                            <input name="points_chart" type="radio" value="PTE" />
-                            Units sold
-                        </label>
-                    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="x_panel">
+        <div class="x_title">
+          <h2>Points To Date vs Missed</h2>
 
-                    <div class="radio" id="point_to_date_radio">
-                        <label class="radio_label">
-                            <input checked="checked" name="points_chart" type="radio" value="PTD" />
-                            Units outstanding
-                        </label>
-                    </div>
-                </div>
+          <ul class="nav navbar-right panel_toolbox">
+            <li>&nbsp;</li>
+            <li class="dropdown">
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Settings 1</a></li>
+                <li><a href="#">Settings 2</a></li>
+              </ul>
+            </li>
+            <li>&nbsp;</li>
+          </ul>
 
-                <!-- Points To Earn per Category -->
-                <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq half_top_margin hide"
-                    id="points_to_earn_vendor_dropdownmenu">
-                    <div class="row">
-                        <label class="titled_component one_margin_left">Category &nbsp;</label>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuVendor"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Choose Category
-                        </button>
-                        <ul class="dropdown-menu" id="earn_vendor_dd_menu">
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend1" checked>
-                                <label class="form-check-label" for="checkVend1">
-                                    Core i3
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend2" checked>
-                                <label class="form-check-label" for="checkVend2">
-                                    Core i5
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend3" checked>
-                                <label class="form-check-label" for="checkVend3">
-                                    Core i7
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend4" checked>
-                                <label class="form-check-label" for="checkVend4">
-                                    Core i9
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend5" checked>
-                                <label class="form-check-label" for="checkVend5">
-                                    Core m3
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend6" checked>
-                                <label class="form-check-label" for="checkVend6">
-                                    Pentium
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend7" checked>
-                                <label class="form-check-label" for="checkVend7">
-                                    Xeon
-                                </label>
-                            </li>
-                            <li class="not-sortable columns-li-padding">
-                                <button class="btn btn-primary btn-xs btn-block" id="default_checkVend">Show
-                                    All</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq hide" id="points_to_earn_category_combobox">
-                    <div class="row">
-                        <label class="titled_component">Frequency</label>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <select class="browser-default custom-select country" id="earn_point_activity_graph">
-                            <option value="1">Weekly</option>
-                            <option value="2">Monthly</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Points To Date By Brand Category -->
-                <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq" id="points_to_date_vendor_combobox">
-
-                    <div class="row">
-                        <label class="titled_component one_margin_left">Category &nbsp;</label>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuBrandDateVendor"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Choose Brand
-                        </button>
-                        <ul class="dropdown-menu" id="date_brand_vendor_dd_menu">
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend1"
-                                    checked>
-                                <label class="form-check-label" for="checkBrandDateVend1">
-                                    Core i3
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend2"
-                                    checked>
-                                <label class="form-check-label" for="checkBrandDateVend2">
-                                    Core i5
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend3"
-                                    checked>
-                                <label class="form-check-label" for="checkBrandDateVend3">
-                                    Core i7
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend4"
-                                    checked>
-                                <label class="form-check-label" for="checkBrandDateVend4">
-                                    Core i9
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend5"
-                                    checked>
-                                <label class="form-check-label" for="checkBrandDateVend5">
-                                    Core m3
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend6"
-                                    checked>
-                                <label class="form-check-label" for="checkBrandDateVend6">
-                                    Pentium
-                                </label>
-                            </li>
-                            <li class="dropdown_list">
-                                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend7"
-                                    checked>
-                                <label class="form-check-label" for="checkBrandDateVend7">
-                                    Xeon
-                                </label>
-                            </li>
-                            <li class="not-sortable columns-li-padding">
-                                <button class="btn btn-primary btn-xs btn-block" id="default_checkBrandDateVend">Show
-                                    All</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- <div class="col-md-2 col-sm-3 col-xs-3 dashboard_freq" id="points_to_date_category_combobox">
-                <div class="row">
-                <label class="titled_component">Category</label>
-                </div>
-                <br>
-                <div class="row">
-                <select class="browser-default custom-select" id="brand_date_point_activity_graph">
-                    <option value="1">Core i3</option>
-                    <option value="2">Core i5</option>
-                    <option value="3">Core i7</option>
-                    <option value="4">Core i9</option>
-                    <option value="5">Core m3</option>
-                    <option value="6">Pentium</option>
-                    <option value="7">Xeon</option>
-                </select>
-                </div>
-            </div> -->
-
-                <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq" id="points_to_date_freq_combobox">
-                    <div class="row">
-                        <label class="titled_component">Frequency</label>
-                    </div>
-
-                    <div class="row">
-                        <select class="browser-default custom-select country" id="freq_point_activity_graph">
-                            <option value="1">Weekly</option>
-                            <option value="2">Monthly</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+          <div class="clearfix">&nbsp;</div>
         </div>
-    </div>
-    <!--end Choose chart panel-->
 
-    <!-- Units sold section -->
-    <!-- endUnits sold section -->
-
-    <!-- Units outdtanding section -->
-    <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="x_panel tile fixed_height_360">
-                <div class="x_title">
-                    <h2>Points To Earn per Category</h2>
-
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li>&nbsp;</li>
-                        <li class="dropdown">
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Settings 1</a></li>
-                                <li><a href="#">Settings 2</a></li>
-                            </ul>
-                        </li>
-                        <li>&nbsp;</li>
-                    </ul>
-
-                    <div class="clearfix">&nbsp;</div>
-                </div>
-
-                <div class="x_content">
-                    <div class="widget_summary">
-                        <div class="w_left w_25"><span>Core i3</span></div>
-
-                        <div class="w_center w_55" style="width: 75%;">
-                            <div class="progress">
-                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="" class="progress-bar bg-red"
-                                    role="progressbar" style="width: 26%;">2550 Left</div>
-                            </div>
-                        </div>
-                        <!--<div class="w_right w_20"><span>462</span></div>-->
-
-                        <div class="clearfix">&nbsp;</div>
-                    </div>
-
-                    <div class="widget_summary">
-                        <div class="w_left w_25"><span>Core i5</span></div>
-
-                        <div class="w_center w_55" style="width: 75%;">
-                            <div class="progress">
-                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
-                                    class="progress-bar bg-orange" role="progressbar" style="width:95%;"><span>50
-                                        Left</span></div>
-                            </div>
-                        </div>
-                        <!--<div class="w_right w_20"><span>1419</span></div>-->
-
-                        <div class="clearfix">&nbsp;</div>
-                    </div>
-
-                    <div class="widget_summary">
-                        <div class="w_left w_25"><span>Core i7</span></div>
-
-                        <div class="w_center w_55" style="width: 75%;">
-                            <div class="progress">
-                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
-                                    class="progress-bar bg-blue" role="progressbar" style="width: 85%;"><span>250
-                                        Left</span></div>
-                            </div>
-                        </div>
-                        <!--<div class="w_right w_20"><span>1496</span></div>-->
-
-                        <div class="clearfix">&nbsp;</div>
-                    </div>
-
-                    <div class="widget_summary">
-                        <div class="w_left w_25"><span>Core i9</span></div>
-
-                        <div class="w_center w_55" style="width: 75%;">
-                            <div class="progress">
-                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
-                                    class="progress-bar bg-blue" role="progressbar" style="width: 70%;"><span>800
-                                        Left</span></div>
-                            </div>
-                        </div>
-                        <!--<div class="w_right w_20"><span>836</span></div>-->
-
-                        <div class="clearfix">&nbsp;</div>
-                    </div>
-
-                    <div class="widget_summary">
-                        <div class="w_left w_25"><span>Core m3</span></div>
-
-                        <div class="w_center w_55" style="width: 75%;">
-                            <div class="progress">
-                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
-                                    class="progress-bar bg-orange" role="progressbar" style="width: 95%;"><span>25 Left
-                                    </span></div>
-                            </div>
-                        </div>
-                        <!--<div class="w_right w_20"><span>11</span></div><-->
-
-                        <div class="clearfix">&nbsp;</div>
-                    </div>
-
-                    <div class="widget_summary">
-                        <div class="w_left w_25"><span>Pentium</span></div>
-
-                        <div class="w_center w_55" style="width: 75%;">
-                            <div class="progress">
-                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
-                                    class="progress-bar bg-green" role="progressbar" style="width: 100%;"><span>0</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--<div class="w_right w_20"><span>11</span></div><-->
-
-                        <div class="clearfix">&nbsp;</div>
-                    </div>
-
-                    <div class="widget_summary">
-                        <div class="w_left w_25"><span>Xeon</span></div>
-
-                        <div class="w_center w_55" style="width: 75%;">
-                            <div class="progress">
-                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
-                                    class="progress-bar bg-red" role="progressbar" style="width: 30%;"><span>1200
-                                        Left</span></div>
-                            </div>
-                        </div>
-                        <!--<div class="w_right w_20"><span>11</span></div><-->
-
-                        <div class="clearfix">&nbsp;</div>
-                    </div>
-                </div>
-            </div>
+        <div class="x_content">
+          <div id="echart_mini_pie" style="height:280px;">&nbsp;</div>
         </div>
+      </div>
     </div>
+  </div>
+
+  <!--Choose chart panel-->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="col-xs-12 dashboard_filter_panel dashboard__filter-rebate">
+        <div class="col-md-6 col-sm-6 col-xs-6 dash_ratio_container" id="dash_ratio_container">
+          <div class="radio" id="point_to_earn_radio">
+            <label class="radio_label">
+              <input name="points_chart" type="radio" value="PTE" />
+              Units sold
+            </label>
+          </div>
+
+          <div class="radio" id="point_to_date_radio">
+            <label class="radio_label">
+              <input checked="checked" name="points_chart" type="radio" value="PTD" />
+              Units outstanding
+            </label>
+          </div>
+        </div>
+
+        <!-- Points To Earn per Category -->
+        <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq half_top_margin hide"
+          id="points_to_earn_vendor_dropdownmenu">
+          <div class="row">
+            <label class="titled_component one_margin_left">Category &nbsp;</label>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuVendor" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Choose Category
+            </button>
+            <ul class="dropdown-menu" id="earn_vendor_dd_menu">
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend1" checked>
+                <label class="form-check-label" for="checkVend1">
+                  Core i3
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend2" checked>
+                <label class="form-check-label" for="checkVend2">
+                  Core i5
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend3" checked>
+                <label class="form-check-label" for="checkVend3">
+                  Core i7
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend4" checked>
+                <label class="form-check-label" for="checkVend4">
+                  Core i9
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend5" checked>
+                <label class="form-check-label" for="checkVend5">
+                  Core m3
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend6" checked>
+                <label class="form-check-label" for="checkVend6">
+                  Pentium
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend7" checked>
+                <label class="form-check-label" for="checkVend7">
+                  Xeon
+                </label>
+              </li>
+              <li class="not-sortable columns-li-padding">
+                <button class="btn btn-primary btn-xs btn-block" id="default_checkVend">Show
+                  All</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq hide" id="points_to_earn_category_combobox">
+          <div class="row">
+            <label class="titled_component">Frequency</label>
+          </div>
+          <br>
+          <div class="row">
+            <select class="browser-default custom-select country" id="earn_point_activity_graph">
+              <option value="1">Weekly</option>
+              <option value="2">Monthly</option>
+              <option value="3">Annual</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Points To Date By Brand Category -->
+        <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq" id="points_to_date_vendor_combobox">
+
+          <div class="row block">
+            <label class="titled_component one_margin_left">Category</label>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle no_wrap" type="button" id="dropdownMenuBrandDateVendor"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Choose Brand
+            </button>
+            <ul class="dropdown-menu" id="date_brand_vendor_dd_menu">
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend1" checked>
+                <label class="form-check-label" for="checkBrandDateVend1">
+                  Core i3
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend2" checked>
+                <label class="form-check-label" for="checkBrandDateVend2">
+                  Core i5
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend3" checked>
+                <label class="form-check-label" for="checkBrandDateVend3">
+                  Core i7
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend4" checked>
+                <label class="form-check-label" for="checkBrandDateVend4">
+                  Core i9
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend5" checked>
+                <label class="form-check-label" for="checkBrandDateVend5">
+                  Core m3
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend6" checked>
+                <label class="form-check-label" for="checkBrandDateVend6">
+                  Pentium
+                </label>
+              </li>
+              <li class="dropdown_list">
+                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend7" checked>
+                <label class="form-check-label" for="checkBrandDateVend7">
+                  Xeon
+                </label>
+              </li>
+              <li class="not-sortable columns-li-padding">
+                <button class="btn btn-primary btn-xs select-category-btn" id="default_checkBrandDateVend">Select
+                  All</button>
+                <button class="btn btn-primary btn-xs select-category-btn" id="default_uncheckBrandDateVend">Unselect
+                  All</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq" id="points_to_date_category_combobox">
+          <div class="row">
+            <label class="titled_component">Frequency</label>
+          </div>
+          <br>
+          <div class="row">
+            <select class="browser-default custom-select" id="brand_date_point_activity_graph">
+              <option value="1">Weekly</option>
+              <option value="2">Monthly</option>
+              <option value="3">Annual</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq" id="points_to_date_freq_combobox">
+          <div class="row block">
+            <label class="titled_component">Range</label>
+          </div>
+
+          <div class="row">
+            <!-- if selected as weekly -->
+            <select class="browser-default custom-select" id="freq_point_activity_graph2">
+              <option value="1">Week 1</option>
+              <option value="2">Week 2</option>
+              <option value="3">Week 3</option>
+              <option value="4">Week 4</option>
+              <option value="5">Week 5</option>
+              <option value="6">Week 6</option>
+              <option value="7">Week 7</option>
+            </select>
+
+            <!-- if selected as monthly -->
+            <select class="browser-default custom-select" id="freq_month_point_activity_graph2">
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+
+            <!-- if selected as annual -->
+            <select class="browser-default custom-select" id="freq_annual_point_activity_graph2">
+              <option value="1">2020</option>
+              <option value="2">2019</option>
+              <option value="3">2018</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end Choose chart panel-->
+
+  <!-- Units sold section -->
+  <!-- endUnits sold section -->
+
+  <!-- Units outdtanding section -->
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="x_panel tile fixed_height_360">
+        <div class="x_title">
+          <h2>Units outstanding</h2>
+
+          <ul class="nav navbar-right panel_toolbox">
+            <li>&nbsp;</li>
+            <li class="dropdown">
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Settings 1</a></li>
+                <li><a href="#">Settings 2</a></li>
+              </ul>
+            </li>
+            <li>&nbsp;</li>
+          </ul>
+
+          <div class="clearfix">&nbsp;</div>
+        </div>
+
+        <div class="x_content">
+          <div class="widget_summary">
+            <div class="w_left w_25"><span>Core i3</span></div>
+
+            <div class="w_center w_55" style="width: 75%;">
+              <div class="progress">
+                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="" class="progress-bar bg-red"
+                  role="progressbar" style="width: 26%;">2550 Left</div>
+              </div>
+            </div>
+            <!--<div class="w_right w_20"><span>462</span></div>-->
+
+            <div class="clearfix">&nbsp;</div>
+          </div>
+
+          <div class="widget_summary">
+            <div class="w_left w_25"><span>Core i5</span></div>
+
+            <div class="w_center w_55" style="width: 75%;">
+              <div class="progress">
+                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar bg-orange"
+                  role="progressbar" style="width:95%;"><span>50
+                    Left</span></div>
+              </div>
+            </div>
+            <!--<div class="w_right w_20"><span>1419</span></div>-->
+
+            <div class="clearfix">&nbsp;</div>
+          </div>
+
+          <div class="widget_summary">
+            <div class="w_left w_25"><span>Core i7</span></div>
+
+            <div class="w_center w_55" style="width: 75%;">
+              <div class="progress">
+                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar bg-blue"
+                  role="progressbar" style="width: 85%;"><span>250
+                    Left</span></div>
+              </div>
+            </div>
+            <!--<div class="w_right w_20"><span>1496</span></div>-->
+
+            <div class="clearfix">&nbsp;</div>
+          </div>
+
+          <div class="widget_summary">
+            <div class="w_left w_25"><span>Core i9</span></div>
+
+            <div class="w_center w_55" style="width: 75%;">
+              <div class="progress">
+                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar bg-blue"
+                  role="progressbar" style="width: 70%;"><span>800
+                    Left</span></div>
+              </div>
+            </div>
+            <!--<div class="w_right w_20"><span>836</span></div>-->
+
+            <div class="clearfix">&nbsp;</div>
+          </div>
+
+          <div class="widget_summary">
+            <div class="w_left w_25"><span>Core m3</span></div>
+
+            <div class="w_center w_55" style="width: 75%;">
+              <div class="progress">
+                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar bg-orange"
+                  role="progressbar" style="width: 95%;"><span>25 Left
+                  </span></div>
+              </div>
+            </div>
+            <!--<div class="w_right w_20"><span>11</span></div><-->
+
+            <div class="clearfix">&nbsp;</div>
+          </div>
+
+          <div class="widget_summary">
+            <div class="w_left w_25"><span>Pentium</span></div>
+
+            <div class="w_center w_55" style="width: 75%;">
+              <div class="progress">
+                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar bg-green"
+                  role="progressbar" style="width: 100%;"><span>0</span>
+                </div>
+              </div>
+            </div>
+            <!--<div class="w_right w_20"><span>11</span></div><-->
+
+            <div class="clearfix">&nbsp;</div>
+          </div>
+
+          <div class="widget_summary">
+            <div class="w_left w_25"><span>Xeon</span></div>
+
+            <div class="w_center w_55" style="width: 75%;">
+              <div class="progress">
+                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar bg-red"
+                  role="progressbar" style="width: 30%;"><span>1200
+                    Left</span></div>
+              </div>
+            </div>
+            <!--<div class="w_right w_20"><span>11</span></div><-->
+
+            <div class="clearfix">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Points To Earn per Category -->
+  <!--Daily graph cat. i3-->
+  <div class="row" id="daily_graph_i3">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="x_panel">
+        <div class="x_title">
+          <h2>Units outstanding <small id="daily_graph_i3_title"></small></h2>
+
+          <ul class="nav navbar-right panel_toolbox">
+            <li>&nbsp;</li>
+            <li class="dropdown">
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Settings 1</a></li>
+                <li><a href="#">Settings 2</a></li>
+              </ul>
+            </li>
+            <li>&nbsp;</li>
+          </ul>
+
+          <div class="clearfix">&nbsp;</div>
+        </div>
+
+        <div class="x_content"><canvas height="80px" id="lineChart"></canvas></div>
+      </div>
+    </div>
+
+    <div class="clearfix">&nbsp;</div>
+  </div>
+
 </div>
 
 <!-- Mini Pie -->
 <script>
-    //Tooltip
+  //Tooltip
 
-    YUI().use('aui-tooltip', function (Y) {
-        new Y.Tooltip({
-            trigger: '.tooltip-test',
-            position: 'right',
-            'font-size': '30px;'
-        }).render();
-    });
+  YUI().use('aui-tooltip', function (Y) {
+    new Y.Tooltip({
+      trigger: '.tooltip-test',
+      position: 'right',
+      'font-size': '30px;'
+    }).render();
+  });
 
 //Tooltip
 //	    AUI().ready('aui-tooltip', 'aui-io-plugin', function(A) {
@@ -522,172 +573,172 @@
 </script>
 
 <script>
-    var theme = {
-        color: [
-            '#1adbbb', '#9B59B6', '#9B59B6', '#3498DB',
-            '#9B59B6', '#8abb6f', '#759c6a', '#bfd3b7'
+  var theme = {
+    color: [
+      '#1adbbb', '#9B59B6', '#9B59B6', '#3498DB',
+      '#9B59B6', '#8abb6f', '#759c6a', '#bfd3b7'
 
-        ],
+    ],
 
-        title: {
-            itemGap: 8,
-            textStyle: {
-                fontWeight: 'normal',
-                color: '#408829'
-            }
+    title: {
+      itemGap: 8,
+      textStyle: {
+        fontWeight: 'normal',
+        color: '#408829'
+      }
+    },
+
+    dataRange: {
+      color: ['#1f610a', '#97b58d']
+    },
+
+    toolbox: {
+      color: ['#408829', '#408829', '#408829', '#408829']
+    },
+
+    tooltip: {
+      backgroundColor: 'rgba(0,0,0,0.5)',
+      axisPointer: {
+        type: 'line',
+        lineStyle: {
+          color: '#408829',
+          type: 'dashed'
         },
-
-        dataRange: {
-            color: ['#1f610a', '#97b58d']
+        crossStyle: {
+          color: '#408829'
         },
-
-        toolbox: {
-            color: ['#408829', '#408829', '#408829', '#408829']
-        },
-
-        tooltip: {
-            backgroundColor: 'rgba(0,0,0,0.5)',
-            axisPointer: {
-                type: 'line',
-                lineStyle: {
-                    color: '#408829',
-                    type: 'dashed'
-                },
-                crossStyle: {
-                    color: '#408829'
-                },
-                shadowStyle: {
-                    color: 'rgba(200,200,200,0.3)'
-                }
-            }
+        shadowStyle: {
+          color: 'rgba(200,200,200,0.3)'
         }
+      }
+    }
 
-    };
+  };
 
-    var placeHolderStyle = {
-        normal: {
-            color: 'rgba(0,0,0,0)',
-            label: {
-                show: false
-            },
-            labelLine: {
-                show: false
-            }
+  var placeHolderStyle = {
+    normal: {
+      color: 'rgba(0,0,0,0)',
+      label: {
+        show: false
+      },
+      labelLine: {
+        show: false
+      }
+    },
+    emphasis: {
+      color: 'rgba(0,0,0,0)'
+    }
+  };
+
+  var dataStyle = {
+    normal: {
+      label: {
+        show: false
+      },
+      labelLine: {
+        show: false
+      }
+    }
+  };
+
+  var echartMiniPie = echarts.init(document.getElementById('echart_mini_pie'), theme);
+
+  echartMiniPie.setOption({
+    title: {
+      text: 'Pts Comparison',
+      subtext: '',
+      x: 'center',
+      y: 'center',
+      itemGap: 20,
+      textStyle: {
+        color: 'rgba(30,144,255,0.8)',
+        fontSize: 15,
+        fontWeight: 'bolder'
+      }
+    },
+    tooltip: {
+      show: true,
+      formatter: function (params) {
+        console.log(params);
+        if (params.name !== '')
+          return params.seriesName + " <br/>" + params.name + ":" + params.value + "(" + params.percent + "%)";
+        else
+          return "";
+
+      }
+    },
+    legend: {
+      orient: 'vertical',
+      x: 0.5,
+      y: 0.5,
+      itemGap: 3,
+      data: ['Missed', 'Earned'],
+
+    },
+    toolbox: {
+      show: true,
+      feature: {
+        mark: {
+          show: true
         },
-        emphasis: {
-            color: 'rgba(0,0,0,0)'
+        dataView: {
+          show: false,
+          title: "Text View",
+          lang: [
+            "Text View",
+            "Close",
+            "Refresh",
+          ],
+          readOnly: false
+        },
+        restore: {
+          show: true,
+          title: "Restore"
+        },
+        saveAsImage: {
+          show: true,
+          title: "Save Image"
         }
-    };
-
-    var dataStyle = {
-        normal: {
-            label: {
-                show: false
-            },
-            labelLine: {
-                show: false
-            }
-        }
-    };
-
-    var echartMiniPie = echarts.init(document.getElementById('echart_mini_pie'), theme);
-
-    echartMiniPie.setOption({
-        title: {
-            text: 'Pts Comparison',
-            subtext: '',
-            x: 'center',
-            y: 'center',
-            itemGap: 20,
-            textStyle: {
-                color: 'rgba(30,144,255,0.8)',
-                fontSize: 15,
-                fontWeight: 'bolder'
-            }
-        },
-        tooltip: {
-            show: true,
-            formatter: function (params) {
-                console.log(params);
-                if (params.name !== '')
-                    return params.seriesName + " <br/>" + params.name + ":" + params.value + "(" + params.percent + "%)";
-                else
-                    return "";
-
-            }
-        },
-        legend: {
-            orient: 'vertical',
-            x: 0.5,
-            y: 0.5,
-            itemGap: 3,
-            data: ['Missed', 'Earned'],
-
-        },
-        toolbox: {
-            show: true,
-            feature: {
-                mark: {
-                    show: true
-                },
-                dataView: {
-                    show: false,
-                    title: "Text View",
-                    lang: [
-                        "Text View",
-                        "Close",
-                        "Refresh",
-                    ],
-                    readOnly: false
-                },
-                restore: {
-                    show: true,
-                    title: "Restore"
-                },
-                saveAsImage: {
-                    show: true,
-                    title: "Save Image"
-                }
-            }
-        },
-        series: [{
-            name: '1',
-            type: 'pie',
-            clockWise: false,
-            radius: [105, 130],
-            itemStyle: dataStyle,
-            data: [{
-                value: 68,
-                name: 'Missed'
-            }, {
-                value: 32,
-                name: '',
-                itemStyle: placeHolderStyle
-            }]
-        }, {
-            name: '2',
-            type: 'pie',
-            clockWise: false,
-            radius: [80, 105],
-            itemStyle: dataStyle,
-            data: [{
-                value: 29,
-                name: 'Earned'
-            }, {
-                value: 71,
-                name: '',
-                itemStyle: placeHolderStyle
-            }]
-        }]
-    });
+      }
+    },
+    series: [{
+      name: '1',
+      type: 'pie',
+      clockWise: false,
+      radius: [105, 130],
+      itemStyle: dataStyle,
+      data: [{
+        value: 68,
+        name: 'Missed'
+      }, {
+        value: 32,
+        name: '',
+        itemStyle: placeHolderStyle
+      }]
+    }, {
+      name: '2',
+      type: 'pie',
+      clockWise: false,
+      radius: [80, 105],
+      itemStyle: dataStyle,
+      data: [{
+        value: 29,
+        name: 'Earned'
+      }, {
+        value: 71,
+        name: '',
+        itemStyle: placeHolderStyle
+      }]
+    }]
+  });
 
 </script><!-- /page content -->
 
 <script>
-    window.__define = window.define;
-    window.__require = window.require;
-    window.define = undefined;
-    window.require = undefined;
+  window.__define = window.define;
+  window.__require = window.require;
+  window.define = undefined;
+  window.require = undefined;
 </script><!-- Chart.js -->
 
 <script src="/o/gentelella-theme/vendors/Chart.js/dist/Chart.min.js"></script><!-- gauge.js -->
@@ -711,196 +762,1980 @@
 
 <!-- bootstrap-daterangepicker -->
 <script>
-    window.define = window.__define;
-    window.require = window.__require;
-    window.__define = undefined;
-    window.__require = undefined;
+  window.define = window.__define;
+  window.require = window.__require;
+  window.__define = undefined;
+  window.__require = undefined;
 </script>
 
 <script>
-    Chart.defaults.global.legend = {
-        enabled: false
-    };
+  Chart.defaults.global.legend = {
+    enabled: false
+  };
 
-    // Line chart
-    var ctx = document.getElementById("lineChart");
-    var lineChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11",],
-            datasets: [{
-                label: "Weekly Points",
-                backgroundColor: "rgba(38, 185, 154, 0.31)",
-                borderColor: "rgba(38, 185, 154, 0.7)",
-                pointBorderColor: "rgba(38, 185, 154, 0.7)",
-                pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
-                pointHoverBackgroundColor: "#fff",
-                pointHoverBorderColor: "rgba(220,220,220,1)",
-                pointBorderWidth: 1,
-                data: [131, 874, 366, 539, 200, 785, 227, 490, 1050, 850, 250]
-            }]
-        },
-    });
+  // Line chart
+  var ctx = document.getElementById("lineChart");
+  var lineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11",],
+      datasets: [{
+        label: "Weekly Points",
+        backgroundColor: "rgba(38, 185, 154, 0.31)",
+        borderColor: "rgba(38, 185, 154, 0.7)",
+        pointBorderColor: "rgba(38, 185, 154, 0.7)",
+        pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+        pointHoverBackgroundColor: "#fff",
+        pointHoverBorderColor: "rgba(220,220,220,1)",
+        pointBorderWidth: 1,
+        data: [131, 874, 366, 539, 200, 785, 227, 490, 1050, 850, 250]
+      }]
+    },
+  });
 
 
 
 </script><!-- JQVMap -->
 
 <script>
-    $(document).ready(function () {
-        $('#world-map-gdp').vectorMap({
-            map: 'world_en',
-            backgroundColor: null,
-            color: '#ffffff',
-            hoverOpacity: 0.7,
-            selectedColor: '#666666',
-            enableZoom: true,
-            showTooltip: true,
-            values: sample_data,
-            scaleColors: ['#E6F2F0', '#149B7E'],
-            normalizeFunction: 'polynomial'
-        });
+  $(document).ready(function () {
+    $('#world-map-gdp').vectorMap({
+      map: 'world_en',
+      backgroundColor: null,
+      color: '#ffffff',
+      hoverOpacity: 0.7,
+      selectedColor: '#666666',
+      enableZoom: true,
+      showTooltip: true,
+      values: sample_data,
+      scaleColors: ['#E6F2F0', '#149B7E'],
+      normalizeFunction: 'polynomial'
     });
+  });
 </script><!-- /JQVMap -->
 
 <!-- Skycons -->
 <script>
-    $(document).ready(function () {
-        var icons = new Skycons({
-            "color": "#73879C"
-        }),
-            list = [
-                "clear-day", "clear-night", "partly-cloudy-day",
-                "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-                "fog"
-            ],
-            i;
+  $(document).ready(function () {
+    var icons = new Skycons({
+      "color": "#73879C"
+    }),
+      list = [
+        "clear-day", "clear-night", "partly-cloudy-day",
+        "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+        "fog"
+      ],
+      i;
 
-        for (i = list.length; i--;)
-            icons.set(list[i], list[i]);
+    for (i = list.length; i--;)
+      icons.set(list[i], list[i]);
 
-        icons.play();
-    });
+    icons.play();
+  });
 </script><!-- /Skycons -->
 
 <!-- Doughnut Chart -->
 <script>
-    $(document).ready(function () {
-        var options = {
-            legend: false,
-            responsive: false
-        };
+  $(document).ready(function () {
+    var options = {
+      legend: false,
+      responsive: false
+    };
 
-        new Chart(document.getElementById("canvas1"), {
-            type: 'doughnut',
-            tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-            data: {
-                labels: [
-                    "Core i3",
-                    "Core i5",
-                    "Core i7",
-                    "Core i9",
-                    "Core m3",
-                    "Pentium",
-                    "Xeon"
-                ],
-                datasets: [{
-                    data: [14, 29, 22, 12, 1, 18, 4],
-                    backgroundColor: [
-                        "#BDC3C7",
-                        "#9B59B6",
-                        "#E74C3C",
-                        "#26B99A",
-                        "#26B39A",
-                        "#26F99A",
-                        "#3498DB"
-                    ],
-                    hoverBackgroundColor: [
-                        "#CFD4D8",
-                        "#B370CF",
-                        "#E95E4F",
-                        "#36CAAB",
-                        "#56CAAB",
-                        "#73CAAB",
-                        "#49A9EA"
-                    ]
-                }]
-            },
-            options: options
-        });
+    new Chart(document.getElementById("canvas1"), {
+      type: 'doughnut',
+      tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+      data: {
+        labels: [
+          "Core i3",
+          "Core i5",
+          "Core i7",
+          "Core i9",
+          "Core m3",
+          "Pentium",
+          "Xeon"
+        ],
+        datasets: [{
+          data: [14, 29, 22, 12, 1, 18, 4],
+          backgroundColor: [
+            "#BDC3C7",
+            "#9B59B6",
+            "#E74C3C",
+            "#26B99A",
+            "#26B39A",
+            "#26F99A",
+            "#3498DB"
+          ],
+          hoverBackgroundColor: [
+            "#CFD4D8",
+            "#B370CF",
+            "#E95E4F",
+            "#36CAAB",
+            "#56CAAB",
+            "#73CAAB",
+            "#49A9EA"
+          ]
+        }]
+      },
+      options: options
     });
+  });
 </script><!-- /Doughnut Chart -->
+
+<!-- units outstanding chart -->
+<script>
+  var lineChartsCollection = [
+    // frequency weekly
+    [
+      // range w1
+      {
+        title: 'Weekly: Week 1',
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",],
+        datasets: [
+          {
+            label: "Core i3",
+            backgroundColor: "rgba(189, 195, 199, 0.31)",
+            borderColor: "rgba(189, 195, 199, 0.7)",
+            pointBorderColor: "rgba(189, 195, 199, 0.7)",
+            pointBackgroundColor: "rgba(189, 195, 199, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [11, 74, 66, 139, 300, 685, 287]
+          },
+          {
+            label: "Core i5",
+            backgroundColor: "rgba(155, 89, 182, 0.31)",
+            borderColor: "rgba(155, 89, 182, 0.7)",
+            pointBorderColor: "rgba(155, 89, 182, 0.7)",
+            pointBackgroundColor: "rgba(155, 89, 182, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [111, 174, 166, 139, 200, 585, 387]
+          },
+          {
+            label: "Core i7",
+            backgroundColor: "rgba(231, 76, 60, 0.31)",
+            borderColor: "rgba(231, 76, 60, 0.7)",
+            pointBorderColor: "rgba(231, 76, 60, 0.7)",
+            pointBackgroundColor: "rgba(231, 76, 60, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [218, 4, 626, 319, 220, 855, 871]
+          },
+          {
+            label: "Core i9",
+            backgroundColor: "rgba(38, 185, 154, 0.31)",
+            borderColor: "rgba(38, 185, 154, 0.7)",
+            pointBorderColor: "rgba(38, 185, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [23, 42, 76, 39, 20, 85, 87]
+          },
+          {
+            label: "Core m3",
+            backgroundColor: "rgba(38, 179, 154, 0.31)",
+            borderColor: "rgba(38, 179, 154, 0.7)",
+            pointBorderColor: "rgba(38, 179, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 179, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [305, 459, 101, 220, 307, 799, 54]
+          },
+          {
+            label: "Pentium",
+            backgroundColor: "rgba(38, 249, 154, 0.31)",
+            borderColor: "rgba(38, 249, 154, 0.7)",
+            pointBorderColor: "rgba(38, 249, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 249, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [267, 125, 739, 671, 16, 801, 351]
+          },
+          {
+            label: "Xeon",
+            backgroundColor: "rgba(38, 249, 154, 0.31)",
+            borderColor: "rgba(38, 249, 154, 0.7)",
+            pointBorderColor: "rgba(38, 249, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 249, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [49, 226, 931, 497, 840, 237, 369]
+          }
+        ]
+      },
+      // range w2
+      {
+        title: 'Weekly: Week 2',
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",],
+        datasets: [
+          {
+            label: "Core i3",
+            backgroundColor: "rgba(189, 195, 199, 0.31)",
+            borderColor: "rgba(189, 195, 199, 0.7)",
+            pointBorderColor: "rgba(189, 195, 199, 0.7)",
+            pointBackgroundColor: "rgba(189, 195, 199, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            data: [131, 874, 366, 539, 200, 785, 227]
+          },
+          {
+            label: "Core i5",
+            backgroundColor: "rgba(155, 89, 182, 0.31)",
+            borderColor: "rgba(155, 89, 182, 0.7)",
+            pointBorderColor: "rgba(155, 89, 182, 0.7)",
+            pointBackgroundColor: "rgba(155, 89, 182, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [108, 119, 998, 982, 12, 282, 946]
+          },
+          {
+            label: "Core i7",
+            backgroundColor: "rgba(231, 76, 60, 0.31)",
+            borderColor: "rgba(231, 76, 60, 0.7)",
+            pointBorderColor: "rgba(231, 76, 60, 0.7)",
+            pointBackgroundColor: "rgba(231, 76, 60, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [426, 13, 266, 783, 605, 163, 570]
+          },
+          {
+            label: "Core i9",
+            backgroundColor: "rgba(38, 185, 154, 0.31)",
+            borderColor: "rgba(38, 185, 154, 0.7)",
+            pointBorderColor: "rgba(38, 185, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [242, 158, 923, 755, 737, 260, 978]
+          },
+          {
+            label: "Core m3",
+            backgroundColor: "rgba(38, 179, 154, 0.31)",
+            borderColor: "rgba(38, 179, 154, 0.7)",
+            pointBorderColor: "rgba(38, 179, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 179, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [45, 79, 592, 49, 503, 6, 784]
+          },
+          {
+            label: "Pentium",
+            backgroundColor: "rgba(38, 249, 154, 0.31)",
+            borderColor: "rgba(38, 249, 154, 0.7)",
+            pointBorderColor: "rgba(38, 249, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 249, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [969, 96, 921, 195, 277, 210, 238]
+          },
+          {
+            label: "Xeon",
+            backgroundColor: "rgba(38, 249, 154, 0.31)",
+            borderColor: "rgba(38, 249, 154, 0.7)",
+            pointBorderColor: "rgba(38, 249, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 249, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [791, 842, 93, 304, 888, 363, 697]
+          }
+        ]
+      },
+      // range w3
+      {
+        title: 'Weekly: Week 3',
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",],
+        datasets: [
+          {
+            label: "Core i3",
+            backgroundColor: "rgba(189, 195, 199, 0.31)",
+            borderColor: "rgba(189, 195, 199, 0.7)",
+            pointBorderColor: "rgba(189, 195, 199, 0.7)",
+            pointBackgroundColor: "rgba(189, 195, 199, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            data: [231, 774, 466, 639, 100, 885, 327]
+          },
+          {
+            label: "Core i5",
+            backgroundColor: "rgba(155, 89, 182, 0.31)",
+            borderColor: "rgba(155, 89, 182, 0.7)",
+            pointBorderColor: "rgba(155, 89, 182, 0.7)",
+            pointBackgroundColor: "rgba(155, 89, 182, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [704, 946, 351, 640, 14, 157, 203]
+          },
+          {
+            label: "Core i7",
+            backgroundColor: "rgba(231, 76, 60, 0.31)",
+            borderColor: "rgba(231, 76, 60, 0.7)",
+            pointBorderColor: "rgba(231, 76, 60, 0.7)",
+            pointBackgroundColor: "rgba(231, 76, 60, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [783, 925, 416, 802, 477, 814, 289]
+          },
+          {
+            label: "Core i9",
+            backgroundColor: "rgba(38, 185, 154, 0.31)",
+            borderColor: "rgba(38, 185, 154, 0.7)",
+            pointBorderColor: "rgba(38, 185, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [517, 615, 107, 775, 708, 221, 698]
+          },
+          {
+            label: "Core m3",
+            backgroundColor: "rgba(38, 179, 154, 0.31)",
+            borderColor: "rgba(38, 179, 154, 0.7)",
+            pointBorderColor: "rgba(38, 179, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 179, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [521, 676, 544, 218, 186, 244, 303]
+          },
+          {
+            label: "Pentium",
+            backgroundColor: "rgba(38, 249, 154, 0.31)",
+            borderColor: "rgba(38, 249, 154, 0.7)",
+            pointBorderColor: "rgba(38, 249, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 249, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [349, 891, 890, 451, 660, 885, 545]
+          },
+          {
+            label: "Xeon",
+            backgroundColor: "rgba(38, 249, 154, 0.31)",
+            borderColor: "rgba(38, 249, 154, 0.7)",
+            pointBorderColor: "rgba(38, 249, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 249, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [421, 695, 795, 691, 124, 448, 884]
+          }
+        ]
+      }
+    ],
+    // frequency monthly
+    [
+      // range m1
+      {
+        title: 'Montly: January',
+        labels: ["1.01", "2.01", "3.01", "4.01", "5.01", "6.01", "7.01", "8.01", "9.01", "10.01", "11.01", "12.01", "13.01", "14.01", "15.01", "16.01", "17.01", "18.01", "19.01", "20.01", "21.01", "22.01", "23.01", "24.01", "25.01", "26.01", "27.01", "28.01", "29.01", "30.01", "31.01"],
+        datasets: [
+          {
+            label: "Core i3",
+            backgroundColor: "rgba(38, 185, 154, 0.31)",
+            borderColor: "rgba(38, 185, 154, 0.7)",
+            pointBorderColor: "rgba(38, 185, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            data: [19, 64, 96, 239, 180, 575, 427, 130, 1200, 850, 50, 41, 349, 81, 316, 191, 296, 98, 138, 158, 139, 336, 421, 905, 70, 328, 225, 257, 23, 43, 768]
+          },
+          {
+            label: "Core i5",
+            backgroundColor: "rgba(240, 105, 31, 0.31)",
+            borderColor: "rgba(240, 105, 31, 0.7)",
+            pointBorderColor: "rgba(240, 105, 31, 0.7)",
+            pointBackgroundColor: "rgba(240, 105, 31, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [266, 443, 863, 138, 402, 17, 285, 727, 869, 427, 861, 742, 266, 288, 533, 710, 789, 535, 317, 940, 58, 240, 862, 914, 346, 131, 878, 125, 660, 635, 844]
+          },
+          {
+            label: "Core i7",
+            backgroundColor: "rgba(32, 50, 222, 0.31)",
+            borderColor: "rgba(32, 50, 222, 0.7)",
+            pointBorderColor: "rgba(32, 50, 222, 0.7)",
+            pointBackgroundColor: "rgba(32, 50, 222, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [976, 872, 918, 381, 271, 985, 288, 359, 578, 818, 326, 350, 229, 73, 687, 421, 920, 870, 539, 802, 925, 587, 62, 42, 6, 953, 722, 205, 623, 35, 305]
+          },
+          {
+            label: "Core i9",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [863, 156, 725, 267, 660, 554, 102, 93, 549, 62, 244, 867, 319, 799, 889, 905, 937, 829, 846, 602, 655, 399, 248, 945, 746, 607, 769, 792, 412, 401, 371]
+          },
+          {
+            label: "Core m3",
+            backgroundColor: "rgba(0, 156, 21, 0.31)",
+            borderColor: "rgba(0, 156, 21, 0.7)",
+            pointBorderColor: "rgba(0, 156, 21, 0.7)",
+            pointBackgroundColor: "rgba(0, 156, 21, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [260, 686, 498, 529, 845, 745, 955, 552, 96, 466, 893, 80, 159, 407, 500, 454, 666, 987, 615, 753, 771, 362, 588, 905, 413, 984, 694, 945, 309, 41, 130]
+          },
+          {
+            label: "Pentium",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [590, 698, 941, 833, 724, 609, 578, 173, 39, 229, 462, 451, 977, 77, 780, 245, 413, 590, 308, 258, 27, 487, 494, 530, 917, 211, 119, 219, 491, 201, 216]
+          },
+          {
+            label: "Xeon",
+            backgroundColor: "rgba(240, 105, 31, 0.31)",
+            borderColor: "rgba(240, 105, 31, 0.7)",
+            pointBorderColor: "rgba(240, 105, 31, 0.7)",
+            pointBackgroundColor: "rgba(240, 105, 31, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [751, 191, 702, 20, 231, 696, 749, 400, 739, 93, 394, 812, 455, 438, 34, 311, 527, 176, 818, 697, 666, 288, 625, 960, 438, 405, 517, 40, 943, 181, 935]
+          }
+        ]
+      },
+      // range m2
+      {
+        title: 'Montly: February',
+        labels: ["1.02", "2.02", "3.02", "4.02", "5.02", "6.02", "7.02", "8.02", "9.02", "10.02", "11.02", "12.02", "13.02", "14.02", "15.02", "16.02", "17.02", "18.02", "19.02", "20.02", "21.02", "22.02", "23.02", "24.02", "25.02", "26.02", "27.02", "28.02", ],
+        datasets: [
+          {
+            label: "Core i3",
+            backgroundColor: "rgba(38, 185, 154, 0.31)",
+            borderColor: "rgba(38, 185, 154, 0.7)",
+            pointBorderColor: "rgba(38, 185, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            data: [31, 74, 66, 39, 20, 85, 27, 90, 150, 350, 590, 992, 384, 243, 406, 797, 275, 932, 290, 184, 927, 844, 973, 150, 19, 874, 971, 300]
+          },
+          {
+            label: "Core i5",
+            backgroundColor: "rgba(240, 105, 31, 0.31)",
+            borderColor: "rgba(240, 105, 31, 0.7)",
+            pointBorderColor: "rgba(240, 105, 31, 0.7)",
+            pointBackgroundColor: "rgba(240, 105, 31, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [351, 469, 3, 497, 257, 901, 833, 581, 615, 23, 312, 627, 431, 766, 325, 325, 876, 948, 27, 946, 457, 862, 25, 934, 460, 628, 69, 922]
+          },
+          {
+            label: "Core i7",
+            backgroundColor: "rgba(32, 50, 222, 0.31)",
+            borderColor: "rgba(32, 50, 222, 0.7)",
+            pointBorderColor: "rgba(32, 50, 222, 0.7)",
+            pointBackgroundColor: "rgba(32, 50, 222, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [381, 740, 652, 726, 911, 148, 495, 637, 327, 644, 352, 233, 265, 212, 944, 117, 802, 884, 11, 542, 658, 180, 358, 605, 256, 684, 86, 711]
+          },
+          {
+            label: "Core i9",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [514, 8, 765, 825, 579, 658, 838, 49, 934, 7, 988, 722, 577, 647, 561, 327, 105, 197, 149, 160, 202, 469, 56, 578, 150, 45, 687, 116]
+          },
+          {
+            label: "Core m3",
+            backgroundColor: "rgba(0, 156, 21, 0.31)",
+            borderColor: "rgba(0, 156, 21, 0.7)",
+            pointBorderColor: "rgba(0, 156, 21, 0.7)",
+            pointBackgroundColor: "rgba(0, 156, 21, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [962, 532, 178, 155, 192, 13, 413, 677, 98, 460, 557, 251, 405, 37, 619, 530, 583, 482, 526, 722, 410, 123, 278, 288, 820, 124, 388]
+          },
+          {
+            label: "Pentium",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            
+            data: [808, 243, 466, 508, 309, 396, 256, 257, 912, 948, 882, 571, 758, 834, 782, 363, 402, 146, 522, 6, 415, 820, 28, 195, 775, 89, 707, 902]
+          },
+          {
+            label: "Xeon",
+            backgroundColor: "rgba(240, 105, 31, 0.31)",
+            borderColor: "rgba(240, 105, 31, 0.7)",
+            pointBorderColor: "rgba(240, 105, 31, 0.7)",
+            pointBackgroundColor: "rgba(240, 105, 31, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [76, 690, 889, 233, 758, 298, 258, 817, 392, 374, 86, 827, 343, 414, 186, 100, 200, 128, 588, 636, 612, 695, 103, 733, 914, 695, 381, 912]
+          }
+        ]
+      },
+      // range m3
+      {
+        title: 'Montly: March',
+        labels: ["1.03", "2.03", "3.03", "4.03", "5.03", "6.03", "7.03", "8.03", "9.03", "10.03", "11.03", "12.03", "13.03", "14.03", "15.03", "16.03", "17.03", "18.03", "19.03", "20.03", "21.03", "22.03", "23.03", "24.03", "25.03", "26.03", "27.03", "28.03", "29.03", "30.03", "31.03"],
+        datasets: [
+          {
+            label: "Core i3",
+            backgroundColor: "rgba(38, 185, 154, 0.31)",
+            borderColor: "rgba(38, 185, 154, 0.7)",
+            pointBorderColor: "rgba(38, 185, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            data: [431, 374, 166, 539, 170, 985, 627, 490, 1550, 950, 535, 1800, 872, 137, 224, 60, 966, 942, 160, 328, 4, 374, 301, 247, 858, 829, 574, 366, 284, 839, 145, 362]
+          },
+          {
+            label: "Core i5",
+            backgroundColor: "rgba(240, 105, 31, 0.31)",
+            borderColor: "rgba(240, 105, 31, 0.7)",
+            pointBorderColor: "rgba(240, 105, 31, 0.7)",
+            pointBackgroundColor: "rgba(240, 105, 31, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [531, 699, 824, 160, 342, 312, 920, 112, 567, 409, 513, 404, 282, 477, 957, 254, 763, 68, 964, 318, 144, 532, 246, 952, 493, 139, 897, 450, 418, 471, 914, 418]
+          },
+          {
+            label: "Core i7",
+            backgroundColor: "rgba(32, 50, 222, 0.31)",
+            borderColor: "rgba(32, 50, 222, 0.7)",
+            pointBorderColor: "rgba(32, 50, 222, 0.7)",
+            pointBackgroundColor: "rgba(32, 50, 222, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [747, 631, 726, 605, 572, 584, 170, 108, 108, 681, 689, 585, 837, 490, 220, 714, 230, 506, 683, 382, 359, 709, 287, 136, 595, 567, 782, 826, 11, 444, 570, 611]
+          },
+          {
+            label: "Core i9",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [416, 413, 995, 73, 41, 684, 945, 423, 397, 436, 962, 354, 136, 282, 272, 270, 582, 432, 703, 637, 973, 683, 268, 730, 731, 514, 290, 807, 720, 826, 498, 756]
+          },
+          {
+            label: "Core m3",
+            backgroundColor: "rgba(0, 156, 21, 0.31)",
+            borderColor: "rgba(0, 156, 21, 0.7)",
+            pointBorderColor: "rgba(0, 156, 21, 0.7)",
+            pointBackgroundColor: "rgba(0, 156, 21, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [325, 176, 789, 95, 264, 782, 470, 569, 689, 335, 387, 742, 473, 330, 839, 816, 36, 761, 202, 758, 91, 718, 639, 396, 515, 540, 558, 935, 700, 847, 820, 149]
+          },
+          {
+            label: "Pentium",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [510, 191, 722, 976, 176, 998, 66, 640, 773, 613, 800, 36, 144, 122, 872, 716, 477, 224, 541, 109, 755, 468, 280, 479, 255, 715, 386, 77, 345, 562, 733, 877]
+          },
+          {
+            label: "Xeon",
+            backgroundColor: "rgba(240, 105, 31, 0.31)",
+            borderColor: "rgba(240, 105, 31, 0.7)",
+            pointBorderColor: "rgba(240, 105, 31, 0.7)",
+            pointBackgroundColor: "rgba(240, 105, 31, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [297, 417, 255, 182, 710, 50, 55, 598, 482, 76, 666, 381, 675, 606, 854, 834, 856, 278, 831, 375, 678, 475, 360, 332, 995, 359, 169, 763, 412, 970, 258]
+          }
+        ]
+      }
+    ],
+    // frequency annual
+    [
+      // range y1
+      {
+        title: 'Annual: 2020',
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",],
+        datasets: [
+          {
+            label: "Core i3",
+            backgroundColor: "rgba(38, 185, 154, 0.31)",
+            borderColor: "rgba(38, 185, 154, 0.7)",
+            pointBorderColor: "rgba(38, 185, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            data: [50, 850, 1200, 130, 457, 552, 180, 239, 96, 64, 19, 597]
+          },
+          {
+            label: "Core i5",
+            backgroundColor: "rgba(240, 105, 31, 0.31)",
+            borderColor: "rgba(240, 105, 31, 0.7)",
+            pointBorderColor: "rgba(240, 105, 31, 0.7)",
+            pointBackgroundColor: "rgba(240, 105, 31, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [402, 980, 141, 376, 753, 640, 741, 847, 912, 942, 92, 178]
+          },
+          {
+            label: "Core i7",
+            backgroundColor: "rgba(32, 50, 222, 0.31)",
+            borderColor: "rgba(32, 50, 222, 0.7)",
+            pointBorderColor: "rgba(32, 50, 222, 0.7)",
+            pointBackgroundColor: "rgba(32, 50, 222, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [352, 186, 819, 326, 595, 199, 441, 573, 887, 917, 759, 502]
+          },
+          {
+            label: "Core i9",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [281, 393, 616, 104, 6, 430, 709, 65, 962, 293, 557, 938]
+          },
+          {
+            label: "Core m3",
+            backgroundColor: "rgba(0, 156, 21, 0.31)",
+            borderColor: "rgba(0, 156, 21, 0.7)",
+            pointBorderColor: "rgba(0, 156, 21, 0.7)",
+            pointBackgroundColor: "rgba(0, 156, 21, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [902, 473, 104, 914, 589, 89, 552, 794, 196, 11, 317, 231]
+          },
+          {
+            label: "Pentium",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [257, 910, 477, 428, 434, 876, 14, 106, 26, 849, 833, 953]
+          },
+          {
+            label: "Xeon",
+            backgroundColor: "rgba(32, 50, 222, 0.31)",
+            borderColor: "rgba(32, 50, 222, 0.7)",
+            pointBorderColor: "rgba(32, 50, 222, 0.7)",
+            pointBackgroundColor: "rgba(32, 50, 222, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [959, 571, 535, 479, 1000, 192, 883, 694, 788, 490, 991, 385]
+          }
+        ]
+      },
+      // range y2
+      {
+        title: 'Annual: 2019',
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",],
+        datasets: [
+          {
+            label: "Core i3",
+            backgroundColor: "rgba(38, 185, 154, 0.31)",
+            borderColor: "rgba(38, 185, 154, 0.7)",
+            pointBorderColor: "rgba(38, 185, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            data: [590, 350, 150, 90, 27, 235, 20, 39, 66, 74, 31, 147]
+          },
+          {
+            label: "Core i5",
+            backgroundColor: "rgba(240, 105, 31, 0.31)",
+            borderColor: "rgba(240, 105, 31, 0.7)",
+            pointBorderColor: "rgba(240, 105, 31, 0.7)",
+            pointBackgroundColor: "rgba(240, 105, 31, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [952, 567, 734, 333, 754, 686, 405, 448, 657, 301, 669, 317]
+          },
+          {
+            label: "Core i7",
+            backgroundColor: "rgba(32, 50, 222, 0.31)",
+            borderColor: "rgba(32, 50, 222, 0.7)",
+            pointBorderColor: "rgba(32, 50, 222, 0.7)",
+            pointBackgroundColor: "rgba(32, 50, 222, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [949, 663, 462, 347, 640, 495, 403, 650, 279, 6, 577, 134]
+          },
+          {
+            label: "Core i9",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [52, 66, 960, 864, 385, 32, 836, 406, 616, 13, 276, 620]
+          },
+          {
+            label: "Core m3",
+            backgroundColor: "rgba(0, 156, 21, 0.31)",
+            borderColor: "rgba(0, 156, 21, 0.7)",
+            pointBorderColor: "rgba(0, 156, 21, 0.7)",
+            pointBackgroundColor: "rgba(0, 156, 21, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [606, 139, 902, 336, 404, 973, 492, 396, 401, 692, 253, 650]
+          },
+          {
+            label: "Pentium",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [975, 463, 243, 378, 367, 607, 754, 697, 420, 287, 87, 544]
+          },
+          {
+            label: "Xeon",
+            backgroundColor: "rgba(32, 50, 222, 0.31)",
+            borderColor: "rgba(32, 50, 222, 0.7)",
+            pointBorderColor: "rgba(32, 50, 222, 0.7)",
+            pointBackgroundColor: "rgba(32, 50, 222, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [678, 526, 451, 639, 75, 596, 885, 247, 32, 800, 366, 631]
+          }
+        ]
+      },
+      // range y3
+      {
+        title: 'Annual: 2018',
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",],
+        datasets: [
+          {
+            label: "Core i3",
+            backgroundColor: "rgba(38, 185, 154, 0.31)",
+            borderColor: "rgba(38, 185, 154, 0.7)",
+            pointBorderColor: "rgba(38, 185, 154, 0.7)",
+            pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            data: [1800, 535, 950, 1550, 490, 627, 985, 170, 539, 166, 374, 431, 537]
+          },
+          {
+            label: "Core i5",
+            backgroundColor: "rgba(240, 105, 31, 0.31)",
+            borderColor: "rgba(240, 105, 31, 0.7)",
+            pointBorderColor: "rgba(240, 105, 31, 0.7)",
+            pointBackgroundColor: "rgba(240, 105, 31, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [70, 617, 843, 833, 734, 922, 411, 383, 537, 932, 570, 623, 443]
+          },
+          {
+            label: "Core i7",
+            backgroundColor: "rgba(32, 50, 222, 0.31)",
+            borderColor: "rgba(32, 50, 222, 0.7)",
+            pointBorderColor: "rgba(32, 50, 222, 0.7)",
+            pointBackgroundColor: "rgba(32, 50, 222, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [105, 326, 565, 262, 996, 597, 272, 191, 180, 688, 627, 642, 171]
+          },
+          {
+            label: "Core i9",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [692, 659, 702, 86, 533, 294, 122, 267, 634, 537, 219, 412, 749]
+          },
+          {
+            label: "Core m3",
+            backgroundColor: "rgba(0, 156, 21, 0.31)",
+            borderColor: "rgba(0, 156, 21, 0.7)",
+            pointBorderColor: "rgba(0, 156, 21, 0.7)",
+            pointBackgroundColor: "rgba(0, 156, 21, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [79, 640, 613, 302, 919, 18, 377, 455, 33, 948, 139, 211, 945]
+          },
+          {
+            label: "Pentium",
+            backgroundColor: "rgba(248, 6, 10, 0.31)",
+            borderColor: "rgba(248, 6, 10, 0.7)",
+            pointBorderColor: "rgba(248, 6, 10, 0.7)",
+            pointBackgroundColor: "rgba(248, 6, 10, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [24, 274, 323, 35, 36, 818, 326, 283, 811, 841, 137, 310, 317]
+          },
+          {
+            label: "Xeon",
+            backgroundColor: "rgba(32, 50, 222, 0.31)",
+            borderColor: "rgba(32, 50, 222, 0.7)",
+            pointBorderColor: "rgba(32, 50, 222, 0.7)",
+            pointBackgroundColor: "rgba(32, 50, 222, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [214, 439, 536, 528, 507, 398, 739, 188, 464, 965, 778, 583]
+          }
+        ]
+      }
+    ],
+  ];
+
+  // Line chart day i3
+  var ctx = document.getElementById("lineChart");
+  var lineChartBrand = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [],
+      datasets: [
+        {
+          label: "Core i3",
+          backgroundColor: "rgba(189, 195, 199, 0.31)",
+          borderColor: "rgba(189, 195, 199, 0.7)",
+          pointBorderColor: "rgba(189, 195, 199, 0.7)",
+          pointBackgroundColor: "rgba(189, 195, 199, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Core i5",
+          backgroundColor: "rgba(155, 89, 182, 0.31)",
+          borderColor: "rgba(155, 89, 182, 0.7)",
+          pointBorderColor: "rgba(155, 89, 182, 0.7)",
+          pointBackgroundColor: "rgba(155, 89, 182, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Core i7",
+          backgroundColor: "rgba(231, 76, 60, 0.31)",
+          borderColor: "rgba(231, 76, 60, 0.7)",
+          pointBorderColor: "rgba(231, 76, 60, 0.7)",
+          pointBackgroundColor: "rgba(231, 76, 60, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Core i9",
+          backgroundColor: "rgba(38, 185, 154, 0.31)",
+          borderColor: "rgba(38, 185, 154, 0.7)",
+          pointBorderColor: "rgba(38, 185, 154, 0.7)",
+          pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Core m3",
+          backgroundColor: "rgba(38, 179, 154, 0.31)",
+          borderColor: "rgba(38, 179, 154, 0.7)",
+          pointBorderColor: "rgba(38, 179, 154, 0.7)",
+          pointBackgroundColor: "rgba(38, 179, 154, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Pentium",
+          backgroundColor: "rgba(38, 249, 154, 0.31)",
+          borderColor: "rgba(38, 249, 154, 0.7)",
+          pointBorderColor: "rgba(38, 249, 154, 0.7)",
+          pointBackgroundColor: "rgba(38, 249, 154, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Xeon",
+          backgroundColor: "rgba(52, 152, 219, 0.31)",
+          borderColor: "rgba(52, 152, 219, 0.7)",
+          pointBorderColor: "rgba(52, 152, 219, 0.7)",
+          pointBackgroundColor: "rgba(52, 152, 219, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        }
+      ]
+    },
+  });
+</script>
+<!-- end units oustanding chart -->
 
 <!-- bootstrap-daterangepicker -->
 <script>
-    $(document).ready(function () {
+  $(document).ready(function () {
 
-        var cb = function (start, end, label) {
-            console.log(start.toISOString(), end.toISOString(), label);
-            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-        };
+    var cb = function (start, end, label) {
+      console.log(start.toISOString(), end.toISOString(), label);
+      $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    };
 
-        var optionSet1 = {
-            startDate: moment().subtract(29, 'days'),
-            endDate: moment(),
-            minDate: '01/10/2019',
-            maxDate: '12/31/2020',
-            dateLimit: {
-                days: 60
-            },
-            showDropdowns: true,
-            showWeekNumbers: true,
-            timePicker: false,
-            timePickerIncrement: 1,
-            timePicker12Hour: true,
-            ranges: {
-                'Today': [moment(), moment()],
-                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                'This Month': [moment().startOf('month'), moment().endOf('month')],
-                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-            },
-            opens: 'left',
-            buttonClasses: ['btn btn-default'],
-            applyClass: 'btn-small btn-primary',
-            cancelClass: 'btn-small',
-            format: 'MM/DD/YYYY',
-            separator: ' to ',
-            locale: {
-                applyLabel: 'Submit',
-                cancelLabel: 'Clear',
-                fromLabel: 'From',
-                toLabel: 'To',
-                customRangeLabel: 'Custom',
-                daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-                monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                firstDay: 1
-            }
-        };
-        $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
-        $('#reportrange').daterangepicker(optionSet1, cb);
-        $('#reportrange').on('show.daterangepicker', function () {
-            console.log("show event fired");
-        });
-        $('#reportrange').on('hide.daterangepicker', function () {
-            console.log("hide event fired");
-        });
-        $('#reportrange').on('apply.daterangepicker', function (ev, picker) {
-            console.log("apply event fired, start/end dates are " + picker.startDate.format('MMMM D, YYYY') + " to " + picker.endDate.format('MMMM D, YYYY'));
-        });
-        $('#reportrange').on('cancel.daterangepicker', function (ev, picker) {
-            console.log("cancel event fired");
-        });
-        $('#options1').click(function () {
-            $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
-        });
-        $('#options2').click(function () {
-            $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
-        });
-        $('#destroy').click(function () {
-            $('#reportrange').data('daterangepicker').remove();
-        });
+    var optionSet1 = {
+      startDate: moment().subtract(29, 'days'),
+      endDate: moment(),
+      minDate: '01/10/2019',
+      maxDate: '12/31/2020',
+      dateLimit: {
+        days: 60
+      },
+      showDropdowns: true,
+      showWeekNumbers: true,
+      timePicker: false,
+      timePickerIncrement: 1,
+      timePicker12Hour: true,
+      ranges: {
+        'Today': [moment(), moment()],
+        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+        'This Month': [moment().startOf('month'), moment().endOf('month')],
+        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+      },
+      opens: 'left',
+      buttonClasses: ['btn btn-default'],
+      applyClass: 'btn-small btn-primary',
+      cancelClass: 'btn-small',
+      format: 'MM/DD/YYYY',
+      separator: ' to ',
+      locale: {
+        applyLabel: 'Submit',
+        cancelLabel: 'Clear',
+        fromLabel: 'From',
+        toLabel: 'To',
+        customRangeLabel: 'Custom',
+        daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+        monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        firstDay: 1
+      }
+    };
+    $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+    $('#reportrange').daterangepicker(optionSet1, cb);
+    $('#reportrange').on('show.daterangepicker', function () {
+      console.log("show event fired");
     });
+    $('#reportrange').on('hide.daterangepicker', function () {
+      console.log("hide event fired");
+    });
+    $('#reportrange').on('apply.daterangepicker', function (ev, picker) {
+      console.log("apply event fired, start/end dates are " + picker.startDate.format('MMMM D, YYYY') + " to " + picker.endDate.format('MMMM D, YYYY'));
+    });
+    $('#reportrange').on('cancel.daterangepicker', function (ev, picker) {
+      console.log("cancel event fired");
+    });
+    $('#options1').click(function () {
+      $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
+    });
+    $('#options2').click(function () {
+      $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
+    });
+    $('#destroy').click(function () {
+      $('#reportrange').data('daterangepicker').remove();
+    });
+  });
 </script><!-- /bootstrap-daterangepicker -->
 <!-- gauge.js -->
+
+<script>
+  function chooseRadioButtons() {
+    $('#dash_ratio_container .radio_label').on('click', function (event) {
+      var val = $(this).find('input').val();
+      $("#points_to_earn_hidden_combobox").addClass("hide");
+      $("#points_to_earn_category_combobox").addClass("hide");
+      $("#points_to_earn_vendor_dropdownmenu").addClass("hide");
+      $("#points_to_date_category_combobox").removeClass("hide");
+      $("#points_to_date_freq_combobox").removeClass("hide");
+      $("#points_to_date_vendor_combobox").removeClass("hide");
+      // hideAllCharts();
+      // selectDashboardChart();
+      console.log('render default');
+
+      if (val == 'PTD') {
+        $("#points_to_earn_hidden_combobox").addClass("hide");
+        $("#points_to_earn_category_combobox").addClass("hide");
+        $("#points_to_earn_vendor_dropdownmenu").addClass("hide");
+        $("#points_to_date_category_combobox").removeClass("hide");
+        $("#points_to_date_freq_combobox").removeClass("hide");
+        $("#points_to_date_vendor_combobox").removeClass("hide");
+        $("#brand_date_point_vendor_chooser").val("1");
+        $("#brand_date_point_activity_graph").val("1");
+        $("#freq_point_activity_graph2").val("1");
+        // hideAllCharts();
+        // selectDashboardChart();
+        console.log('render PTD');
+      }
+      if (val == 'PTE') {
+        $("#points_to_earn_hidden_combobox").removeClass("hide");
+        $("#points_to_earn_category_combobox").removeClass("hide");
+        $("#points_to_earn_vendor_dropdownmenu").removeClass("hide");
+        $("#points_to_date_category_combobox").addClass("hide");
+        $("#points_to_date_freq_combobox").addClass("hide");
+        $("#points_to_date_vendor_combobox").addClass("hide");
+        $("#earn_point_vendor_chooser").val("1");
+        $("#earn_point_activity_graph").val("1");
+        // hideAllCharts();
+        // selectEarnBarChart();
+        console.log('render PTE');
+      }
+    });
+  };
+
+  function hideAllCharts() {
+    hideChartCat1Vend1();
+    hideChartCat1Vend2();
+    hideChartCat1();
+    // hideChartCat2();
+    // hideChartCat3();
+    // hideChartCat4();
+    // hideChartCat5();
+    // hideChartCat6();
+    // hideChartCat7();
+    hideEarnBarChartCat1();
+    hideEarnBarChartCat2();
+    hideEarnBarChartCat3();
+    hideEarnBarChartCat4();
+    hideEarnBarChartCat5();
+    hideEarnBarChartCat6();
+    hideEarnBarChartCat7();
+    console.log('hide all charts fn');
+  }
+
+  function selectEarnBarChart() {
+    //hide other charts except graph1
+    hideAllCharts();
+    $("#earn_graph_i3").removeClass("hide");
+    $("#earn_graph_i3").show();
+  };
+
+  function hideEarnBarChartCat1() {
+    $("#earn_graph_i3").addClass("hide");
+  };
+
+  function selectEarnBarChart2() {
+    hideAllCharts();
+    $("#earn_graph_i5").removeClass("hide");
+    $("#earn_graph_i5").show();
+  };
+
+  function hideEarnBarChartCat2() {
+    $("#earn_graph_i5").addClass("hide");
+  };
+
+  function selectEarnBarChart3() {
+    hideAllCharts();
+    $("#earn_graph_i7").removeClass("hide");
+    $("#earn_graph_i7").show();
+  };
+
+  function hideEarnBarChartCat3() {
+    $("#earn_graph_i7").addClass("hide");
+  };
+
+  function selectEarnBarChart4() {
+    hideAllCharts();
+    $("#earn_graph_i9").removeClass("hide");
+    $("#earn_graph_i9").show();
+  };
+
+  function hideEarnBarChartCat4() {
+    $("#earn_graph_i9").addClass("hide");
+  };
+
+  function selectEarnBarChart5() {
+    hideAllCharts();
+    $("#earn_graph_m3").removeClass("hide");
+    $("#earn_graph_m3").show();
+  };
+
+  function hideEarnBarChartCat5() {
+    $("#earn_graph_m3").addClass("hide");
+  };
+
+  function selectEarnBarChart6() {
+    hideAllCharts();
+    $("#earn_graph_pen").removeClass("hide");
+    $("#earn_graph_pen").show();
+  };
+
+  function hideEarnBarChartCat6() {
+    $("#earn_graph_pen").addClass("hide");
+  };
+
+  function selectEarnBarChart7() {
+    hideAllCharts();
+    $("#earn_graph_xeon").removeClass("hide");
+    $("#earn_graph_xeon").show();
+  };
+
+  function hideEarnBarChartCat7() {
+    $("#earn_graph_xeon").addClass("hide");
+  };
+
+  function hideRangeCombo() {
+    $('#freq_point_activity_graph2').addClass("hide");
+    $('#freq_month_point_activity_graph2').addClass("hide");
+    $('#freq_annual_point_activity_graph2').addClass("hide");
+  }
+  function initializeSelectedChart() {
+    var selectedFreq = $('#freq_point_activity_graph2').children("option:selected").val();
+    var selectedFreqMonth = $('#freq_month_point_activity_graph2').children("option:selected").val();
+    var selectedFreqYear = $('#freq_annual_point_activity_graph2').children("option:selected").val();
+    var selectedCategory = $('#brand_date_point_activity_graph').children("option:selected").val();
+    var active = [
+      $('#checkBrandDateVend1').is(':checked'),
+      $('#checkBrandDateVend2').is(':checked'),
+      $('#checkBrandDateVend3').is(':checked'),
+      $('#checkBrandDateVend4').is(':checked'),
+      $('#checkBrandDateVend5').is(':checked'),
+      $('#checkBrandDateVend6').is(':checked'),
+      $('#checkBrandDateVend7').is(':checked'),
+    ];
+
+    hideAllCharts();
+    hideRangeCombo();
+
+    $("#daily_graph_i3").removeClass("hide");
+    $("#daily_graph_i3").show();
+
+    
+    if (selectedCategory == 1) {
+      $('#freq_point_activity_graph2').removeClass("hide");
+      var chartData=lineChartsCollection[selectedCategory - 1][selectedFreq - 1];
+      $('#daily_graph_i3_title').text(chartData.title);
+
+      console.log('show ' + selectedCategory + ' ' + selectedFreq);
+    }
+    if (selectedCategory == 2) {
+      $('#freq_month_point_activity_graph2').removeClass("hide");
+      var chartData=lineChartsCollection[selectedCategory - 1][selectedFreqMonth - 1];
+      $('#daily_graph_i3_title').text(chartData.title);
+
+      console.log('show ' + selectedCategory + ' ' + selectedFreqMonth);
+    }
+    if (selectedCategory == 3) {
+      $('#freq_annual_point_activity_graph2').removeClass("hide");
+      $("#freq_annual_point_activity_graph2").val("1");
+      var chartData=lineChartsCollection[selectedCategory - 1][selectedFreqYear - 1];
+      $('#daily_graph_i3_title').text(chartData.title);
+
+      console.log('show ' + selectedCategory + ' ' + selectedFreqYear);
+    }
+
+   
+    
+
+    lineChartBrand.data.labels.splice(0, lineChartBrand.data.labels.length);
+    for (var i = 0; i < chartData.labels.length; i++) {
+      lineChartBrand.data.labels.push(chartData.labels[i]);
+    }
+
+
+    for (var i = 0; i < lineChartBrand.data.datasets.length; i++) {
+      lineChartBrand.data.datasets[i].data.splice(0, lineChartBrand.data.datasets[i].data.length);
+      if (active[i]) {
+        for (var j = 0; j < chartData.datasets[i].data.length; j++) {
+          lineChartBrand.data.datasets[i].data.push(chartData.datasets[i].data[j]);
+        }
+      }
+    }
+
+    lineChartBrand.update();
+    console.log('update chart_auto function');
+    console.log(selectedFreq - 1);
+    console.log(selectedCategory - 1);
+    console.log(selectedFreqMonth - 1);
+    console.log(selectedFreqYear - 1);
+  }
+
+  function selectDashboardChart() {
+    //hide other charts except graph1
+    initializeSelectedChart();
+    $("select#freq_point_activity_graph2").change(initializeSelectedChart);
+    $("select#freq_month_point_activity_graph2").change(initializeSelectedChart);
+    $("select#freq_annual_point_activity_graph2").change(initializeSelectedChart);
+    console.log('selectDashboardChart depands on range');
+  };
+
+  function hideChartCat1() {
+    //hide chart1
+    $("#daily_graph_i3").addClass("hide");
+
+  };
+
+  function selectDashboardChartVend1() {
+    //hide other charts except graph1
+    $("#no_chart_page").addClass("hide");
+    $("#daily_graph_i3_v1").removeClass("hide");
+    $("#weekly_graph_i3_v1").addClass("hide");
+    $("#monthly_graph_i3_v1").addClass("hide");
+    $("#daily_graph_i3_v1").show();
+
+    $("select#freq_point_activity_graph2").change(function () {
+      var selectedFreq = $(this).children("option:selected").val();
+      hideAllCharts();
+
+      if (selectedFreq == 1) {
+        $("#daily_graph_i3_v1").removeClass("hide");
+        $("#weekly_graph_i3_v1").addClass("hide");
+        $("#monthly_graph_i3_v1").addClass("hide");
+        $("#daily_graph_i3_v1").show();
+      }
+      if (selectedFreq == 2) {
+        $("#daily_graph_i3_v1").addClass("hide");
+        $("#weekly_graph_i3_v1").removeClass("hide");
+        $("#monthly_graph_i3_v1").addClass("hide");
+        $("#weekly_graph_i3_v1").show();
+      }
+      if (selectedFreq == 3) {
+        $("#daily_graph_i3_v1").addClass("hide");
+        $("#weekly_graph_i3_v1").addClass("hide");
+        $("#monthly_graph_i3_v1").removeClass("hide");
+        $("#monthly_graph_i3_v1").show();
+      }
+    });
+  };
+
+  function hideChartCat1Vend1() {
+    //hide chart1
+    $("#daily_graph_i3_v1").addClass("hide");
+    $("#weekly_graph_i3_v1").addClass("hide");
+    $("#monthly_graph_i3_v1").addClass("hide");
+  };
+
+  function selectDashboardChartVend2() {
+    //hide other charts except graph1
+    $("#no_chart_page").addClass("hide");
+    $("#daily_graph_i3_v2").removeClass("hide");
+    $("#weekly_graph_i3_v2").addClass("hide");
+    $("#monthly_graph_i3_v2").addClass("hide");
+    $("#daily_graph_i3_v2").show();
+
+    $("select#freq_point_activity_graph2").change(function () {
+      var selectedFreq = $(this).children("option:selected").val();
+      hideAllCharts();
+
+      if (selectedFreq == 1) {
+        $("#no_chart_page").addClass("hide");
+        $("#daily_graph_i3_v2").removeClass("hide");
+        $("#weekly_graph_i3_v2").addClass("hide");
+        $("#monthly_graph_i3_v2").addClass("hide");
+        $("#daily_graph_i3_v2").show();
+      }
+      if (selectedFreq == 2) {
+        $("#no_chart_page").addClass("hide");
+        $("#daily_graph_i3_v2").addClass("hide");
+        $("#weekly_graph_i3_v2").removeClass("hide");
+        $("#monthly_graph_i3_v2").addClass("hide");
+        $("#weekly_graph_i3_v2").show();
+      }
+      if (selectedFreq == 3) {
+        $("#no_chart_page").addClass("hide");
+        $("#daily_graph_i3_v2").addClass("hide");
+        $("#weekly_graph_i3_v2").addClass("hide");
+        $("#monthly_graph_i3_v2").removeClass("hide");
+        $("#monthly_graph_i3_v2").show();
+      }
+    });
+  };
+
+  function hideChartCat1Vend2() {
+    $("#daily_graph_i3_v2").addClass("hide");
+    $("#weekly_graph_i3_v2").addClass("hide");
+    $("#monthly_graph_i3_v2").addClass("hide");
+  };
+
+  function selectCategoryPerEarn() {
+    $("select#earn_point_activity_graph").change(function () {
+      var selectedCat = $(this).children("option:selected").val();
+      // $("#freq_point_activity_graph2").val("1");
+      hideAllCharts();
+      chooseEarnVendorChbx();
+
+      if (selectedCat == 1) {
+        selectEarnBarChart();
+        chooseEarnVendorChbx();
+        console.log("selectedCat " + selectedCat);
+      }
+      else if (selectedCat == 2) {
+        selectEarnBarChart2();
+        chooseEarnVendorChbx2();
+        console.log("selectedCat " + selectedCat);
+      }
+      else if (selectedCat == 3) {
+        selectEarnBarChart3();
+        chooseEarnVendorChbx3();
+        console.log("selectedCat " + selectedCat);
+      }
+      else if (selectedCat == 4) {
+        selectEarnBarChart4();
+        chooseEarnVendorChbx4();
+        console.log("selectedCat " + selectedCat);
+      }
+      else if (selectedCat == 5) {
+        selectEarnBarChart5();
+        chooseEarnVendorChbx5();
+        console.log("selectedCat " + selectedCat);
+      }
+      else if (selectedCat == 6) {
+        selectEarnBarChart6();
+        chooseEarnVendorChbx6();
+        console.log("selectedCat " + selectedCat);
+      }
+      else if (selectedCat == 7) {
+        selectEarnBarChart7();
+        chooseEarnVendorChbx7();
+        console.log("selectedCat " + selectedCat);
+      }
+    });
+  };
+
+  function selectCategoryPerDate() {
+    $("select#brand_date_point_activity_graph").change(function () {
+      var selectedFreq = $(this).children("option:selected").val();
+      $("#freq_point_activity_graph2").val("1");
+      hideAllCharts();
+      chooseEarnVendorChbxNew();
+      initializeSelectedChart();
+
+    });
+  };
+
+  function selectVendorBrand() {
+    $("#daily_graph_i3").removeClass("hide");
+    $("#weekly_graph_i3").addClass("hide");
+    $("#monthly_graph_i3").addClass("hide");
+    $("#daily_graph_i3").show();
+
+    $("select#brand_date_point_vendor_chooser").change(function () {
+      var selectedFreq = $(this).children("option:selected").val();
+      $("#freq_point_activity_graph2").val("1");
+      $("#brand_date_point_activity_graph").val("1");
+      hideAllCharts();
+
+      if (selectedFreq == 1) {
+        selectDashboardChart();
+      }
+      else if (selectedFreq == 2) {
+        selectDashboardChartVend1();
+      }
+      else if (selectedFreq == 3) {
+        selectDashboardChartVend2();
+      }
+      else if (selectedFreq == 4) {
+        selectDashboardChart();
+      }
+      else if (selectedFreq == 5) {
+        selectDashboardChartVend1();
+      }
+      else if (selectedFreq == 6) {
+        selectDashboardChartVend2();
+      }
+    });
+  };
+
+  function updateEarnVendors() {
+    var active = [
+      $('#checkVend1').is(':checked'),
+      $('#checkVend2').is(':checked'),
+      $('#checkVend3').is(':checked'),
+      $('#checkVend4').is(':checked'),
+      $('#checkVend5').is(':checked'),
+      $('#checkVend6').is(':checked'),
+      $('#checkVend7').is(':checked'),
+    ];
+    updateDatasetBC(active, earnVendorsData);
+    console.log($(this).attr('id') + $(this).is(":checked"));
+  }
+
+  function updateEarnVendors2() {
+    var active = [
+      $('#checkVend1').is(':checked'),
+      $('#checkVend2').is(':checked'),
+      $('#checkVend3').is(':checked'),
+      $('#checkVend4').is(':checked'),
+      $('#checkVend5').is(':checked'),
+      $('#checkVend6').is(':checked'),
+      $('#checkVend7').is(':checked'),
+    ];
+    updateDatasetBC2(active, earnVendorsData2);
+    console.log($(this).attr('id') + $(this).is(":checked"));
+  }
+
+  function updateEarnVendors3() {
+    var active = [
+      $('#checkVend1').is(':checked'),
+      $('#checkVend2').is(':checked'),
+      $('#checkVend3').is(':checked'),
+      $('#checkVend4').is(':checked'),
+      $('#checkVend5').is(':checked'),
+      $('#checkVend6').is(':checked'),
+      $('#checkVend7').is(':checked'),
+    ];
+    updateDatasetBC3(active, earnVendorsData3);
+    console.log($(this).attr('id') + $(this).is(":checked"));
+  }
+
+  function updateEarnVendors4() {
+    var active = [
+      $('#checkVend1').is(':checked'),
+      $('#checkVend2').is(':checked'),
+      $('#checkVend3').is(':checked'),
+      $('#checkVend4').is(':checked'),
+      $('#checkVend5').is(':checked'),
+      $('#checkVend6').is(':checked'),
+      $('#checkVend7').is(':checked'),
+    ];
+    updateDatasetBC4(active, earnVendorsData4);
+    console.log($(this).attr('id') + $(this).is(":checked"));
+  }
+
+  function updateEarnVendors5() {
+    var active = [
+      $('#checkVend1').is(':checked'),
+      $('#checkVend2').is(':checked'),
+      $('#checkVend3').is(':checked'),
+      $('#checkVend4').is(':checked'),
+      $('#checkVend5').is(':checked'),
+      $('#checkVend6').is(':checked'),
+      $('#checkVend7').is(':checked'),
+    ];
+    updateDatasetBC5(active, earnVendorsData5);
+    console.log($(this).attr('id') + $(this).is(":checked"));
+  }
+
+  function updateEarnVendors6() {
+    var active = [
+      $('#checkVend1').is(':checked'),
+      $('#checkVend2').is(':checked'),
+      $('#checkVend3').is(':checked'),
+      $('#checkVend4').is(':checked'),
+      $('#checkVend5').is(':checked'),
+      $('#checkVend6').is(':checked'),
+      $('#checkVend7').is(':checked'),
+    ];
+    updateDatasetBC6(active, earnVendorsData6);
+    console.log($(this).attr('id') + $(this).is(":checked"));
+  }
+
+  function updateEarnVendors7() {
+    var active = [
+      $('#checkVend1').is(':checked'),
+      $('#checkVend2').is(':checked'),
+      $('#checkVend3').is(':checked'),
+      $('#checkVend4').is(':checked'),
+      $('#checkVend5').is(':checked'),
+      $('#checkVend6').is(':checked'),
+      $('#checkVend7').is(':checked'),
+    ];
+    updateDatasetBC7(active, earnVendorsData7);
+    console.log($(this).attr('id') + $(this).is(":checked"));
+  }
+
+  function updateEarnVendors_new() {
+    var active = [
+      $('#checkBrandDateVend1').is(':checked'),
+      $('#checkBrandDateVend2').is(':checked'),
+      $('#checkBrandDateVend3').is(':checked'),
+      $('#checkBrandDateVend4').is(':checked'),
+      $('#checkBrandDateVend5').is(':checked'),
+      $('#checkBrandDateVend6').is(':checked'),
+      $('#checkBrandDateVend7').is(':checked'),
+    ];
+    updateDatasetBC_New(active, dataBrandVendorsData);
+    console.log($(this).attr('id') + $(this).is(":checked"));
+  }
+
+  function updateBrandVendorsDataWeekI3() {
+    var active = [
+      $('#checkBrandDateVend1').is(':checked'),
+      $('#checkBrandDateVend2').is(':checked'),
+      $('#checkBrandDateVend3').is(':checked'),
+      $('#checkBrandDateVend4').is(':checked'),
+      $('#checkBrandDateVend5').is(':checked'),
+      $('#checkBrandDateVend6').is(':checked'),
+      $('#checkBrandDateVend7').is(':checked'),
+    ];
+    updateDatasetLCBrandWeekI3(active, brandVendorsDataWeekI3);
+    console.log($(this).attr('id') + $(this).is(":checked"));
+  }
+
+  function chooseEarnVendorChbxNew() {
+    $('#date_brand_vendor_dd_menu').on('click', '#checkBrandDateVend1, #checkBrandDateVend2, #checkBrandDateVend3, #checkBrandDateVend4, #checkBrandDateVend5, #checkBrandDateVend6', initializeSelectedChart);
+
+    $('#date_brand_vendor_dd_menu').on('click', '#default_checkBrandDateVend', function () {
+      $('#checkBrandDateVend1').prop('checked', true);
+      $('#checkBrandDateVend2').prop('checked', true);
+      $('#checkBrandDateVend3').prop('checked', true);
+      $('#checkBrandDateVend4').prop('checked', true);
+      $('#checkBrandDateVend5').prop('checked', true);
+      $('#checkBrandDateVend6').prop('checked', true);
+      $('#checkBrandDateVend7').prop('checked', true);
+      initializeSelectedChart();
+
+      console.log('click default_new');
+    });
+
+    $('#date_brand_vendor_dd_menu').on('click', '#default_uncheckBrandDateVend', function () {
+      $('#checkBrandDateVend1').prop('checked', false);
+      $('#checkBrandDateVend2').prop('checked', false);
+      $('#checkBrandDateVend3').prop('checked', false);
+      $('#checkBrandDateVend4').prop('checked', false);
+      $('#checkBrandDateVend5').prop('checked', false);
+      $('#checkBrandDateVend6').prop('checked', false);
+      $('#checkBrandDateVend7').prop('checked', false);
+      initializeSelectedChart();
+
+      console.log('uncheck default settings');
+    });
+  };
+
+  function chooseEarnVendorChbx() {
+    $('#earn_vendor_dd_menu').on('click', '#checkVend1, #checkVend2, #checkVend3, #checkVend4, #checkVend5, #checkVend6', updateEarnVendors);
+
+    $('#earn_vendor_dd_menu').on('click', '#default_checkVend', function () {
+      $('#checkVend1').prop('checked', true);
+      $('#checkVend2').prop('checked', true);
+      $('#checkVend3').prop('checked', true);
+      $('#checkVend4').prop('checked', true);
+      $('#checkVend5').prop('checked', true);
+      $('#checkVend6').prop('checked', true);
+      $('#checkVend7').prop('checked', true);
+      updateEarnVendors();
+      updateEarnVendors2();
+      updateEarnVendors3();
+      updateEarnVendors4();
+      updateEarnVendors5();
+      updateEarnVendors6();
+      updateEarnVendors7();
+      console.log('click default');
+    });
+  };
+
+  function chooseEarnVendorChbx2() {
+    $('#earn_vendor_dd_menu').on('click', '#checkVend1, #checkVend2, #checkVend3, #checkVend4, #checkVend5, #checkVend6', updateEarnVendors2);
+
+    $('#earn_vendor_dd_menu').on('click', '#default_checkVend', function () {
+      $('#checkVend1').prop('checked', true);
+      $('#checkVend2').prop('checked', true);
+      $('#checkVend3').prop('checked', true);
+      $('#checkVend4').prop('checked', true);
+      $('#checkVend5').prop('checked', true);
+      $('#checkVend6').prop('checked', true);
+      $('#checkVend7').prop('checked', true);
+      updateEarnVendors2();
+      console.log('click default');
+    });
+  };
+
+  function chooseEarnVendorChbx3() {
+    $('#earn_vendor_dd_menu').on('click', '#checkVend1, #checkVend2, #checkVend3, #checkVend4, #checkVend5, #checkVend6', updateEarnVendors3);
+
+    $('#earn_vendor_dd_menu').on('click', '#default_checkVend', function () {
+      $('#checkVend1').prop('checked', true);
+      $('#checkVend2').prop('checked', true);
+      $('#checkVend3').prop('checked', true);
+      $('#checkVend4').prop('checked', true);
+      $('#checkVend5').prop('checked', true);
+      $('#checkVend6').prop('checked', true);
+      $('#checkVend7').prop('checked', true);
+      updateEarnVendors3();
+      console.log('click default');
+    });
+  };
+
+  function chooseEarnVendorChbx4() {
+    $('#earn_vendor_dd_menu').on('click', '#checkVend1, #checkVend2, #checkVend3, #checkVend4, #checkVend5, #checkVend6', updateEarnVendors4);
+
+    $('#earn_vendor_dd_menu').on('click', '#default_checkVend', function () {
+      $('#checkVend1').prop('checked', true);
+      $('#checkVend2').prop('checked', true);
+      $('#checkVend3').prop('checked', true);
+      $('#checkVend4').prop('checked', true);
+      $('#checkVend5').prop('checked', true);
+      $('#checkVend6').prop('checked', true);
+      $('#checkVend7').prop('checked', true);
+      updateEarnVendors4();
+      console.log('click default');
+    });
+  };
+
+  function chooseEarnVendorChbx5() {
+    $('#earn_vendor_dd_menu').on('click', '#checkVend1, #checkVend2, #checkVend3, #checkVend4, #checkVend5, #checkVend6', updateEarnVendors5);
+
+    $('#earn_vendor_dd_menu').on('click', '#default_checkVend', function () {
+      $('#checkVend1').prop('checked', true);
+      $('#checkVend2').prop('checked', true);
+      $('#checkVend3').prop('checked', true);
+      $('#checkVend4').prop('checked', true);
+      $('#checkVend5').prop('checked', true);
+      $('#checkVend6').prop('checked', true);
+      $('#checkVend7').prop('checked', true);
+      updateEarnVendors5();
+      console.log('click default');
+    });
+  };
+
+  function chooseEarnVendorChbx6() {
+    $('#earn_vendor_dd_menu').on('click', '#checkVend1, #checkVend2, #checkVend3, #checkVend4, #checkVend5, #checkVend6', updateEarnVendors6);
+
+    $('#earn_vendor_dd_menu').on('click', '#default_checkVend', function () {
+      $('#checkVend1').prop('checked', true);
+      $('#checkVend2').prop('checked', true);
+      $('#checkVend3').prop('checked', true);
+      $('#checkVend4').prop('checked', true);
+      $('#checkVend5').prop('checked', true);
+      $('#checkVend6').prop('checked', true);
+      $('#checkVend7').prop('checked', true);
+      updateEarnVendors6();
+      console.log('click default');
+    });
+  };
+
+  function chooseEarnVendorChbx7() {
+    $('#earn_vendor_dd_menu').on('click', '#checkVend1, #checkVend2, #checkVend3, #checkVend4, #checkVend5, #checkVend6', updateEarnVendors7);
+
+    $('#earn_vendor_dd_menu').on('click', '#default_checkVend', function () {
+      $('#checkVend1').prop('checked', true);
+      $('#checkVend2').prop('checked', true);
+      $('#checkVend3').prop('checked', true);
+      $('#checkVend4').prop('checked', true);
+      $('#checkVend5').prop('checked', true);
+      $('#checkVend6').prop('checked', true);
+      $('#checkVend7').prop('checked', true);
+      updateEarnVendors7();
+      console.log('click default');
+    });
+  };
+
+  function updateDatasetBC(active, earnVendorsData) {
+    barChart.data.labels.splice(0, barChart.data.labels.length);
+    barChart.data.datasets[0].data.splice(0, barChart.data.datasets[0].data.length);
+    barChart.data.datasets[0].backgroundColor.splice(0, barChart.data.datasets[0].backgroundColor.length);
+    barChart.data.datasets[0].borderColor.splice(0, barChart.data.datasets[0].borderColor.length);
+
+    for (var i = 0; i < active.length; i++) {
+      if (active[i]) {
+        barChart.data.labels.push(earnVendorsData.labels[i]);
+        barChart.data.datasets[0].data.push(earnVendorsData.datasets[0].data[i]);
+        barChart.data.datasets[0].backgroundColor.push(earnVendorsData.datasets[0].backgroundColor[i]);
+        barChart.data.datasets[0].borderColor.push(earnVendorsData.datasets[0].borderColor[i]);
+        console.log('update chart' + i);
+      }
+    }
+    barChart.update();
+    console.log('update chart function');
+  }
+
+  function updateDatasetBC2(active, earnVendorsData2) {
+    barChart2.data.labels.splice(0, barChart2.data.labels.length);
+    barChart2.data.datasets[0].data.splice(0, barChart2.data.datasets[0].data.length);
+    barChart2.data.datasets[0].backgroundColor.splice(0, barChart2.data.datasets[0].backgroundColor.length);
+    barChart2.data.datasets[0].borderColor.splice(0, barChart2.data.datasets[0].borderColor.length);
+
+    for (var i = 0; i < active.length; i++) {
+      if (active[i]) {
+        barChart2.data.labels.push(earnVendorsData2.labels[i]);
+        barChart2.data.datasets[0].data.push(earnVendorsData2.datasets[0].data[i]);
+        barChart2.data.datasets[0].backgroundColor.push(earnVendorsData2.datasets[0].backgroundColor[i]);
+        barChart2.data.datasets[0].borderColor.push(earnVendorsData2.datasets[0].borderColor[i]);
+        console.log('update chart2_' + i);
+      }
+    }
+    barChart2.update();
+    console.log('update chart2 function');
+  }
+
+  function updateDatasetBC3(active, earnVendorsData3) {
+    barChart3.data.labels.splice(0, barChart3.data.labels.length);
+    barChart3.data.datasets[0].data.splice(0, barChart3.data.datasets[0].data.length);
+    barChart3.data.datasets[0].backgroundColor.splice(0, barChart3.data.datasets[0].backgroundColor.length);
+    barChart3.data.datasets[0].borderColor.splice(0, barChart3.data.datasets[0].borderColor.length);
+
+    for (var i = 0; i < active.length; i++) {
+      if (active[i]) {
+        barChart3.data.labels.push(earnVendorsData3.labels[i]);
+        barChart3.data.datasets[0].data.push(earnVendorsData3.datasets[0].data[i]);
+        barChart3.data.datasets[0].backgroundColor.push(earnVendorsData3.datasets[0].backgroundColor[i]);
+        barChart3.data.datasets[0].borderColor.push(earnVendorsData3.datasets[0].borderColor[i]);
+        console.log('update chart3_' + i);
+      }
+    }
+    barChart3.update();
+    console.log('update chart3 function');
+  }
+
+  function updateDatasetBC4(active, earnVendorsData4) {
+    barChart4.data.labels.splice(0, barChart4.data.labels.length);
+    barChart4.data.datasets[0].data.splice(0, barChart4.data.datasets[0].data.length);
+    barChart4.data.datasets[0].backgroundColor.splice(0, barChart4.data.datasets[0].backgroundColor.length);
+    barChart4.data.datasets[0].borderColor.splice(0, barChart4.data.datasets[0].borderColor.length);
+
+    for (var i = 0; i < active.length; i++) {
+      if (active[i]) {
+        barChart4.data.labels.push(earnVendorsData4.labels[i]);
+        barChart4.data.datasets[0].data.push(earnVendorsData4.datasets[0].data[i]);
+        barChart4.data.datasets[0].backgroundColor.push(earnVendorsData4.datasets[0].backgroundColor[i]);
+        barChart4.data.datasets[0].borderColor.push(earnVendorsData4.datasets[0].borderColor[i]);
+        console.log('update chart4_' + i);
+      }
+    }
+    barChart4.update();
+    console.log('update chart4 function');
+  }
+
+  function updateDatasetBC5(active, earnVendorsData5) {
+    barChart5.data.labels.splice(0, barChart5.data.labels.length);
+    barChart5.data.datasets[0].data.splice(0, barChart5.data.datasets[0].data.length);
+    barChart5.data.datasets[0].backgroundColor.splice(0, barChart5.data.datasets[0].backgroundColor.length);
+    barChart5.data.datasets[0].borderColor.splice(0, barChart5.data.datasets[0].borderColor.length);
+
+    for (var i = 0; i < active.length; i++) {
+      if (active[i]) {
+        barChart5.data.labels.push(earnVendorsData5.labels[i]);
+        barChart5.data.datasets[0].data.push(earnVendorsData5.datasets[0].data[i]);
+        barChart5.data.datasets[0].backgroundColor.push(earnVendorsData5.datasets[0].backgroundColor[i]);
+        barChart5.data.datasets[0].borderColor.push(earnVendorsData5.datasets[0].borderColor[i]);
+        console.log('update chart5_' + i);
+      }
+    }
+    barChart5.update();
+    console.log('update chart5 function');
+  }
+
+  function updateDatasetBC6(active, earnVendorsData6) {
+    barChart6.data.labels.splice(0, barChart6.data.labels.length);
+    barChart6.data.datasets[0].data.splice(0, barChart6.data.datasets[0].data.length);
+    barChart6.data.datasets[0].backgroundColor.splice(0, barChart6.data.datasets[0].backgroundColor.length);
+    barChart6.data.datasets[0].borderColor.splice(0, barChart6.data.datasets[0].borderColor.length);
+
+    for (var i = 0; i < active.length; i++) {
+      if (active[i]) {
+        barChart6.data.labels.push(earnVendorsData6.labels[i]);
+        barChart6.data.datasets[0].data.push(earnVendorsData6.datasets[0].data[i]);
+        barChart6.data.datasets[0].backgroundColor.push(earnVendorsData6.datasets[0].backgroundColor[i]);
+        barChart6.data.datasets[0].borderColor.push(earnVendorsData6.datasets[0].borderColor[i]);
+        console.log('update chart6_' + i);
+      }
+    }
+    barChart6.update();
+    console.log('update chart6 function');
+  }
+
+  function updateDatasetBC7(active, earnVendorsData7) {
+    barChart7.data.labels.splice(0, barChart7.data.labels.length);
+    barChart7.data.datasets[0].data.splice(0, barChart7.data.datasets[0].data.length);
+    barChart7.data.datasets[0].backgroundColor.splice(0, barChart7.data.datasets[0].backgroundColor.length);
+    barChart7.data.datasets[0].borderColor.splice(0, barChart7.data.datasets[0].borderColor.length);
+
+    for (var i = 0; i < active.length; i++) {
+      if (active[i]) {
+        barChart7.data.labels.push(earnVendorsData7.labels[i]);
+        barChart7.data.datasets[0].data.push(earnVendorsData7.datasets[0].data[i]);
+        barChart7.data.datasets[0].backgroundColor.push(earnVendorsData7.datasets[0].backgroundColor[i]);
+        barChart7.data.datasets[0].borderColor.push(earnVendorsData7.datasets[0].borderColor[i]);
+        console.log('update chart7_' + i);
+      }
+    }
+    barChart7.update();
+    console.log('update chart7 function');
+  }
+
+  function updateDatasetBC_New(active, dataBrandVendorsData) {
+    barChart_new.data.labels.splice(0, barChart_new.data.labels.length);
+    barChart_new.data.datasets[0].data.splice(0, barChart_new.data.datasets[0].data.length);
+    barChart_new.data.datasets[0].backgroundColor.splice(0, barChart_new.data.datasets[0].backgroundColor.length);
+    barChart_new.data.datasets[0].borderColor.splice(0, barChart_new.data.datasets[0].borderColor.length);
+    for (var i = 0; i < active.length; i++) {
+      if (active[i]) {
+        barChart_new.data.labels.push(dataBrandVendorsData.labels[i]);
+        barChart_new.data.datasets[0].data.push(dataBrandVendorsData.datasets[0].data[i]);
+        barChart_new.data.datasets[0].backgroundColor.push(dataBrandVendorsData.datasets[0].backgroundColor[i]);
+        barChart_new.data.datasets[0].borderColor.push(dataBrandVendorsData.datasets[0].borderColor[i]);
+        console.log('update chart_new' + i);
+      }
+    }
+
+    barChart_new.update();
+    console.log('update chart_new function');
+  }
+
+  function updateDatasetLCBrandWeekI3(active, brandVendorsDataWeekI3) {
+    // lineChart_newChart.data.labels.splice(0,lineChart_newChart.data.labels.length);
+    lineChart_newChart.data.datasets[0].data.splice(0, lineChart_newChart.data.datasets[0].data.length);
+    lineChart_newChart.data.datasets[0].backgroundColor.splice(0, lineChart_newChart.data.datasets[0].backgroundColor.length);
+    lineChart_newChart.data.datasets[0].borderColor.splice(0, lineChart_newChart.data.datasets[0].borderColor.length);
+    for (var i = 0; i < active.length; i++) {
+      if (active[i]) {
+        lineChart_newChart.data.labels.push(brandVendorsDataWeekI3.labels[i]);
+        lineChart_newChart.data.datasets[0].data.push(brandVendorsDataWeekI3.datasets[0].data[i]);
+        lineChart_newChart.data.datasets[0].backgroundColor.push(brandVendorsDataWeekI3.datasets[0].backgroundColor[i]);
+        lineChart_newChart.data.datasets[0].borderColor.push(brandVendorsDataWeekI3.datasets[0].borderColor[i]);
+        console.log('update line_chart_new' + i);
+      }
+    }
+
+    lineChart_newChart.update();
+    console.log('update line_chart_new function');
+  }
+
+  $(document).ready(function () {
+    selectEarnBarChart();
+    selectVendorBrand();
+    chooseRadioButtons();
+    chooseEarnVendorChbxNew();
+    chooseEarnVendorChbx();
+    chooseEarnVendorChbx2();
+    chooseEarnVendorChbx3();
+    chooseEarnVendorChbx4();
+    chooseEarnVendorChbx5();
+    chooseEarnVendorChbx6();
+    chooseEarnVendorChbx7();
+    selectCategoryPerEarn();
+    selectCategoryPerDate();
+    hideAllCharts();
+    selectDashboardChart();
+  });
+</script>
