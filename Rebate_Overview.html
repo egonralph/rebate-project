@@ -55,7 +55,7 @@
         <div class="x_content">
           <table class="table table-fixed no_margin_bottom">
             <tbody>
-              <tr class="table_col_30">
+              <tr class="table_col_20">
                 <td class="no_border center">
                   <em>
                     <canvas height="160" id="canvas1" style="margin: 5px 5px 5px 0" width="160"></canvas>
@@ -70,6 +70,7 @@
                         <th class="table_col_10"></th>
                         <th class="table_col_30">Brand</th>
                         <th class="table_col_30">Points</th>
+                        <th class="table_col_30">Units</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -80,6 +81,7 @@
                         </td>
                         <td class="no_border">Core i3</td>
                         <td class="no_border">462</td>
+                        <td class="no_border">14</td>
                       </tr>
                       <tr>
                         <td class="no_border">
@@ -88,6 +90,7 @@
                         </td>
                         <td class="no_border">Core i5</td>
                         <td class="no_border">1419</td>
+                        <td class="no_border">59</td>
                       </tr>
                       <tr>
                         <td class="no_border">
@@ -96,6 +99,7 @@
                         </td>
                         <td class="no_border">Core i7</td>
                         <td class="no_border">1496</td>
+                        <td class="no_border">24</td>
                       </tr>
                       <tr>
                         <td class="no_border">
@@ -104,6 +108,7 @@
                         </td>
                         <td class="no_border">Core i9</td>
                         <td class="no_border">836</td>
+                        <td class="no_border">44</td>
                       </tr>
                       <tr>
                         <td class="no_border">
@@ -112,6 +117,7 @@
                         </td>
                         <td class="no_border">Core m3</td>
                         <td class="no_border">11</td>
+                        <td class="no_border">95</td>
                       </tr>
                       <tr>
                         <td class="no_border">
@@ -120,6 +126,7 @@
                         </td>
                         <td class="no_border">Pentium</td>
                         <td class="no_border">22</td>
+                        <td class="no_border">80</td>
                       </tr>
                       <tr>
                         <td class="no_border">
@@ -128,6 +135,7 @@
                         </td>
                         <td class="no_border">Xeon</td>
                         <td class="no_border">176</td>
+                        <td class="no_border">5</td>
                       </tr>
                     </tbody>
                   </table>
@@ -241,8 +249,10 @@
                   Xeon
                 </label>
               </li>
-              <li class="not-sortable columns-li-padding">
-                <button class="btn btn-primary btn-xs btn-block" id="default_checkVend">Show
+              <li class="not-sortable columns-li-padding dropdown-select-button-content">
+                <button class="btn btn-primary btn-xs btn-block select-category-btn" id="default_checkVend">Select
+                  All</button>
+                <button class="btn btn-primary btn-xs btn-block select-category-btn" id="default_uncheckVend">Unselect
                   All</button>
               </li>
             </ul>
@@ -317,7 +327,7 @@
                   Xeon
                 </label>
               </li>
-              <li class="not-sortable columns-li-padding">
+              <li class="not-sortable columns-li-padding dropdown-select-button-content">
                 <button class="btn btn-primary btn-xs select-category-btn" id="default_checkBrandDateVend">Select
                   All</button>
                 <button class="btn btn-primary btn-xs select-category-btn" id="default_uncheckBrandDateVend">Unselect
@@ -391,7 +401,7 @@
   <!-- endUnits sold section -->
 
   <!-- Units outdtanding section -->
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="x_panel tile fixed_height_360">
         <div class="x_title">
@@ -421,7 +431,6 @@
                   role="progressbar" style="width: 26%;">2550 Left</div>
               </div>
             </div>
-            <!--<div class="w_right w_20"><span>462</span></div>-->
 
             <div class="clearfix">&nbsp;</div>
           </div>
@@ -436,7 +445,6 @@
                     Left</span></div>
               </div>
             </div>
-            <!--<div class="w_right w_20"><span>1419</span></div>-->
 
             <div class="clearfix">&nbsp;</div>
           </div>
@@ -451,7 +459,6 @@
                     Left</span></div>
               </div>
             </div>
-            <!--<div class="w_right w_20"><span>1496</span></div>-->
 
             <div class="clearfix">&nbsp;</div>
           </div>
@@ -466,7 +473,6 @@
                     Left</span></div>
               </div>
             </div>
-            <!--<div class="w_right w_20"><span>836</span></div>-->
 
             <div class="clearfix">&nbsp;</div>
           </div>
@@ -481,7 +487,6 @@
                   </span></div>
               </div>
             </div>
-            <!--<div class="w_right w_20"><span>11</span></div><-->
 
             <div class="clearfix">&nbsp;</div>
           </div>
@@ -496,7 +501,6 @@
                 </div>
               </div>
             </div>
-            <!--<div class="w_right w_20"><span>11</span></div><-->
 
             <div class="clearfix">&nbsp;</div>
           </div>
@@ -511,14 +515,13 @@
                     Left</span></div>
               </div>
             </div>
-            <!--<div class="w_right w_20"><span>11</span></div><-->
 
             <div class="clearfix">&nbsp;</div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Points To Earn per Category -->
   <!--Daily graph cat. i3-->
@@ -542,12 +545,42 @@
           <div class="clearfix">&nbsp;</div>
         </div>
 
-        <div class="x_content"><canvas height="80px" id="lineChart"></canvas></div>
+        <div class="x_content"><canvas height="80px" id="barChartByBrandCollapse"></canvas></div>
       </div>
     </div>
 
     <div class="clearfix">&nbsp;</div>
   </div>
+
+</div>
+
+<!--Daily graph cat. i3 historical-->
+<div class="row" id="daily_graph_i3">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+      <div class="x_title">
+        <h2>Units outstanding <small id="daily_graph_i3_title"></small></h2>
+
+        <ul class="nav navbar-right panel_toolbox">
+          <li>&nbsp;</li>
+          <li class="dropdown">
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Settings 1</a></li>
+              <li><a href="#">Settings 2</a></li>
+            </ul>
+          </li>
+          <li>&nbsp;</li>
+        </ul>
+
+        <div class="clearfix">&nbsp;</div>
+      </div>
+
+      <div class="x_content"><canvas height="80px" id="barChartByBrand"></canvas></div>
+    </div>
+  </div>
+
+  <div class="clearfix">&nbsp;</div>
+</div>
 
 </div>
 
@@ -774,8 +807,8 @@
   };
 
   // Line chart
-  var ctx = document.getElementById("lineChart");
-  var lineChart = new Chart(ctx, {
+  var ctx = document.getElementById("barChartByBrand");
+  var barChartByBrand = new Chart(ctx, {
     type: 'line',
     data: {
       labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11",],
@@ -884,7 +917,7 @@
 
 <!-- units outstanding chart -->
 <script>
-  var lineChartsCollection = [
+  var barChartByBrandsCollection = [
     // frequency weekly
     [
       // range w1
@@ -1033,7 +1066,7 @@
       // range m2
       {
         title: 'Montly: February',
-        labels: ["1.02", "2.02", "3.02", "4.02", "5.02", "6.02", "7.02", "8.02", "9.02", "10.02", "11.02", "12.02", "13.02", "14.02", "15.02", "16.02", "17.02", "18.02", "19.02", "20.02", "21.02", "22.02", "23.02", "24.02", "25.02", "26.02", "27.02", "28.02", ],
+        labels: ["1.02", "2.02", "3.02", "4.02", "5.02", "6.02", "7.02", "8.02", "9.02", "10.02", "11.02", "12.02", "13.02", "14.02", "15.02", "16.02", "17.02", "18.02", "19.02", "20.02", "21.02", "22.02", "23.02", "24.02", "25.02", "26.02", "27.02", "28.02",],
         datasets: [
           {
             label: "Core i3",
@@ -1212,15 +1245,15 @@
   ];
 
   // Line chart day i3
-  var ctx = document.getElementById("lineChart");
-  var lineChartBrand = new Chart(ctx, {
-    type: 'line',
+  var ctx = document.getElementById("barChartByBrandCollapse");
+  var barChartBrand = new Chart(ctx, {
+    type: 'horizontalBar',
     data: {
       labels: [],
       datasets: [
         {
           label: "Core i3",
-          backgroundColor: "rgba(189, 195, 199, 0.31)",
+          backgroundColor: "rgba(189, 195, 199, 1)",
           borderColor: "rgba(189, 195, 199, 0.7)",
           pointBorderColor: "rgba(189, 195, 199, 0.7)",
           pointBackgroundColor: "rgba(189, 195, 199, 0.7)",
@@ -1232,7 +1265,7 @@
         },
         {
           label: "Core i5",
-          backgroundColor: "rgba(155, 89, 182, 0.31)",
+          backgroundColor: "rgba(155, 89, 182, 1)",
           borderColor: "rgba(155, 89, 182, 0.7)",
           pointBorderColor: "rgba(155, 89, 182, 0.7)",
           pointBackgroundColor: "rgba(155, 89, 182, 0.7)",
@@ -1244,7 +1277,7 @@
         },
         {
           label: "Core i7",
-          backgroundColor: "rgba(231, 76, 60, 0.31)",
+          backgroundColor: "rgba(231, 76, 60, 1)",
           borderColor: "rgba(231, 76, 60, 0.7)",
           pointBorderColor: "rgba(231, 76, 60, 0.7)",
           pointBackgroundColor: "rgba(231, 76, 60, 0.7)",
@@ -1256,7 +1289,7 @@
         },
         {
           label: "Core i9",
-          backgroundColor: "rgba(38, 185, 154, 0.31)",
+          backgroundColor: "rgba(38, 185, 154, 1)",
           borderColor: "rgba(38, 185, 154, 0.7)",
           pointBorderColor: "rgba(38, 185, 154, 0.7)",
           pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
@@ -1268,7 +1301,7 @@
         },
         {
           label: "Core m3",
-          backgroundColor: "rgba(38, 179, 154, 0.31)",
+          backgroundColor: "rgba(38, 179, 154, 1)",
           borderColor: "rgba(38, 179, 154, 0.7)",
           pointBorderColor: "rgba(38, 179, 154, 0.7)",
           pointBackgroundColor: "rgba(38, 179, 154, 0.7)",
@@ -1280,7 +1313,7 @@
         },
         {
           label: "Pentium",
-          backgroundColor: "rgba(38, 249, 154, 0.31)",
+          backgroundColor: "rgba(38, 249, 154, 1)",
           borderColor: "rgba(38, 249, 154, 0.7)",
           pointBorderColor: "rgba(38, 249, 154, 0.7)",
           pointBackgroundColor: "rgba(38, 249, 154, 0.7)",
@@ -1292,7 +1325,102 @@
         },
         {
           label: "Xeon",
-          backgroundColor: "rgba(52, 152, 219, 0.31)",
+          backgroundColor: "rgba(52, 152, 219, 1)",
+          borderColor: "rgba(52, 152, 219, 0.7)",
+          pointBorderColor: "rgba(52, 152, 219, 0.7)",
+          pointBackgroundColor: "rgba(52, 152, 219, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        }
+      ]
+    },
+  });
+
+  // Line chart day i3 historical
+  var ctx = document.getElementById("barChartByBrand");
+  var barChartBrand = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [],
+      datasets: [
+        {
+          label: "Core i3",
+          backgroundColor: "rgba(189, 195, 199, 1)",
+          borderColor: "rgba(189, 195, 199, 0.7)",
+          pointBorderColor: "rgba(189, 195, 199, 0.7)",
+          pointBackgroundColor: "rgba(189, 195, 199, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Core i5",
+          backgroundColor: "rgba(155, 89, 182, 1)",
+          borderColor: "rgba(155, 89, 182, 0.7)",
+          pointBorderColor: "rgba(155, 89, 182, 0.7)",
+          pointBackgroundColor: "rgba(155, 89, 182, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Core i7",
+          backgroundColor: "rgba(231, 76, 60, 1)",
+          borderColor: "rgba(231, 76, 60, 0.7)",
+          pointBorderColor: "rgba(231, 76, 60, 0.7)",
+          pointBackgroundColor: "rgba(231, 76, 60, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Core i9",
+          backgroundColor: "rgba(38, 185, 154, 1)",
+          borderColor: "rgba(38, 185, 154, 0.7)",
+          pointBorderColor: "rgba(38, 185, 154, 0.7)",
+          pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Core m3",
+          backgroundColor: "rgba(38, 179, 154, 1)",
+          borderColor: "rgba(38, 179, 154, 0.7)",
+          pointBorderColor: "rgba(38, 179, 154, 0.7)",
+          pointBackgroundColor: "rgba(38, 179, 154, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Pentium",
+          backgroundColor: "rgba(38, 249, 154, 1)",
+          borderColor: "rgba(38, 249, 154, 0.7)",
+          pointBorderColor: "rgba(38, 249, 154, 0.7)",
+          pointBackgroundColor: "rgba(38, 249, 154, 0.7)",
+          pointHoverBackgroundColor: "#fff",
+          pointHoverBorderColor: "rgba(220,220,220,1)",
+          pointBorderWidth: 1,
+          showLine: true,
+          data: []
+        },
+        {
+          label: "Xeon",
+          backgroundColor: "rgba(52, 152, 219, 1)",
           borderColor: "rgba(52, 152, 219, 0.7)",
           pointBorderColor: "rgba(52, 152, 219, 0.7)",
           pointBackgroundColor: "rgba(52, 152, 219, 0.7)",
@@ -1537,49 +1665,64 @@
     $("#daily_graph_i3").removeClass("hide");
     $("#daily_graph_i3").show();
 
-    
+
     if (selectedCategory == 1) {
       $('#freq_point_activity_graph2').removeClass("hide");
-      var chartData=lineChartsCollection[selectedCategory - 1][selectedFreq - 1];
+      var chartData = barChartByBrandsCollection[selectedCategory - 1][selectedFreq - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
       console.log('show ' + selectedCategory + ' ' + selectedFreq);
     }
     if (selectedCategory == 2) {
       $('#freq_month_point_activity_graph2').removeClass("hide");
-      var chartData=lineChartsCollection[selectedCategory - 1][selectedFreqMonth - 1];
+      var chartData = barChartByBrandsCollection[selectedCategory - 1][selectedFreqMonth - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
       console.log('show ' + selectedCategory + ' ' + selectedFreqMonth);
     }
     if (selectedCategory == 3) {
       $('#freq_annual_point_activity_graph2').removeClass("hide");
-      $("#freq_annual_point_activity_graph2").val("1");
-      var chartData=lineChartsCollection[selectedCategory - 1][selectedFreqYear - 1];
+      var chartData = barChartByBrandsCollection[selectedCategory - 1][selectedFreqYear - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
       console.log('show ' + selectedCategory + ' ' + selectedFreqYear);
     }
 
-   
-    
 
-    lineChartBrand.data.labels.splice(0, lineChartBrand.data.labels.length);
+
+
+    barChartBrand.data.labels.splice(0, barChartBrand.data.labels.length);
     for (var i = 0; i < chartData.labels.length; i++) {
-      lineChartBrand.data.labels.push(chartData.labels[i]);
+      barChartBrand.data.labels.push(chartData.labels[i]);
     }
 
 
-    for (var i = 0; i < lineChartBrand.data.datasets.length; i++) {
-      lineChartBrand.data.datasets[i].data.splice(0, lineChartBrand.data.datasets[i].data.length);
+    for (var i = 0; i < barChartBrand.data.datasets.length; i++) {
+      barChartBrand.data.datasets[i].data.splice(0, barChartBrand.data.datasets[i].data.length);
       if (active[i]) {
         for (var j = 0; j < chartData.datasets[i].data.length; j++) {
-          lineChartBrand.data.datasets[i].data.push(chartData.datasets[i].data[j]);
+          barChartBrand.data.datasets[i].data.push(chartData.datasets[i].data[j]);
         }
       }
     }
 
-    lineChartBrand.update();
+    barChartBrandCollapse.data.labels.splice(0, barChartBrandCollapse.data.labels.length);
+    for (var i = 0; i < chartData.labels.length; i++) {
+      barChartBrandCollapse.data.labels.push(chartData.labels[i]);
+    }
+
+
+    for (var i = 0; i < barChartBrandCollapse.data.datasets.length; i++) {
+      barChartBrandCollapse.data.datasets[i].data.splice(0, barChartBrandCollapse.data.datasets[i].data.length);
+      if (active[i]) {
+        for (var j = 0; j < chartData.datasets[i].data.length; j++) {
+          barChartBrandCollapse.data.datasets[i].data.push(chartData.datasets[i].data[j]);
+        }
+      }
+    }
+
+    barChartBrand.update();
+    barChartBrandCollapse.update();
     console.log('update chart_auto function');
     console.log(selectedFreq - 1);
     console.log(selectedCategory - 1);
@@ -1687,7 +1830,6 @@
   function selectCategoryPerEarn() {
     $("select#earn_point_activity_graph").change(function () {
       var selectedCat = $(this).children("option:selected").val();
-      // $("#freq_point_activity_graph2").val("1");
       hideAllCharts();
       chooseEarnVendorChbx();
 
