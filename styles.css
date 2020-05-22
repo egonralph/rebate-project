@@ -205,6 +205,10 @@ html {
 .panel-body-progress-collapse{
     margin-bottom: 2em;
 }
+.panel-collapse-heading{
+    text-align: center;
+    margin-bottom: 2em;
+}
 .panel-collapse-table{
     max-width: 50%;
     margin: 0 auto;
