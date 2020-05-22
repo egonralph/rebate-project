@@ -202,7 +202,13 @@ html {
 .orange {
     color: #f1a50d;
 }
-
+.panel-body-progress-collapse{
+    margin-bottom: 2em;
+}
+.panel-collapse-table{
+    max-width: 50%;
+    margin: 0 auto;
+}
 #points-to-date-by-brand-category-main-chart td {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
