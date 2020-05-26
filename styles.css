@@ -26,6 +26,13 @@ html {
     height: 14px;
 }
 
+.collapse_icon {
+    margin-left: 1em;
+    float: right;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 .columns-li-padding {
     margin-right: 1.5em;
     margin-left: 1.5em;
@@ -140,6 +147,10 @@ html {
     margin-top: 0.5em;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .left_margin_container {
     margin-left: 15px;
 }
@@ -202,17 +213,38 @@ html {
 .orange {
     color: #f1a50d;
 }
-.panel-body-progress-collapse{
-    margin-bottom: 2em;
+
+.overview-panel {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
-.panel-collapse-heading{
+
+.overview-radio-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.panel-body-progress-collapse {
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 5px;
+    padding-left: 0px;
+}
+
+.panel-body-progress-collapse--empty-container {
+    display: block;
+}
+
+.panel-collapse-heading {
     text-align: center;
     margin-bottom: 2em;
 }
-.panel-collapse-table{
-    max-width: 50%;
-    margin: 0 auto;
+
+.panel-collapse-table {
+    max-width: 94%;
 }
+
 #points-to-date-by-brand-category-main-chart td {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -259,6 +291,14 @@ html {
     background-color: #9B59B6;
 }
 
+.radio+.historical-charts, .radio+.checkbox.historical-charts, .radio+.radio-units-charts {
+    margin-top: 10px;
+}
+
+.radio-paragraph {
+    margin-bottom: 0;
+}
+
 .right_margin_container {
     margin-right: 15px;
 }
@@ -298,6 +338,10 @@ html {
     width: 35%;
 }
 
+.table_col_legend_label {
+    width: 40px;
+}
+
 .table-fixed {
     table-layout: fixed;
 }
@@ -325,9 +369,25 @@ html {
 ul.dropdown-menu>li:hover {
     background-color: #eeeeee;
 }
-.widget_summary_width_7{
+
+.widget_summary_width_7 {
     width: 7%;
 }
-.widget_summary_width_93{
+
+.widget_summary_width_93 {
     width: 93%;
+}
+
+.widget_summary--collapse-label:hover, .widget_summary--collapse-label:hover>a {
+    font-weight: 700;
+    color: grey;
+}
+
+.widget_summary_left_panel {
+    width: 85px;
+    margin-right: 1em;
+}
+
+.widget_summary_right_panel {
+    width: 94%;
 }

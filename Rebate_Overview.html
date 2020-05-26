@@ -67,7 +67,7 @@
                     class="table table-hover table-sm table-fixed no_margin_bottom">
                     <thead>
                       <tr>
-                        <th class="table_col_10"></th>
+                        <th class="table_col_legend_label"></th>
                         <th class="table_col_30">Brand</th>
                         <th class="table_col_30">Points</th>
                         <th class="table_col_30">Units</th>
@@ -179,219 +179,31 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="col-xs-12 dashboard_filter_panel dashboard__filter-rebate">
-        <div class="col-md-6 col-sm-6 col-xs-6 dash_ratio_container" id="dash_ratio_container">
-          <div class="radio" id="point_to_earn_radio">
-            <label class="radio_label">
-              <input name="points_chart" type="radio" value="PTE" />
-              Units sold
+        <div class="overview-panel dash_ratio_container" id="dash_ratio_container">
+          <div class="radio overview-radio-panel" id="point_to_earn_radio">
+            <p class="radio-paragraph">
+              <label class="radio_label">
+                <input name="chart_panel" type="radio" value="CPS" />
+                Units sold
+              </label>
+            </p>
+            <p class="radio-paragraph">
+              <label class="radio_label">
+                <input name="chart_panel" type="radio" value="CPO" checked />
+                Units outstanding
+              </label>
+            </p>
+          </div>
+
+          <div class="checkbox historical-charts">
+            <label class="historical-charts--js">
+              <input name="showHistoricChbx" type="checkbox" value="showHistoric" />
+              Show historical charts
             </label>
           </div>
-
-          <div class="radio" id="point_to_date_radio">
-            <label class="radio_label">
-              <input checked="checked" name="points_chart" type="radio" value="PTD" />
-              Units outstanding
-            </label>
-          </div>
         </div>
 
-        <!-- Points To Earn per Category -->
-        <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq half_top_margin hide"
-          id="points_to_earn_vendor_dropdownmenu">
-          <div class="row">
-            <label class="titled_component one_margin_left">Category &nbsp;</label>
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuVendor" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Choose Category
-            </button>
-            <ul class="dropdown-menu" id="earn_vendor_dd_menu">
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend1" checked>
-                <label class="form-check-label" for="checkVend1">
-                  Core i3
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend2" checked>
-                <label class="form-check-label" for="checkVend2">
-                  Core i5
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend3" checked>
-                <label class="form-check-label" for="checkVend3">
-                  Core i7
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend4" checked>
-                <label class="form-check-label" for="checkVend4">
-                  Core i9
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend5" checked>
-                <label class="form-check-label" for="checkVend5">
-                  Core m3
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend6" checked>
-                <label class="form-check-label" for="checkVend6">
-                  Pentium
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend7" checked>
-                <label class="form-check-label" for="checkVend7">
-                  Xeon
-                </label>
-              </li>
-              <li class="not-sortable columns-li-padding dropdown-select-button-content">
-                <button class="btn btn-primary btn-xs btn-block select-category-btn" id="default_checkVend">Select
-                  All</button>
-                <button class="btn btn-primary btn-xs btn-block select-category-btn" id="default_uncheckVend">Unselect
-                  All</button>
-              </li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq hide" id="points_to_earn_category_combobox">
-          <div class="row">
-            <label class="titled_component">Frequency</label>
-          </div>
-          <br>
-          <div class="row">
-            <select class="browser-default custom-select country" id="earn_point_activity_graph">
-              <option value="1">Weekly</option>
-              <option value="2">Monthly</option>
-              <option value="3">Annual</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Points To Date By Brand Category -->
-        <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq" id="points_to_date_vendor_combobox">
-
-          <div class="row block">
-            <label class="titled_component one_margin_left">Category</label>
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle no_wrap" type="button" id="dropdownMenuBrandDateVendor"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Choose Brand
-            </button>
-            <ul class="dropdown-menu" id="date_brand_vendor_dd_menu">
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend1" checked>
-                <label class="form-check-label" for="checkBrandDateVend1">
-                  Core i3
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend2" checked>
-                <label class="form-check-label" for="checkBrandDateVend2">
-                  Core i5
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend3" checked>
-                <label class="form-check-label" for="checkBrandDateVend3">
-                  Core i7
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend4" checked>
-                <label class="form-check-label" for="checkBrandDateVend4">
-                  Core i9
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend5" checked>
-                <label class="form-check-label" for="checkBrandDateVend5">
-                  Core m3
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend6" checked>
-                <label class="form-check-label" for="checkBrandDateVend6">
-                  Pentium
-                </label>
-              </li>
-              <li class="dropdown_list">
-                <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend7" checked>
-                <label class="form-check-label" for="checkBrandDateVend7">
-                  Xeon
-                </label>
-              </li>
-              <li class="not-sortable columns-li-padding dropdown-select-button-content">
-                <button class="btn btn-primary btn-xs select-category-btn" id="default_checkBrandDateVend">Select
-                  All</button>
-                <button class="btn btn-primary btn-xs select-category-btn" id="default_uncheckBrandDateVend">Unselect
-                  All</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq" id="points_to_date_category_combobox">
-          <div class="row">
-            <label class="titled_component">Frequency</label>
-          </div>
-          <br>
-          <div class="row">
-            <select class="browser-default custom-select" id="brand_date_point_activity_graph">
-              <option value="1">Weekly</option>
-              <option value="2">Monthly</option>
-              <option value="3">Annual</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq" id="points_to_date_freq_combobox">
-          <div class="row block">
-            <label class="titled_component">Range</label>
-          </div>
-
-          <div class="row">
-            <!-- if selected as weekly -->
-            <select class="browser-default custom-select" id="freq_point_activity_graph2">
-              <option value="1">Week 1</option>
-              <option value="2">Week 2</option>
-              <option value="3">Week 3</option>
-              <option value="4">Week 4</option>
-              <option value="5">Week 5</option>
-              <option value="6">Week 6</option>
-              <option value="7">Week 7</option>
-            </select>
-
-            <!-- if selected as monthly -->
-            <select class="browser-default custom-select" id="freq_month_point_activity_graph2">
-              <option value="1">January</option>
-              <option value="2">February</option>
-              <option value="3">March</option>
-              <option value="4">April</option>
-              <option value="5">May</option>
-              <option value="6">June</option>
-              <option value="7">July</option>
-              <option value="8">August</option>
-              <option value="9">September</option>
-              <option value="10">October</option>
-              <option value="11">November</option>
-              <option value="12">December</option>
-            </select>
-
-            <!-- if selected as annual -->
-            <select class="browser-default custom-select" id="freq_annual_point_activity_graph2">
-              <option value="1">2020</option>
-              <option value="2">2019</option>
-              <option value="3">2018</option>
-            </select>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -423,17 +235,20 @@
 
         <section class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
           <div class="x_content">
+
+            <!-- CPU Core i3 -->
             <div class="widget_summary" role="tab" id="headingOne">
-              <div class="w_left widget_summary_width_7">
-                <a role="button" data-toggle="collapse"
-                  data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
                   Core i3</a>
+                <i class="fa fa-angle-right collapse_icon"></i>
               </div>
 
-              <div class="w_center widget_summary_width_93">
+              <div class="w_center widget_summary_right_panel">
                 <div class="progress">
                   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="" class="progress-bar progress__bg-grey"
-                    role="progressbar" style="width: 26%;">2550 Left</div>
+                    role="progressbar" style="width: 80%;">3 Units</div>
                 </div>
               </div>
 
@@ -441,13 +256,15 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
               <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_left_panel hidden"></div>
                 <table class="table table-striped table-hover table-sm panel-collapse-table">
                   <thead>
                     <tr>
                       <th></th>
                       <th>CPU Name</th>
                       <th>Processor Number</th>
-                      <th>Total Quantity</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -455,18 +272,21 @@
                       <td>1.</td>
                       <td>Core i3</td>
                       <td>8145U</td>
+                      <td>Aspire XC-885</td>
                       <td>10</td>
                     </tr>
                     <tr>
                       <td>2.</td>
                       <td>Core i3</td>
                       <td>9350K</td>
+                      <td>Aspire XC-885</td>
                       <td>5</td>
                     </tr>
                     <tr>
                       <td>3.</td>
                       <td>Core i3</td>
                       <td>10110U</td>
+                      <td>Aspire XC-885</td>
                       <td>7</td>
                     </tr>
                   </tbody>
@@ -474,16 +294,17 @@
               </div>
             </div>
 
+            <!-- CPU Core i5 -->
             <div class="widget_summary" role="tab" id="headingTwo">
-              <div class="w_left widget_summary_width_7"><a role="button" data-toggle="collapse"
-                data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                Core i5</a></div>
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label"><a role="button" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  Core i5</a><i class="fa fa-angle-right collapse_icon"></i>
+              </div>
 
-              <div class="w_center widget_summary_width_93">
+              <div class="w_center widget_summary_right_panel">
                 <div class="progress">
                   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar progress__bg-violet"
-                    role="progressbar" style="width:95%;"><span>50
-                      Left</span></div>
+                    role="progressbar" style="width:99.9%;"><span>2 Units</span></div>
                 </div>
               </div>
 
@@ -491,13 +312,15 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
               <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_left_panel hidden"></div>
                 <table class="table table-striped table-hover table-sm panel-collapse-table">
                   <thead>
                     <tr>
                       <th></th>
                       <th>CPU Name</th>
                       <th>Processor Number</th>
-                      <th>Total Quantity</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -505,12 +328,14 @@
                       <td>1.</td>
                       <td>Core i5</td>
                       <td>8265U</td>
+                      <td>Aspire 5 A514-51-58B4</td>
                       <td>4</td>
                     </tr>
                     <tr>
                       <td>2.</td>
                       <td>Core i5</td>
                       <td>8400</td>
+                      <td>Nitro N50-600</td>
                       <td>28</td>
                     </tr>
                   </tbody>
@@ -518,16 +343,17 @@
               </div>
             </div>
 
+            <!-- CPU Core i7 -->
             <div class="widget_summary" role="tab" id="headingThree">
-              <div class="w_left widget_summary_width_7"><a role="button" data-toggle="collapse"
-                data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                Core i7</a></div>
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label"><a role="button" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                  Core i7</a><i class="fa fa-angle-right collapse_icon"></i>
+              </div>
 
-              <div class="w_center widget_summary_width_93">
+              <div class="w_center widget_summary_right_panel">
                 <div class="progress">
                   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar progress__bg-red"
-                    role="progressbar" style="width: 85%;"><span>250
-                      Left</span></div>
+                    role="progressbar" style="width: 98.65%;"><span>1 Unit</span></div>
                 </div>
               </div>
 
@@ -535,13 +361,15 @@
             </div>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
               <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_left_panel hidden"></div>
                 <table class="table table-striped table-hover table-sm panel-collapse-table">
                   <thead>
                     <tr>
                       <th></th>
                       <th>CPU Name</th>
                       <th>Processor Number</th>
-                      <th>Total Quantity</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -549,6 +377,7 @@
                       <td>1.</td>
                       <td>Core i7</td>
                       <td>8565U</td>
+                      <td>Aspire 5 A514-51-791X</td>
                       <td>38</td>
                     </tr>
                   </tbody>
@@ -556,16 +385,18 @@
               </div>
             </div>
 
+            <!-- CPU Core i9 -->
             <div class="widget_summary" role="tab" id="headingFour">
-              <div class="w_left widget_summary_width_7"><a role="button" data-toggle="collapse"
-                data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                Core i9</a></div>
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label"><a role="button" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                  Core i9</a><i class="fa fa-angle-right collapse_icon"></i>
+              </div>
 
-              <div class="w_center widget_summary_width_93">
+              <div class="w_center widget_summary_right_panel">
                 <div class="progress">
                   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
-                    class="progress-bar progress__bg-medium-green" role="progressbar" style="width: 70%;"><span>800
-                      Left</span></div>
+                    class="progress-bar progress__bg-medium-green" role="progressbar" style="width: 85.65%;"><span>
+                      5 Units</span></div>
                 </div>
               </div>
 
@@ -573,13 +404,15 @@
             </div>
             <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
               <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_left_panel hidden"></div>
                 <table class="table table-striped table-hover table-sm panel-collapse-table">
                   <thead>
                     <tr>
                       <th></th>
                       <th>CPU Name</th>
                       <th>Processor Number</th>
-                      <th>Total Quantity</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -587,36 +420,35 @@
                       <td>1.</td>
                       <td>Core i9</td>
                       <td>9900K</td>
-                      <td>20</td>
+                      <td>Legion T730-28ICO</td>
+                      <td>7</td>
                     </tr>
                     <tr>
                       <td>2.</td>
                       <td>Core i9</td>
-                      <td>9880H</td>
+                      <td>9880H	</td>
+                      <td>MacBook Pro</td>
                       <td>2</td>
                     </tr>
                     <tr>
                       <td>3.</td>
                       <td>Core i9</td>
                       <td>10900X</td>
-                      <td>6</td>
+                      <td>PC DL-S911</td>
+                      <td>27</td>
                     </tr>
                     <tr>
                       <td>4.</td>
                       <td>Core i9</td>
-                      <td>10900X</td>
-                      <td>27</td>
+                      <td>9900KS</td>
+                      <td>Core i9-9900KS 4.0 GHz</td>
+                      <td>6</td>
                     </tr>
                     <tr>
                       <td>5.</td>
                       <td>Core i9</td>
-                      <td>9900KS</td>
-                      <td>5</td>
-                    </tr>
-                    <tr>
-                      <td>6.</td>
-                      <td>Core i9</td>
                       <td>9980HK</td>
+                      <td>ROG G703GXR-EV025R</td>
                       <td>24</td>
                     </tr>
                   </tbody>
@@ -624,15 +456,17 @@
               </div>
             </div>
 
+            <!-- CPU Core m3 -->
             <div class="widget_summary" role="tab" id="headingFive">
-              <div class="w_left widget_summary_width_7"><a role="button" data-toggle="collapse"
-                data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                Core m3</a></div>
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label"><a role="button" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                  Core m3</a><i class="fa fa-angle-right collapse_icon"></i>
+              </div>
 
-              <div class="w_center widget_summary_width_93">
+              <div class="w_center widget_summary_right_panel">
                 <div class="progress">
                   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
-                    class="progress-bar progress__bg-dark-green" role="progressbar" style="width: 95%;"><span>25 Left
+                    class="progress-bar progress__bg-dark-green" role="progressbar" style="width: 75%;"><span>2 Units
                     </span></div>
                 </div>
               </div>
@@ -641,13 +475,15 @@
             </div>
             <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
               <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_left_panel hidden"></div>
                 <table class="table table-striped table-hover table-sm panel-collapse-table">
                   <thead>
                     <tr>
                       <th></th>
                       <th>CPU Name</th>
                       <th>Processor Number</th>
-                      <th>Total Quantity</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -655,12 +491,14 @@
                       <td>1.</td>
                       <td>Core m3</td>
                       <td>6Y30</td>
+                      <td>Compute Stick</td>
                       <td>25</td>
                     </tr>
                     <tr>
                       <td>2.</td>
                       <td>Core m3</td>
                       <td>8100Y</td>
+                      <td>Chromebook Flip C434TA-AI0029</td>
                       <td>1</td>
                     </tr>
                   </tbody>
@@ -668,12 +506,14 @@
               </div>
             </div>
 
+            <!-- CPU Pentium -->
             <div class="widget_summary" role="tab" id="headingSix">
-              <div class="w_left widget_summary_width_7"><a role="button" data-toggle="collapse"
-                data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                Pentium</a></div>
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label"><a role="button" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                  Pentium</a><i class="fa fa-angle-right collapse_icon"></i>
+              </div>
 
-              <div class="w_center widget_summary_width_93">
+              <div class="w_center widget_summary_right_panel">
                 <div class="progress">
                   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
                     class="progress-bar progress__bg-light-green" role="progressbar" style="width: 100%;"><span>0</span>
@@ -683,43 +523,49 @@
 
               <div class="clearfix">&nbsp;</div>
             </div>
+
             <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-              <div class="panel-body panel-body-progress-collapse">
-               <h5 class="panel-collapse-heading">There are no outstanding products</h5>
+              <div class="panel-body panel-body-progress-collapse panel-body-progress-collapse--empty-container">
+                <h5 class="panel-collapse-heading">There are no outstanding products</h5>
               </div>
             </div>
 
+            <!-- CPU Xeon -->
             <div class="widget_summary" role="tab" id="headingSeven">
-              <div class="w_left widget_summary_width_7"><a role="button" data-toggle="collapse"
-                data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                Xeon</a></div>
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label"><a role="button" data-toggle="collapse"
+                  data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                  Xeon</a><i class="fa fa-angle-right collapse_icon"></i>
+              </div>
 
-              <div class="w_center widget_summary_width_93">
+              <div class="w_center widget_summary_right_panel">
                 <div class="progress">
                   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar progress__bg-blue"
-                    role="progressbar" style="width: 30%;"><span>1200
-                      Left</span></div>
+                    role="progressbar" style="width: 98.276%;"><span>1 Unit</span></div>
                 </div>
               </div>
 
               <div class="clearfix">&nbsp;</div>
             </div>
+
             <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
               <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_left_panel hidden"></div>
                 <table class="table table-striped table-hover table-sm panel-collapse-table">
                   <thead>
                     <tr>
                       <th></th>
                       <th>CPU Name</th>
                       <th>Processor Number</th>
-                      <th>Total Quantity</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1.</td>
                       <td>Xeon</td>
-                      <td>E-2176M</td>
+                      <td>N4200</td>
+                      <td>Chromebook 14 CB314-1HT-P46Q</td>
                       <td>31</td>
                     </tr>
                   </tbody>
@@ -732,9 +578,234 @@
     </div>
   </div>
 
-  <!-- Points To Earn per Category -->
-  <!--Daily graph cat. i3-->
-  <!-- <div class="row" id="daily_graph_i3">
+
+  <!-- historical charts panel -->
+  <!--Choose chart panel-->
+  <div class="show-historical-pane hide">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="col-xs-12 dashboard_filter_panel dashboard__filter-rebate">
+          <div class="col-md-6 col-sm-6 col-xs-6 dash_ratio_container" id="dash_ratio_container">
+            <div class="radio" id="point_to_earn_radio">
+              <label class="radio_label">
+                <input name="points_chart" type="radio" value="PTE" />
+                Units sold
+              </label>
+            </div>
+
+            <div class="radio" id="point_to_date_radio">
+              <label class="radio_label">
+                <input checked="checked" name="points_chart" type="radio" value="PTD" />
+                Units outstanding
+              </label>
+            </div>
+          </div>
+
+          <!-- Points To Earn per Category -->
+          <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq half_top_margin hide"
+            id="points_to_earn_vendor_dropdownmenu">
+            <div class="row">
+              <label class="titled_component one_margin_left">Category &nbsp;</label>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuVendor"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Choose Category
+              </button>
+              <ul class="dropdown-menu" id="earn_vendor_dd_menu">
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend1" checked>
+                  <label class="form-check-label" for="checkVend1">
+                    Core i3
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend2" checked>
+                  <label class="form-check-label" for="checkVend2">
+                    Core i5
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend3" checked>
+                  <label class="form-check-label" for="checkVend3">
+                    Core i7
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend4" checked>
+                  <label class="form-check-label" for="checkVend4">
+                    Core i9
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend5" checked>
+                  <label class="form-check-label" for="checkVend5">
+                    Core m3
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend6" checked>
+                  <label class="form-check-label" for="checkVend6">
+                    Pentium
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkVend7" checked>
+                  <label class="form-check-label" for="checkVend7">
+                    Xeon
+                  </label>
+                </li>
+                <li class="not-sortable columns-li-padding dropdown-select-button-content">
+                  <button class="btn btn-primary btn-xs btn-block select-category-btn" id="default_checkVend">Select
+                    All</button>
+                  <button class="btn btn-primary btn-xs btn-block select-category-btn" id="default_uncheckVend">Unselect
+                    All</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-3 col-xs-3 dashboard_freq hide" id="points_to_earn_category_combobox">
+            <div class="row">
+              <label class="titled_component">Frequency</label>
+            </div>
+            <br>
+            <div class="row">
+              <select class="browser-default custom-select country" id="earn_point_activity_graph">
+                <option value="1">Weekly</option>
+                <option value="2">Monthly</option>
+                <option value="3">Annual</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Points To Date By Brand Category -->
+          <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq" id="points_to_date_vendor_combobox">
+
+            <div class="row block">
+              <label class="titled_component one_margin_left">Category</label>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle no_wrap" type="button" id="dropdownMenuBrandDateVendor"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Choose Brand
+              </button>
+              <ul class="dropdown-menu" id="date_brand_vendor_dd_menu">
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend1" checked>
+                  <label class="form-check-label" for="checkBrandDateVend1">
+                    Core i3
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend2" checked>
+                  <label class="form-check-label" for="checkBrandDateVend2">
+                    Core i5
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend3" checked>
+                  <label class="form-check-label" for="checkBrandDateVend3">
+                    Core i7
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend4" checked>
+                  <label class="form-check-label" for="checkBrandDateVend4">
+                    Core i9
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend5" checked>
+                  <label class="form-check-label" for="checkBrandDateVend5">
+                    Core m3
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend6" checked>
+                  <label class="form-check-label" for="checkBrandDateVend6">
+                    Pentium
+                  </label>
+                </li>
+                <li class="dropdown_list">
+                  <input type="checkbox" class="form-check-input dropdown_chbx" id="checkBrandDateVend7" checked>
+                  <label class="form-check-label" for="checkBrandDateVend7">
+                    Xeon
+                  </label>
+                </li>
+                <li class="not-sortable columns-li-padding dropdown-select-button-content">
+                  <button class="btn btn-primary btn-xs select-category-btn" id="default_checkBrandDateVend">Select
+                    All</button>
+                  <button class="btn btn-primary btn-xs select-category-btn" id="default_uncheckBrandDateVend">Unselect
+                    All</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq" id="points_to_date_category_combobox">
+            <div class="row">
+              <label class="titled_component">Frequency</label>
+            </div>
+            <br>
+            <div class="row">
+              <select class="browser-default custom-select" id="brand_date_point_activity_graph">
+                <option value="1">Weekly</option>
+                <option value="2">Monthly</option>
+                <option value="3">Annual</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq" id="points_to_date_freq_combobox">
+            <div class="row block">
+              <label class="titled_component">Range</label>
+            </div>
+
+            <div class="row">
+              <!-- if selected as weekly -->
+              <select class="browser-default custom-select" id="freq_point_activity_graph2">
+                <option value="1">Week 1</option>
+                <option value="2">Week 2</option>
+                <option value="3">Week 3</option>
+                <option value="4">Week 4</option>
+                <option value="5">Week 5</option>
+                <option value="6">Week 6</option>
+                <option value="7">Week 7</option>
+              </select>
+
+              <!-- if selected as monthly -->
+              <select class="browser-default custom-select" id="freq_month_point_activity_graph2">
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+
+              <!-- if selected as annual -->
+              <select class="browser-default custom-select" id="freq_annual_point_activity_graph2">
+                <option value="1">2020</option>
+                <option value="2">2019</option>
+                <option value="3">2018</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end Choose chart panel-->
+
+    <!-- Points To Earn per Category -->
+    <!--Daily graph cat. i3-->
+    <!-- <div class="row" id="daily_graph_i3">
     <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="x_panel">
         <div class="x_title">
@@ -763,34 +834,34 @@
 
 </div> -->
 
-  <!--Daily graph cat. i3 historical-->
-  <div class="row" id="daily_graph_i3">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-      <div class="x_panel">
-        <div class="x_title">
-          <h2>Units outstanding <small id="daily_graph_i3_title"></small></h2>
+    <!--Daily graph cat. i3 historical-->
+    <div class="row" id="daily_graph_i3">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Units outstanding <small id="daily_graph_i3_title"></small></h2>
 
-          <ul class="nav navbar-right panel_toolbox">
-            <li>&nbsp;</li>
-            <li class="dropdown">
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Settings 1</a></li>
-                <li><a href="#">Settings 2</a></li>
-              </ul>
-            </li>
-            <li>&nbsp;</li>
-          </ul>
+            <ul class="nav navbar-right panel_toolbox">
+              <li>&nbsp;</li>
+              <li class="dropdown">
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Settings 1</a></li>
+                  <li><a href="#">Settings 2</a></li>
+                </ul>
+              </li>
+              <li>&nbsp;</li>
+            </ul>
 
-          <div class="clearfix">&nbsp;</div>
+            <div class="clearfix">&nbsp;</div>
+          </div>
+
+          <div class="x_content"><canvas height="80px" id="barChartByBrand"></canvas></div>
         </div>
-
-        <div class="x_content"><canvas height="80px" id="barChartByBrand"></canvas></div>
       </div>
+
+      <div class="clearfix">&nbsp;</div>
     </div>
-
-    <div class="clearfix">&nbsp;</div>
   </div>
-
 </div>
 
 <!-- Mini Pie -->
@@ -2568,6 +2639,25 @@
     lineChart_newChart.update();
     console.log('update line_chart_new function');
   }
+
+  $(document).ready(function () {
+    $(".widget_summary").click(function () {
+      var $this = $(this);
+      // this.link = this.element.find('i');    
+      var collapseIcon = $this.find('.fa-angle-right');
+      // collapseIcon.classList.toggle('fa-angle-down');
+      console.log($this);
+      console.log(collapseIcon);
+    });
+  });
+
+  var showHistoric = document.querySelector('.historical-charts--js');
+
+  showHistoric.addEventListener('click', () => {
+    console.log('show/ hide historic chart');
+    var showHistoricPane = document.querySelector('.show-historical-pane');
+    showHistoricPane.classList.toggle('hide');
+  });
 
   $(document).ready(function () {
     selectEarnBarChart();
