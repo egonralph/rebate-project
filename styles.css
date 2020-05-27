@@ -29,7 +29,7 @@ html {
 .collapse_icon {
     margin-left: 1em;
     float: right;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
 }
 
@@ -227,7 +227,6 @@ html {
 .panel-body-progress-collapse {
     margin-bottom: 2em;
     display: flex;
-    flex-direction: row-reverse;
     padding-right: 5px;
     padding-left: 0px;
 }
@@ -382,7 +381,9 @@ ul.dropdown-menu>li:hover {
     font-weight: 700;
     color: grey;
 }
-
+.widget_summary--collapse-label:hover>i {
+    font-size: 18px;
+}
 .widget_summary_left_panel {
     width: 85px;
     margin-right: 1em;
@@ -390,4 +391,8 @@ ul.dropdown-menu>li:hover {
 
 .widget_summary_right_panel {
     width: 94%;
+}
+.widget_summary_table_left_panel {
+    width: 90px;
+    margin-right: 1em;
 }
