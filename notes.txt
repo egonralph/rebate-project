@@ -70,17 +70,15 @@ Technomarket
         data: [23, 42, 76, 39, 20, 85, 87, 95, 135, 263, 343]
       }
       ]
-    },
-
-
-
-poprawic legende na malych rozdzielczosciach dla okragłego wykresu
-zmienic total quantity na points wewnątrz tabeli units outstanding
-zamienic 2550 left na 3 units
-product name dodac do tabelki wewnatrz
-rozrzerzyc tabelke na cala szerokosc
-zmienic dlugosc paska na 80% i obliczyc wg calosci
-
-w sold befdie totl quanttity 10
-    
+    },    
   });
+
+
+poprawic legende na malych rozdzielczosciach dla okragłego wykresu -
+zmienic total quantity na points wewnątrz tabeli units outstanding -
+zamienic 2550 left na 3 units -
+product name dodac do tabelki wewnatrz -
+rozrzerzyc tabelke na cala szerokosc - 
+zmienic dlugosc paska na 80% i obliczyc wg calosci -
+
+w sold będzie total quanttity 10

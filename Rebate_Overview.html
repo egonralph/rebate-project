@@ -58,11 +58,11 @@
               <tr class="table_col_20">
                 <td class="no_border center">
                   <em>
-                    <canvas height="160" id="canvas1" style="margin: 5px 5px 5px 0" width="160"></canvas>
+                    <canvas height="160" class="circle_chart" id="canvas1" style="margin: 5px 5px 5px 0" width="160"></canvas>
                   </em>
                 </td>
 
-                <td class="no_border">
+                <td class="no_border circle_chart_table">
                   <table id="points-to-date-by-brand-category-main-chart"
                     class="table table-hover table-sm table-fixed no_margin_bottom">
                     <thead>
@@ -2641,13 +2641,15 @@
   }
 
   $(document).ready(function () {
-    $(".widget_summary").click(function () {
-      var $this = $(this);
-      // this.link = this.element.find('i');    
-      var collapseIcon = $this.find('.fa-angle-right');
-      // collapseIcon.classList.toggle('fa-angle-down');
-      console.log($this);
-      console.log(collapseIcon);
+    $('.widget_summary').click(function () {
+      
+      var collapseIcon = $(this).find('i');
+      collapseIcon.toggleClass('fa-angle-down fa-angle-right');
+    });
+    $('#accordion i').click(function () {
+      var changeIcon = $(this).closest('.widget_summary');
+      var collapseTable = $(changeIcon).next();
+      collapseTable.toggleClass('show');
     });
   });
 

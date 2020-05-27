@@ -22,6 +22,16 @@ html {
     padding-top: 3px;
 }
 
+@media (max-width: 768px) {
+    .circle_chart_table {
+        width: 60%;
+    }
+    canvas.circle_chart {
+        width: 32rem !important;
+        height: 16rem !important;
+    }
+}
+
 .clearfix_small_height {
     height: 14px;
 }
@@ -381,9 +391,11 @@ ul.dropdown-menu>li:hover {
     font-weight: 700;
     color: grey;
 }
+
 .widget_summary--collapse-label:hover>i {
     font-size: 18px;
 }
+
 .widget_summary_left_panel {
     width: 85px;
     margin-right: 1em;
@@ -392,6 +404,7 @@ ul.dropdown-menu>li:hover {
 .widget_summary_right_panel {
     width: 94%;
 }
+
 .widget_summary_table_left_panel {
     width: 90px;
     margin-right: 1em;
