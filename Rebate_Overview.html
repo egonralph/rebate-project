@@ -180,8 +180,8 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="col-xs-12 dashboard_filter_panel dashboard__filter-rebate">
-        <div class="overview-panel dash_ratio_container" id="dash_ratio_container">
-          <div class="radio overview-radio-panel" id="point_to_earn_radio">
+        <div class="overview-panel dash_ratio_container" id="sold_outstanding_container">
+          <div class="radio overview-radio-panel" id="sold_outstanding_radio">
             <p class="radio-paragraph">
               <label class="radio_label">
                 <input name="chart_panel" type="radio" value="CPS" />
@@ -211,10 +211,400 @@
   <!--end Choose chart panel-->
 
   <!-- Units sold section -->
+  <div class="row hide" id="sold_section">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="x_panel tile fixed_height_360">
+        <div class="x_title">
+          <h2>Units sold <small>II Quarter</small></h2>
+
+          <ul class="nav navbar-right panel_toolbox">
+            <li>&nbsp;</li>
+            <li class="dropdown">
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Settings 1</a></li>
+                <li><a href="#">Settings 2</a></li>
+              </ul>
+            </li>
+            <li>&nbsp;</li>
+          </ul>
+
+          <div class="clearfix">&nbsp;</div>
+        </div>
+
+        <section class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="x_content">
+
+            <!-- CPU Core i3 -->
+            <div class="widget_summary" role="tab" id="headingOneSold">
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label" data-toggle="collapse"
+                data-parent="#accordion" href="#collapseOneSold" aria-expanded="true" aria-controls="collapseOneSold">
+                <div class="widget_summary_left_panel-item">
+                  <a role="button" title="show / hide outstanding units">
+                    Core i3</a>
+                  <i class="fa fa-angle-right collapse_icon"></i>
+                </div>
+              </div>
+
+              <div class="w_center widget_summary_right_panel">
+                <div class="progress">
+                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="" class="progress-bar progress__bg-grey"
+                    role="progressbar" style="width: 80%;">5 Units</div>
+                </div>
+              </div>
+
+              <div class="clearfix">&nbsp;</div>
+            </div>
+            <div id="collapseOneSold" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOneSold">
+              <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_table_left_panel hidden"></div>
+                <table class="table table-striped table-hover table-sm panel-collapse-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>CPU Name</th>
+                      <th>Processor Number</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>Core i3</td>
+                      <td>8145U</td>
+                      <td>Aspire XC-885</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>2.</td>
+                      <td>Core i3</td>
+                      <td>9350K</td>
+                      <td>Aspire XC-885</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>3.</td>
+                      <td>Core i3</td>
+                      <td>10110U</td>
+                      <td>Aspire XC-885</td>
+                      <td>7</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- CPU Core i5 -->
+            <div class="widget_summary" role="tab" id="headingTwoSold">
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label" data-toggle="collapse" data-parent="#accordion" href="#collapseTwoSold"
+              aria-expanded="true" aria-controls="collapseTwoSold">
+                <div class="widget_summary_left_panel-item">
+                  <a role="button" title="show / hide outstanding units">
+                    Core i5</a>
+                  <i class="fa fa-angle-right collapse_icon"></i>
+                </div>
+              </div>
+
+              <div class="w_center widget_summary_right_panel">
+                <div class="progress">
+                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar progress__bg-violet"
+                    role="progressbar" style="width:99.9%;"><span>24 Units</span></div>
+                </div>
+              </div>
+
+              <div class="clearfix">&nbsp;</div>
+            </div>
+            <div id="collapseTwoSold" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwoSold">
+              <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_table_left_panel hidden"></div>
+                <table class="table table-striped table-hover table-sm panel-collapse-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>CPU Name</th>
+                      <th>Processor Number</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>Core i5</td>
+                      <td>8265U</td>
+                      <td>Aspire 5 A514-51-58B4</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>2.</td>
+                      <td>Core i5</td>
+                      <td>8400</td>
+                      <td>Nitro N50-600</td>
+                      <td>28</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- CPU Core i7 -->
+            <div class="widget_summary" role="tab" id="headingThreeSold">
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label" data-toggle="collapse" data-parent="#accordion" href="#collapseThreeSold"
+              aria-expanded="true" aria-controls="collapseThreeSold">
+                <div class="widget_summary_left_panel-item">
+                  <a role="button" title="show / hide outstanding units">
+                    Core i7</a>
+                  <i class="fa fa-angle-right collapse_icon"></i>
+                </div>
+              </div>
+
+              <div class="w_center widget_summary_right_panel">
+                <div class="progress">
+                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar progress__bg-red"
+                    role="progressbar" style="width: 98.65%;"><span>30 Unit</span></div>
+                </div>
+              </div>
+
+              <div class="clearfix">&nbsp;</div>
+            </div>
+            <div id="collapseThreeSold" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThreeSold">
+              <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_table_left_panel hidden"></div>
+                <table class="table table-striped table-hover table-sm panel-collapse-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>CPU Name</th>
+                      <th>Processor Number</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>Core i7</td>
+                      <td>8565U</td>
+                      <td>Aspire 5 A514-51-791X</td>
+                      <td>38</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- CPU Core i9 -->
+            <div class="widget_summary" role="tab" id="headingFourSold">
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label" data-toggle="collapse" data-parent="#accordion" href="#collapseFourSold"
+              aria-expanded="true" aria-controls="collapseFourSold">
+                <div class="widget_summary_left_panel-item">
+                  <a role="button" title="show / hide outstanding units">
+                    Core i9</a>
+                  <i class="fa fa-angle-right collapse_icon"></i>
+                </div>
+              </div>
+
+              <div class="w_center widget_summary_right_panel">
+                <div class="progress">
+                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
+                    class="progress-bar progress__bg-medium-green" role="progressbar" style="width: 85.65%;"><span>
+                      5 Units</span></div>
+                </div>
+              </div>
+
+              <div class="clearfix">&nbsp;</div>
+            </div>
+            <div id="collapseFourSold" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourSold">
+              <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_table_left_panel hidden"></div>
+                <table class="table table-striped table-hover table-sm panel-collapse-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>CPU Name</th>
+                      <th>Processor Number</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>Core i9</td>
+                      <td>9900K</td>
+                      <td>Legion T730-28ICO</td>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <td>2.</td>
+                      <td>Core i9</td>
+                      <td>9880H </td>
+                      <td>MacBook Pro</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>3.</td>
+                      <td>Core i9</td>
+                      <td>10900X</td>
+                      <td>PC DL-S911</td>
+                      <td>27</td>
+                    </tr>
+                    <tr>
+                      <td>4.</td>
+                      <td>Core i9</td>
+                      <td>9900KS</td>
+                      <td>Core i9-9900KS 4.0 GHz</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>5.</td>
+                      <td>Core i9</td>
+                      <td>9980HK</td>
+                      <td>ROG G703GXR-EV025R</td>
+                      <td>24</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- CPU Core m3 -->
+            <div class="widget_summary" role="tab" id="headingFiveSold">
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label" data-toggle="collapse" data-parent="#accordion" href="#collapseFiveSold"
+              aria-expanded="true" aria-controls="collapseFiveSold">
+                <div class="widget_summary_left_panel-item">
+                  <a role="button" title="show / hide outstanding units">
+                    Core m3</a>
+                  <i class="fa fa-angle-right collapse_icon"></i>
+                </div>
+              </div>
+
+              <div class="w_center widget_summary_right_panel">
+                <div class="progress">
+                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
+                    class="progress-bar progress__bg-dark-green" role="progressbar" style="width: 75%;"><span>2 Units
+                    </span></div>
+                </div>
+              </div>
+
+              <div class="clearfix">&nbsp;</div>
+            </div>
+            <div id="collapseFiveSold" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFiveSold">
+              <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_table_left_panel hidden"></div>
+                <table class="table table-striped table-hover table-sm panel-collapse-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>CPU Name</th>
+                      <th>Processor Number</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>Core m3</td>
+                      <td>6Y30</td>
+                      <td>Compute Stick</td>
+                      <td>25</td>
+                    </tr>
+                    <tr>
+                      <td>2.</td>
+                      <td>Core m3</td>
+                      <td>8100Y</td>
+                      <td>Chromebook Flip C434TA-AI0029</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- CPU Pentium -->
+            <div class="widget_summary" role="tab" id="headingSixSold">
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label" data-toggle="collapse" data-parent="#accordion" href="#collapseSixSold"
+              aria-expanded="true" aria-controls="collapseSixSold">
+                <div class="widget_summary_left_panel-item">
+                  <a role="button" title="show / hide outstanding units">
+                    Pentium</a>
+                  <i class="fa fa-angle-right collapse_icon"></i>
+                </div>
+              </div>
+
+              <div class="w_center widget_summary_right_panel">
+                <div class="progress">
+                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60"
+                    class="progress-bar progress__bg-light-green" role="progressbar" style="width: 100%;"><span>0</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="clearfix">&nbsp;</div>
+            </div>
+
+            <div id="collapseSixSold" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixSold">
+              <div class="panel-body panel-body-progress-collapse panel-body-progress-collapse--empty-container">
+                <h5 class="panel-collapse-heading">There are no outstanding products</h5>
+              </div>
+            </div>
+
+            <!-- CPU Xeon -->
+            <div class="widget_summary" role="tab" id="headingSevenSold">
+              <div class="w_left widget_summary_left_panel widget_summary--collapse-label" data-toggle="collapse" data-parent="#accordion" href="#collapseSevenSold"
+              aria-expanded="true" aria-controls="collapseSevenSold">
+                <div class="widget_summary_left_panel-item">
+                  <a role="button" title="show / hide outstanding units">
+                    Xeon</a>
+                  <i class="fa fa-angle-right collapse_icon"></i>
+                </div>
+              </div>
+
+              <div class="w_center widget_summary_right_panel">
+                <div class="progress">
+                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar progress__bg-blue"
+                    role="progressbar" style="width: 98.276%;"><span>1 Unit</span></div>
+                </div>
+              </div>
+
+              <div class="clearfix">&nbsp;</div>
+            </div>
+
+            <div id="collapseSevenSold" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSevenSold">
+              <div class="panel-body panel-body-progress-collapse">
+                <div class=" widget_summary_table_left_panel hidden"></div>
+                <table class="table table-striped table-hover table-sm panel-collapse-table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>CPU Name</th>
+                      <th>Processor Number</th>
+                      <th>Model Name</th>
+                      <th>Points</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1.</td>
+                      <td>Xeon</td>
+                      <td>N4200</td>
+                      <td>Chromebook 14 CB314-1HT-P46Q</td>
+                      <td>31</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
   <!-- endUnits sold section -->
 
-  <!-- Units outdtanding section -->
-  <div class="row">
+  <!-- Units outstanding section -->
+  <div class="row" id="outstanding_section">
     <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="x_panel tile fixed_height_360">
         <div class="x_title">
@@ -1842,8 +2232,7 @@
       $("#points_to_date_category_combobox").removeClass("hide");
       $("#points_to_date_freq_combobox").removeClass("hide");
       $("#points_to_date_vendor_combobox").removeClass("hide");
-      // hideAllCharts();
-      // selectDashboardChart();
+      
       console.log('render default');
 
       if (val == 'PTD') {
@@ -1856,8 +2245,7 @@
         $("#brand_date_point_vendor_chooser").val("1");
         $("#brand_date_point_activity_graph").val("1");
         $("#freq_point_activity_graph2").val("1");
-        // hideAllCharts();
-        // selectDashboardChart();
+        
         console.log('render PTD');
       }
       if (val == 'PTE') {
@@ -1869,9 +2257,31 @@
         $("#points_to_date_vendor_combobox").addClass("hide");
         $("#earn_point_vendor_chooser").val("1");
         $("#earn_point_activity_graph").val("1");
-        // hideAllCharts();
-        // selectEarnBarChart();
+        
         console.log('render PTE');
+      }
+    });
+  };
+
+  function chooseSoldOutstandingRadio() {
+    $('#sold_outstanding_container .radio_label').on('click', function (event) {
+      var val = $(this).find('input').val();
+      $("#sold_section").addClass("hide");
+      $("#outstanding_section").removeClass("hide");
+      
+      console.log('render default');
+
+      if (val == 'CPS') {
+        $("#sold_section").removeClass("hide");
+        $("#outstanding_section").addClass("hide");
+        
+        console.log('render CPS');
+      }
+      if (val == 'CPO') {
+        $("#sold_section").addClass("hide");
+        $("#outstanding_section").removeClass("hide");
+        
+        console.log('render CPS');
       }
     });
   };
@@ -2706,6 +3116,7 @@
   $(document).ready(function () {
     selectEarnBarChart();
     selectVendorBrand();
+    chooseSoldOutstandingRadio();
     chooseRadioButtons();
     chooseEarnVendorChbxNew();
     chooseEarnVendorChbx();
