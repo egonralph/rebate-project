@@ -322,6 +322,9 @@ html {
 .select-category-btn:last-of-type {
     margin-right: 0;
 }
+.select_superscript{
+    font-size: 10px;
+}
 
 .stats_count_container, .tile_stats_count.stats_count_container {
     margin-bottom: 4em;
