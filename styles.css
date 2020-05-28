@@ -27,8 +27,8 @@ html {
         width: 60%;
     }
     canvas.circle_chart {
-        width: 32rem !important;
-        height: 16rem !important;
+        width: 12rem !important;
+        height: 12rem !important;
     }
 }
 
@@ -334,7 +334,9 @@ html {
 .table_col_10 {
     width: 10%;
 }
-
+.table_col_25 {
+    width: 25%;
+}
 .table_col_30 {
     width: 30%;
 }
@@ -387,17 +389,8 @@ ul.dropdown-menu>li:hover {
     width: 93%;
 }
 
-.widget_summary--collapse-label:hover, .widget_summary--collapse-label:hover>a {
-    font-weight: 700;
-    color: grey;
-}
-
-.widget_summary--collapse-label:hover>i {
-    font-size: 18px;
-}
-
 .widget_summary_left_panel {
-    width: 85px;
+    width: 96px;
     margin-right: 1em;
 }
 
@@ -406,6 +399,17 @@ ul.dropdown-menu>li:hover {
 }
 
 .widget_summary_table_left_panel {
-    width: 90px;
+    width: 101px;
     margin-right: 1em;
+}
+
+.widget_summary_left_panel-item {
+    padding: 0.1em 0.5em;
+    cursor: pointer;
+}
+
+.widget_summary_left_panel-item:hover, .widget_summary_left_panel-item:hover a {
+    background-color: #eee;
+    color: #000;
+    border-radius: 12px;
 }
