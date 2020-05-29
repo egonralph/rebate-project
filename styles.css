@@ -96,18 +96,18 @@ html {
 }
 
 .dbbcl-rebate4 {
-    background: #26B99A;
-    border: 1px solid #26B99A;
+    background: #17a2b8;
+    border: 1px solid #17a2b8;
 }
 
 .dbbcl-rebate5 {
-    background: #26B39A;
-    border: 1px solid #26B39A;
+    background: #28a745;
+    border: 1px solid #28a745;
 }
 
 .dbbcl-rebate6 {
-    background: #26F99A;
-    border: 1px solid #26F99A;
+    background: #ffc107;
+    border: 1px solid #ffc107;
 }
 
 .dbbcl-rebate7 {
@@ -272,16 +272,30 @@ html {
     height: 300px !important
 }
 
+.progress.progress_units {
+    border-radius: 10px;
+}
+
+.progress-bar {
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+}
+
 .progress-bar.progress__bg-blue {
     background-color: #3498DB;
 }
 
 .progress-bar.progress__bg-dark-green {
-    background-color: #26B39A;
+    background-color: #28a745;
 }
 
 .progress-bar.progress__bg-grey {
     background-color: #BDC3C7;
+}
+
+.progress-bar.progress__bg-info {
+    background-color: #17a2b8;
 }
 
 .progress-bar.progress__bg-light-green {
@@ -298,6 +312,10 @@ html {
 
 .progress-bar.progress__bg-violet {
     background-color: #9B59B6;
+}
+
+.progress-bar.progress__bg-warning {
+    background-color: #ffc107;
 }
 
 .radio+.historical-charts, .radio+.checkbox.historical-charts, .radio+.radio-units-charts {
@@ -322,7 +340,8 @@ html {
 .select-category-btn:last-of-type {
     margin-right: 0;
 }
-.select_superscript{
+
+.select_superscript {
     font-size: 10px;
 }
 
@@ -337,9 +356,11 @@ html {
 .table_col_10 {
     width: 10%;
 }
+
 .table_col_25 {
     width: 25%;
 }
+
 .table_col_30 {
     width: 30%;
 }
