@@ -1,0 +1,13 @@
+.dataTables_filter {
+    width: 90%;
+}
+
+.dataTables_info {
+    width: 79.5%
+}
+
+.progress {
+    font-size: 1.2rem;
+    height: 20px;
+    background: none !important;
+}
