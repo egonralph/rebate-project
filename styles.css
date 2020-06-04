@@ -81,8 +81,8 @@ html {
 }
 
 .dbbcl-rebate1 {
-    background: #BDC3C7;
-    border: 1px solid #BDC3C7;
+    background: #FF9143;
+    border: 1px solid #FF9143;
 }
 
 .dbbcl-rebate2 {
@@ -274,6 +274,7 @@ html {
 
 .progress.progress_units {
     border-radius: 10px;
+    background-color: #aaaaaa;
 }
 
 .progress-bar {
@@ -283,6 +284,18 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.progress-bar_items {
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.50);
+    z-index: 1;
 }
 
 .progress-bar.progress__bg-blue {
@@ -307,6 +320,10 @@ html {
 
 .progress-bar.progress__bg-medium-green {
     background-color: #26B99A;
+}
+
+.progress-bar.progress__bg-orange {
+    background-color: #FF9143;
 }
 
 .progress-bar.progress__bg-red {
