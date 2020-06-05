@@ -486,7 +486,9 @@ html {
 .no_border, table td.no_border {
     border: none;
 }
-
+.thumbnail{
+    height: 53vh;
+}
 .thumbnail:hover {
     border: 1px solid #ddd;
     border-radius: 10px;
