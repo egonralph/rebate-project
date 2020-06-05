@@ -160,7 +160,9 @@ html {
 .hidden {
     visibility: hidden;
 }
-
+.incentive_header{
+    margin-top: 1.5em;
+}
 .left_margin_container {
     margin-left: 15px;
 }
@@ -279,6 +281,10 @@ html {
 
 .product_list {
     list-style-type: none;
+}
+
+.product_list__header {
+    margin-bottom: 0.8em;
 }
 
 .progress.progress_units {
@@ -490,12 +496,17 @@ html {
 
 .thumbnail .caption {
     background: none;
+    padding-left: 2em;
 }
 
 .titled_component {
     text-align: left;
     font-weight: 600;
     color: navy;
+}
+.thumbnail_breakline{
+    margin: -0.05em 1em 0 1em;
+    border-color: #eeeeee;
 }
 
 ul.dropdown-menu>li:hover {
