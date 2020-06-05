@@ -326,6 +326,8 @@ html {
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .progress-bar.bg-orange_grad {
@@ -335,6 +337,8 @@ html {
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .progress-bar_items {
@@ -347,6 +351,7 @@ html {
     align-items: center;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.50);
     z-index: 1;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif */
 }
 
 .progress-bar.progress__bg-blue {
@@ -432,6 +437,10 @@ html {
     width: 10%;
 }
 
+.table_col_12 {
+    width: 12%;
+}
+
 .table_col_13 {
     width: 13%;
 }
@@ -440,12 +449,12 @@ html {
     width: 15%;
 }
 
-.table_col_21 {
-    width: 21%;
+.table_col_18 {
+    width: 18%;
 }
 
-.table_col_31 {
-    width: 31%;
+.table_col_21 {
+    width: 21%;
 }
 
 .table_col_25 {
@@ -456,12 +465,20 @@ html {
     width: 30%;
 }
 
-.table_col_35 {
-    width: 35%;
+.table_col_31 {
+    width: 31%;
 }
 
 .table_col_35 {
     width: 35%;
+}
+
+.table_col_36 {
+    width: 36%;
+}
+
+.table_col_42 {
+    width: 42%;
 }
 
 .table_col_legend_label {
