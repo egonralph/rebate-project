@@ -312,4 +312,26 @@
     $(document).ready(function () {
         $('#datatable-buttons').DataTable();
     });
+
+    $(document).ready(function () {
+			$.extend($.fn.dataTable.defaults, {
+			    language: {
+			        emptyTable: "No data found",
+					info: "Showing _START_ to _END_ of _MAX_ records ",
+					infoEmpty: "No records available",
+					search: '_INPUT_',
+					searchPlaceholder: 'Instant Search...',
+				    paginate:{
+						first: "\u00ab",
+						previous: "\u2039",
+						next: "\u203a",
+						last: "\u00bb"
+					}
+			    },
+				select: {
+					style: "os"
+				},
+				"pageLength":50
+			} );
+		});
 </script>

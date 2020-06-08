@@ -69,6 +69,31 @@ html {
     margin-top: 0.5em;
 }
 
+#datatable-buttons_length {
+    display: block;
+    margin-top: 0.1em;
+    font-size: 12px;
+}
+
+#datatable-buttons_length select {
+    height: 24px;
+    border-radius: 4px;
+    padding-left: 6px;
+    width: 41%;
+}
+
+table.dataTable thead th, table.dataTable thead td, #datatable-buttons.dataTable thead th, #datatable-buttons.dataTable thead td {
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+    border-right: 1px solid #ddd;
+}
+
+table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
+    border: 1px solid #ddd;
+}
+
 .dataTables_filter {
     width: 90%;
 }
@@ -167,6 +192,14 @@ html {
 
 .hidden {
     visibility: hidden;
+}
+
+input[type="search"] {
+    border: 1px solid #999999;
+    border-radius: 4px 4px 4px 4px;
+    padding: 6px;
+    margin-top: 0px;
+    font-family: Arial, 'FontAwesome' !important;
 }
 
 .left_margin_container {
@@ -425,6 +458,10 @@ html {
 
 .stats_count_container, .tile_stats_count.stats_count_container {
     margin-bottom: 4em;
+}
+
+.table thead th {
+    vertical-align: inherit;
 }
 
 .table_col_4 {
