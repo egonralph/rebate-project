@@ -487,7 +487,27 @@ html {
     border: none;
 }
 .thumbnail{
-    height: 53vh;
+    height: 28.5em;
+}
+@media (min-width: 1200px) and (max-width: 1450px){
+    .thumbnail{
+        height: 24em;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px){
+    .thumbnail{
+        height: 23.5em;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .thumbnail{
+        height: 24em;
+    }
+}
+@media (max-width: 575px){
+    .thumbnail{
+        height: 26.5em;
+    }
 }
 .thumbnail:hover {
     border: 1px solid #ddd;
