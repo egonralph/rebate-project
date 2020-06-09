@@ -6,6 +6,35 @@ html {
     box-sizing: inherit;
 }
 
+a.disabled {
+    color: #eeeeee;
+}
+
+a.disabled:hover, a.paginate_button.previous.disabled:hover, a.paginate_button.next.disabled:hover {
+    color: #eeeeee !important;
+    background: none !important;
+}
+
+a.paginate_button {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    font-size: 14px;
+}
+
+a.paginate_button.current {
+    background: #337ab7;
+    color: #ffffff;
+    border-color: #337ab7;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+a.paginate_button, #datatable-buttons_paginate a.paginate_button {
+    /* border-radius: 0;
+    margin-left: 0; */
+    box-shadow: 1px 1px 4px #eee;
+}
+
 .auto_margin {
     margin: auto;
 }
@@ -48,6 +77,10 @@ html {
     margin-left: 1.5em;
 }
 
+.current {
+    font-weight: bolder;
+}
+
 .custom-select {
     background: #ffffff;
 }
@@ -69,17 +102,88 @@ html {
     margin-top: 0.5em;
 }
 
+#datatable-buttons_info {
+    float: right;
+    margin-right: 15px;
+    margin-top: -2.75em;
+    font-size: 12px;
+    width: 20%;
+    text-align: right;
+}
+
 #datatable-buttons_length {
     display: block;
-    margin-top: 0.1em;
+    margin-top: 1em;
     font-size: 12px;
+    width: 10%;
 }
 
 #datatable-buttons_length select {
-    height: 24px;
+    height: 26px;
     border-radius: 4px;
     padding-left: 6px;
     width: 41%;
+    border: 1px solid #999999;
+}
+
+#datatable-buttons_paginate {
+    margin-top: 0.5em;
+    /* margin-bottom: 11px; */
+    margin-left: 15px;
+    float: left;
+}
+
+.dataTables_paginate a#datatable-buttons_previous, .dataTables_wrapper.no-footer .dataTables_paginate #datatable-buttons_paginate #datatable-buttons_previous {
+    border-radius: 4px 2px 2px 4px;
+}
+
+.dataTables_paginate a#datatable-buttons_next, .dataTables_wrapper.no-footer .dataTables_paginate #datatable-buttons_paginate #datatable-buttons_next {
+    border-radius: 2px 4px 4px 2px;
+}
+
+a.paginate_button:hover, 
+a.paginate_button.current:hover, 
+a#datatable-buttons_previous:hover, 
+a#datatable-buttons_next:hover, 
+.dataTables_wrapper.no-footer .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper.no-footer .dataTables_paginate .paginate_button.current:hover {
+    background: #e3e3e3 !important;
+    background-image: linear-gradient(0deg, #e3e3e3 0%, #f9f9f9 100%) !important;
+    color: #999999 !important;
+    text-decoration: none !important;
+    border: 1px solid #e3e3e3 !important;
+}
+
+.bottom .dataTables_paginate #datatable-buttons_paginate a.paginate_button.current, .dataTables_wrapper.no-footer .dataTables_paginate .paginate_button.current {
+    background: #337ab7 !important;
+    background-image: linear-gradient(0deg, #337ab7 0%, #8BC6EC 100%) !important;
+    color: #ffffff !important;
+    border-color: #8BC6EC !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
+.bottom .dataTables_paginate a#datatable-buttons_previous, .dataTables_paginate #datatable-buttons_paginate a#datatable-buttons_previous, .bottom .dataTables_paginate a#datatable-buttons_next, .dataTables_paginate #datatable-buttons_paginate a#datatable-buttons_next {
+    border: 1px solid #dddddd !important;
+    background-color: #ffffff;
+    padding: 3px !important;
+    text-decoration: none !important;
+}
+
+.bottom .dataTables_paginate a#datatable-buttons_previous.disabled, 
+.bottom .dataTables_paginate a#datatable-buttons_next.disabled, 
+.bottom .dataTables_paginate a#datatable-buttons_previous.disabled:hover, 
+.bottom .dataTables_paginate a#datatable-buttons_next.disabled:hover {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #dddddd !important;
+}
+
+.dataTables_paginate .paginate_button, .dataTables_paginate #datatable-buttons_paginate .paginate_button {
+    border: 1px solid #dddddd !important;
+    background-color: #ffffff !important;
+    padding: 3px 8px !important;
+    text-decoration: none !important;
 }
 
 table.dataTable thead th, table.dataTable thead td, #datatable-buttons.dataTable thead th, #datatable-buttons.dataTable thead td {

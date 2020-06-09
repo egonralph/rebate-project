@@ -6,6 +6,23 @@ html {
     box-sizing: inherit;
 }
 
+a.disabled {
+    color: #eeeeee;
+}
+
+a.paginate_button.current {
+    background: #337ab7;
+    color: #ffffff;
+    border-color: #337ab7;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+a.paginate_button, #datatable-buttons_paginate a.paginate_button {
+    border-radius: 0;
+    margin-left: 0;
+}
+
 .auto_margin {
     margin: auto;
 }
@@ -48,6 +65,10 @@ html {
     margin-left: 1.5em;
 }
 
+.current {
+    font-weight: bolder;
+}
+
 .custom-select {
     background: #ffffff;
 }
@@ -69,10 +90,19 @@ html {
     margin-top: 0.5em;
 }
 
+#datatable-buttons_info {
+    float: right;
+    margin-right: 15px;
+    margin-top: -2.75em;
+    font-size: 12px;
+    width: 10%;
+}
+
 #datatable-buttons_length {
     display: block;
-    margin-top: 0.1em;
+    margin-top: 1em;
     font-size: 12px;
+    width: 10%;
 }
 
 #datatable-buttons_length select {
@@ -82,12 +112,71 @@ html {
     width: 41%;
 }
 
-table.dataTable thead th, table.dataTable thead td, #datatable-buttons.dataTable thead th, #datatable-buttons.dataTable thead td { 
+a#datatable-buttons_previous, a#datatable-buttons_next, .paginate_button {
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    padding: 3px;
+    text-decoration: none;
+}
+
+#datatable-buttons_paginate {
+    margin-top: 0.5em;
+    /* margin-bottom: 11px; */
+    margin-left: 15px;
+    float: left;
+}
+
+#datatable-buttons_previous,
+#datatable-buttons_paginate #datatable-buttons_previous {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#datatable-buttons_next,
+#datatable-buttons_paginate #datatable-buttons_previous {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#datatable-buttons_paginate a.paginate_button.current {
+    background: #337ab7 !important;
+    color: #ffffff !important;
+    border-color: #337ab7 !important;
+    padding-left: 0.5em !important;
+    padding-right: 0.5em !important;
+}
+
+a#datatable-buttons_previous, #datatable-buttons_paginate a#datatable-buttons_previous, a#datatable-buttons_next, #datatable-buttons_paginate a#datatable-buttons_next, .paginate_button, #datatable-buttons_paginate .paginate_button {
+    border: 1px solid #dddddd !important;
+    background-color: #ffffff !important;
+    padding: 3px !important;
+    text-decoration: none !important;
+}
+
+a.paginate_button:hover, a.paginate_button.current:hover, a#datatable-buttons_previous:hover, a#datatable-buttons_next:hover {
+    background: #e3e3e3;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+table.dataTable thead th, table.dataTable thead td, #datatable-buttons.dataTable thead th, #datatable-buttons.dataTable thead td {
     margin: 0 auto;
     padding-top: 0;
     padding-bottom: 0;
     border: none;
     border-right: 1px solid #ddd;
+}
+
+table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
+    border: 1px solid #ddd;
+}
+
+.dataTables_filter {
+    width: 90%;
+}
+
+.dataTables_info {
+    width: 79.5%
 }
 
 #date_brand_vendor_dd_menu, #earn_vendor_dd_menu {

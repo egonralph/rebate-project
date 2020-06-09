@@ -6,7 +6,8 @@
 <link href="/o/gentelella-theme/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css"
     rel="stylesheet" />
 <link href="/o/gentelella-theme/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="/documents/242830/531852/datatables.min.css/cb203e63-2d7a-df39-d49b-a14fc97b149c" />
+<link rel="stylesheet" type="text/css"
+    href="/documents/242830/531852/datatables.min.css/cb203e63-2d7a-df39-d49b-a14fc97b149c" />
 
 <div>
     <!--<div class="page-title">
@@ -263,7 +264,8 @@
 </script>
 
 <script src="/o/gentelella-theme/vendors/iCheck/icheck.min.js"></script><!-- Datatables -->
-<script type="text/javascript" src="/documents/242830/531855/datatables.min.js/ebfb5c69-ac06-c04c-62f3-5e29607b200a"></script> <!-- Datatables -->
+<script type="text/javascript"
+    src="/documents/242830/531855/datatables.min.js/ebfb5c69-ac06-c04c-62f3-5e29607b200a"></script> <!-- Datatables -->
 
 <script>
     window.define = window.__define;
@@ -309,29 +311,31 @@
 </script>
 
 <script>
-    $(document).ready(function () {
-        $('#datatable-buttons').DataTable();
-    });
+    function initBrandSkuTable() {
+        var $table = $('#datatable-buttons');
+        var table = $table.DataTable({
+            order: [[1, "asc"]],
+            pageLength: 25,
+            dom: '<"top"f>rt<"bottom"lpi><"clear">',
+            language: {
+                emptyTable: "No data found",
+                info: "Showing _START_ to _END_ of _MAX_ records ",
+                infoEmpty: "No records available",
+                search: '_INPUT_',
+                searchPlaceholder: 'Instant Search...',
+                paginate: {
+                    first: "\u00ab",
+                    previous: "\u00ab",
+                    next: "\u00bb",
+                    last: "\u00bb"
+                }
+            }
+        });
+    }
+</script>
 
+<script>
     $(document).ready(function () {
-			$.extend($.fn.dataTable.defaults, {
-			    language: {
-			        emptyTable: "No data found",
-					info: "Showing _START_ to _END_ of _MAX_ records ",
-					infoEmpty: "No records available",
-					search: '_INPUT_',
-					searchPlaceholder: 'Instant Search...',
-				    paginate:{
-						first: "\u00ab",
-						previous: "\u2039",
-						next: "\u203a",
-						last: "\u00bb"
-					}
-			    },
-				select: {
-					style: "os"
-				},
-				"pageLength":50
-			} );
-		});
+        initBrandSkuTable();
+    });
 </script>
