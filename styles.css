@@ -607,24 +607,22 @@ input[type="search"] {
     font-weight: 600;
 }
 
-.table_total_row {
+.table_total_row,
+table td.table_total_row {
     border: none;
-    background-color: #b5fffc;
-    background-image: linear-gradient(0deg, #b5fffc 0%, #effdff 100%);
     font-weight: 700;
     color: #262626;
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
-.table_total_row--special {
+.table_total_row--special,
+table td.table_total_row--special {
     border: none;
-    background-color: #b5fffc;
-    background-image: linear-gradient(0deg, #b5fffc 0%, #effdff 100%);
     font-weight: 700;
     color: #262626;
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
-    text-align: center;
-    letter-spacing: 2em;
+    text-align: right;
+    padding-right: 2em;
 }
 
 .no_border, table td.no_border {
