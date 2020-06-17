@@ -295,6 +295,16 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
     font-size: 12px;
 }
 
+.dropdown-icon {
+    float: right;
+    margin-top: -0.1em;
+    margin-right: -0.2em;
+    color: #777777;
+    font-size: 18px;
+    font-weight: 800;
+    transform: scale(0.9, 1);
+}
+
 .form-check-label {
     top: -3px;
 }

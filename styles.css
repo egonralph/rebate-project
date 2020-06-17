@@ -71,6 +71,7 @@ a.paginate_button, #datatable-buttons_paginate a.paginate_button {
 
 .custom-select {
     background: #ffffff;
+    padding: .175rem 1.75rem .375rem .75rem;
 }
 
 .dashboard_filter_panel {
@@ -256,6 +257,16 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
 .dropdown_list {
     padding-top: 0.2em;
     padding-bottom: 0.2em;
+}
+
+.dropdown-icon {
+    float: right;
+    margin-top: -0.1em;
+    margin-right: -0.2em;
+    color: #777777;
+    font-size: 18px;
+    font-weight: 800;
+    transform: scale(0.9,1);
 }
 
 .dropdown-select-button-content, .columns-li-padding.dropdown-select-button-content {
