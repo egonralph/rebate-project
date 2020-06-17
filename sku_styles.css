@@ -577,6 +577,15 @@ input[type="search"] {
     margin-bottom: 4em;
 }
 
+.superscript {
+    vertical-align: super;
+    font-size: 12px;
+}
+
+.superscript:hover {
+    color: navy;
+}
+
 .table thead th {
     vertical-align: inherit;
 }
@@ -659,16 +668,14 @@ input[type="search"] {
     font-weight: 600;
 }
 
-.table_total_row,
-table td.table_total_row {
+.table_total_row, table td.table_total_row {
     border: none;
     font-weight: 700;
     color: #262626;
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
-.table_total_row--special,
-table td.table_total_row--special {
+.table_total_row--special, table td.table_total_row--special {
     border: none;
     font-weight: 700;
     color: #262626;
