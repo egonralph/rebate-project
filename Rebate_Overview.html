@@ -1975,7 +1975,7 @@
             <div class="clearfix">&nbsp;</div>
           </div>
 
-          <div class="x_content"><canvas height="80px" id="barChartByBrand"></canvas></div>
+          <div class="x_content"><canvas height="80px" id="lineChartByBrand"></canvas></div>
         </div>
       </div>
 
@@ -2207,24 +2207,24 @@
   };
 
   // Line chart
-  var ctx = document.getElementById("barChartByBrand");
-  var barChartByBrand = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11",],
-      datasets: [{
-        label: "Weekly Points",
-        backgroundColor: "rgba(38, 185, 154, 0.31)",
-        borderColor: "rgba(38, 185, 154, 0.7)",
-        pointBorderColor: "rgba(38, 185, 154, 0.7)",
-        pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
-        pointHoverBackgroundColor: "#fff",
-        pointHoverBorderColor: "rgba(220,220,220,1)",
-        pointBorderWidth: 1,
-        data: [131, 874, 366, 539, 200, 785, 227, 490, 1050, 850, 250]
-      }]
-    },
-  });
+  // var ctx = document.getElementById("lineChartByBrand2");
+  // var barChartByBrand = new Chart(ctx, {
+  //   type: 'line',
+  //   data: {
+  //     labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11",],
+  //     datasets: [{
+  //       label: "Weekly Points",
+  //       backgroundColor: "rgba(38, 185, 154, 0.31)",
+  //       borderColor: "rgba(38, 185, 154, 0.7)",
+  //       pointBorderColor: "rgba(38, 185, 154, 0.7)",
+  //       pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+  //       pointHoverBackgroundColor: "#fff",
+  //       pointHoverBorderColor: "rgba(220,220,220,1)",
+  //       pointBorderWidth: 1,
+  //       data: [131, 874, 366, 539, 200, 785, 227, 490, 1050, 850, 250]
+  //     }]
+  //   },
+  // });
 
 
 
@@ -2654,8 +2654,8 @@
   ];
 
   // Line chart day i3 historical
-  var ctx = document.getElementById("barChartByBrand");
-  var barChartBrand = new Chart(ctx, {
+  var ctx = document.getElementById("lineChartByBrand");
+  var lineChartBrand = new Chart(ctx, {
     type: 'line',
     data: {
       labels: [],
@@ -3025,17 +3025,17 @@
 
 
 
-    barChartBrand.data.labels.splice(0, barChartBrand.data.labels.length);
+    lineChartBrand.data.labels.splice(0, lineChartBrand.data.labels.length);
     for (var i = 0; i < chartData.labels.length; i++) {
-      barChartBrand.data.labels.push(chartData.labels[i]);
+      lineChartBrand.data.labels.push(chartData.labels[i]);
     }
 
 
-    for (var i = 0; i < barChartBrand.data.datasets.length; i++) {
-      barChartBrand.data.datasets[i].data.splice(0, barChartBrand.data.datasets[i].data.length);
+    for (var i = 0; i < lineChartBrand.data.datasets.length; i++) {
+      lineChartBrand.data.datasets[i].data.splice(0, lineChartBrand.data.datasets[i].data.length);
       if (active[i]) {
         for (var j = 0; j < chartData.datasets[i].data.length; j++) {
-          barChartBrand.data.datasets[i].data.push(chartData.datasets[i].data[j]);
+          lineChartBrand.data.datasets[i].data.push(chartData.datasets[i].data[j]);
         }
       }
     }
@@ -3055,7 +3055,7 @@
     //   }
     // }
 
-    barChartBrand.update();
+    lineChartBrand.update();
     // barChartBrandCollapse.update();
     console.log('update chart_auto function');
     console.log(selectedFreq - 1);
