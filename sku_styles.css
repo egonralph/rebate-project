@@ -305,6 +305,39 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
     transform: scale(0.9, 1);
 }
 
+.dropdown_menu_chart {
+    float: right;
+    margin-right: 1.5em;
+}
+
+.dropdown_menu_chart-icon1 {
+    color: #FF9143;
+}
+
+.dropdown_menu_chart-icon2 {
+    color: #9B59B6;
+}
+
+.dropdown_menu_chart-icon3 {
+    color: #E74C3C;
+}
+
+.dropdown_menu_chart-icon4 {
+    color: #17a2b8;
+}
+
+.dropdown_menu_chart-icon5 {
+    color: #28a745;
+}
+
+.dropdown_menu_chart-icon6 {
+    color: #ffc107;
+}
+
+.dropdown_menu_chart-icon7 {
+    color: #3498DB;
+}
+
 .form-check-label {
     top: -3px;
 }
