@@ -2854,6 +2854,7 @@
       $("#points_to_date_category_combobox").removeClass("hide");
       $("#points_to_date_freq_combobox").removeClass("hide");
       $("#points_to_date_vendor_combobox").removeClass("hide");
+      initializeSelectedChart();
 
       console.log('render default');
 
@@ -2866,7 +2867,8 @@
         $("#brand_date_point_vendor_chooser").val("1");
         $("#brand_date_point_activity_graph").val("1");
         $("#freq_point_activity_graph2").val("1");
-
+        initializeSelectedChart();
+        
         console.log('render PTD');
       }
       if (val == 'PTE') {
@@ -2877,6 +2879,7 @@
         $("#points_to_date_vendor_combobox").addClass("hide");
         $("#earn_point_vendor_chooser").val("1");
         $("#earn_point_activity_graph").val("1");
+        hideChartCat1();
 
         console.log('render PTE');
       }
