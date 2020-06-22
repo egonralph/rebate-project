@@ -1684,7 +1684,8 @@
           </div>
 
           <!-- Points To Earn per Category -->
-          <div class="offset-md-2 col-md-2 offset-sm-2 col-sm-2 offset-xs-2 col-xs-2 dashboard_freq half_top_margin hide"
+          <div
+            class="offset-md-2 col-md-2 offset-sm-2 col-sm-2 offset-xs-2 col-xs-2 dashboard_freq half_top_margin hide"
             id="points_to_earn_vendor_dropdownmenu">
             <div class="row">
               <label class="titled_component one_margin_left">Category &nbsp;</label>
@@ -1760,9 +1761,11 @@
                   </span>
                 </li>
                 <li class="not-sortable columns-li-padding dropdown-select-button-content">
-                  <button class="btn btn-primary btn-xs btn-block select-category-btn" id="default_checkHistoricalSoldVend">Select
+                  <button class="btn btn-primary btn-xs btn-block select-category-btn"
+                    id="default_checkHistoricalSoldVend">Select
                     All</button>
-                  <button class="btn btn-primary btn-xs btn-block select-category-btn" id="default_uncheckHistoricalSoldVend">Unselect
+                  <button class="btn btn-primary btn-xs btn-block select-category-btn"
+                    id="default_uncheckHistoricalSoldVend">Unselect
                     All</button>
                 </li>
               </ul>
@@ -1980,8 +1983,8 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-            <h2>Units Opportunities <small id="daily_graph_i3_title"></small></h2>
-
+            <h2 class="historical_header--js">Units Opportunities  </h2>
+            <h2><small id="daily_graph_i3_title"></small></h2>
             <ul class="nav navbar-right panel_toolbox">
               <li>&nbsp;</li>
               <li class="dropdown">
@@ -2352,7 +2355,7 @@
     [
       // range w1
       {
-        title: 'Sold Weekly: Week 1',
+        title: 'Weekly: Week 1',
         labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",],
         datasets: [
           {
@@ -2387,7 +2390,7 @@
       },
       // range w2
       {
-        title: 'Sold Weekly: Week 2',
+        title: 'Weekly: Week 2',
         labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",],
         datasets: [
           {
@@ -2422,7 +2425,7 @@
       },
       // range w3
       {
-        title: 'Sold Weekly: Week 3',
+        title: 'Weekly: Week 3',
         labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",],
         datasets: [
           {
@@ -2460,7 +2463,7 @@
     [
       // range m1
       {
-        title: 'Sold Montly: January',
+        title: 'Montly: January',
         labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
         datasets: [
           {
@@ -2495,7 +2498,7 @@
       },
       // range m2
       {
-        title: 'Sold Montly: February',
+        title: 'Montly: February',
         labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28",],
         datasets: [
           {
@@ -2530,7 +2533,7 @@
       },
       // range m3
       {
-        title: 'Sold Montly: March',
+        title: 'Montly: March',
         labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
         datasets: [
           {
@@ -2568,7 +2571,7 @@
     [
       // range y1
       {
-        title: 'Sold Annual: 2020',
+        title: 'Annual: 2020',
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",],
         datasets: [
           {
@@ -2603,7 +2606,7 @@
       },
       // range y2
       {
-        title: 'Sold Annual: 2019',
+        title: 'Annual: 2019',
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",],
         datasets: [
           {
@@ -2638,7 +2641,7 @@
       },
       // range y3
       {
-        title: 'Sold Annual: 2018',
+        title: 'Annual: 2018',
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",],
         datasets: [
           {
@@ -3282,6 +3285,7 @@
       $("#points_to_date_vendor_combobox").removeClass("hide");
       hideChartCat2();
       initializeSelectedChart();
+      changeHistoricalHeader();
 
       console.log('render default');
 
@@ -3296,8 +3300,8 @@
         $("#freq_point_activity_graph2").val("1");
         hideChartCat2();
         initializeSelectedChart();
-        
-        
+        changeHistoricalHeader();
+
         console.log('render PTD');
       }
       if (val == 'PTE') {
@@ -3309,7 +3313,8 @@
         $("#earn_point_vendor_chooser").val("1");
         $("#earn_point_activity_graph").val("1");
         hideChartCat1();
-        initializeHistoricalSoldChart()
+        initializeHistoricalSoldChart();
+        changeHistoricalHeader();
 
         console.log('render PTE');
       }
@@ -3452,7 +3457,6 @@
     $("#daily_graph_i3").removeClass("hide");
     $("#daily_graph_i3").show();
 
-
     if (selectedCategory == 1) {
       // $('#freq_point_activity_graph2').removeClass("hide");
       var chartData = historicalUnitsSoldCollection[selectedCategory - 1][selectedFreq - 1];
@@ -3497,13 +3501,13 @@
     console.log(selectedCategory - 1);
   }
 
-// historical units opportunities section
-  
+  // historical units opportunities section
+
   function hideRangeCombo() {
-      $('#freq_point_activity_graph2').addClass("hide");
-      $('#freq_month_point_activity_graph2').addClass("hide");
-      $('#freq_annual_point_activity_graph2').addClass("hide");
-    }
+    $('#freq_point_activity_graph2').addClass("hide");
+    $('#freq_month_point_activity_graph2').addClass("hide");
+    $('#freq_annual_point_activity_graph2').addClass("hide");
+  }
 
   function initializeSelectedChart() {
     var selectedFreq = $('#freq_point_activity_graph2').children("option:selected").val();
@@ -3525,7 +3529,6 @@
 
     $("#daily_graph_i3").removeClass("hide");
     $("#daily_graph_i3").show();
-
 
     if (selectedCategory == 1) {
       $('#freq_point_activity_graph2').removeClass("hide");
@@ -4224,6 +4227,24 @@
   //   console.log('update line_chart_new function');
   // }
 
+  function changeHistoricalHeader() {
+    $('#dash_ratio_container .radio_label').on('click', function (event) {
+      var historicalHeader = $('#daily_graph_i3 .historical_header--js');
+      var val = $(this).find('input').val();
+      
+      historicalHeader.text('Units Opportunities');
+
+      if (val == 'PTD') {
+        historicalHeader.text('Units Opportunities');
+        console.log('Units Opportunities test');
+      }
+      if (val == 'PTE') {
+        historicalHeader.text('Units Sold');
+        console.log('Units Sold Test');
+      }
+    });
+  };
+
   $(document).ready(function () {
     $('.widget_summary').click(function () {
 
@@ -4243,6 +4264,7 @@
     console.log('show/ hide historic chart');
     var showHistoricPane = document.querySelector('.show-historical-pane');
     showHistoricPane.classList.toggle('hide');
+    changeHistoricalHeader();
   });
 
   $(document).ready(function () {
