@@ -1786,7 +1786,7 @@
             </div>
           </div>
 
-          <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq" id="historic_sold_freq_combobox">
+          <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq hide" id="historic_sold_freq_combobox">
             <div class="row block">
               <label class="titled_component">Range</label>
             </div>
@@ -3368,6 +3368,7 @@
       var val = $(this).find('input').val();
       $("#points_to_earn_category_combobox").addClass("hide");
       $("#points_to_earn_vendor_dropdownmenu").addClass("hide");
+      $("#historic_sold_freq_combobox").addClass("hide");
       $("#points_to_date_category_combobox").removeClass("hide");
       $("#points_to_date_freq_combobox").removeClass("hide");
       $("#points_to_date_vendor_combobox").removeClass("hide");
@@ -3380,6 +3381,7 @@
       if (val == 'PTD') {
         $("#points_to_earn_category_combobox").addClass("hide");
         $("#points_to_earn_vendor_dropdownmenu").addClass("hide");
+        $("#historic_sold_freq_combobox").addClass("hide");
         $("#points_to_date_category_combobox").removeClass("hide");
         $("#points_to_date_freq_combobox").removeClass("hide");
         $("#points_to_date_vendor_combobox").removeClass("hide");
@@ -3395,11 +3397,13 @@
       if (val == 'PTE') {
         $("#points_to_earn_category_combobox").removeClass("hide");
         $("#points_to_earn_vendor_dropdownmenu").removeClass("hide");
+        $("#historic_sold_freq_combobox").removeClass("hide");
         $("#points_to_date_category_combobox").addClass("hide");
         $("#points_to_date_freq_combobox").addClass("hide");
         $("#points_to_date_vendor_combobox").addClass("hide");
         $("#earn_point_vendor_chooser").val("1");
         $("#earn_point_activity_graph").val("1");
+        $("#freq_historic_sold_activity").val("1");
         hideChartCat1();
         initializeHistoricalSoldChart();
         changeHistoricalHeader();
@@ -3519,15 +3523,15 @@
 
   // historical units sold section
   function hideHistoricalSoldRangeCombo() {
-    // $('#freq_point_activity_graph2').addClass("hide");
-    $('#freq_month_point_activity_graph2').addClass("hide");
+    $('#freq_historic_sold_activity').addClass("hide");
+    $('#freq_month_historic_sold_activity').addClass("hide");
     $('#freq_annual_point_activity_graph2').addClass("hide");
   }
 
   function initializeHistoricalSoldChart() {
     var selectedFreq = $('#earn_point_activity_graph').children("option:selected").val();
-    // var selectedFreqMonth = $('#freq_month_point_activity_graph2').children("option:selected").val();
-    // var selectedFreqYear = $('#freq_annual_point_activity_graph2').children("option:selected").val();
+    var selectedFreqMonth = $('#freq_month_historic_sold_activity').children("option:selected").val();
+    var selectedFreqYear = $('#freq_annual_historic_sold_activity').children("option:selected").val();
     var selectedCategory = $('#brand_date_point_activity_graph').children("option:selected").val();
     var active = [
       $('#checkHistoricalSoldVend1').is(':checked'),
@@ -3546,21 +3550,21 @@
     $("#daily_graph_i3").show();
 
     if (selectedCategory == 1) {
-      // $('#freq_point_activity_graph2').removeClass("hide");
+      $('#freq_historic_sold_activity').removeClass("hide");
       var chartData = historicalUnitsSoldCollection[selectedCategory - 1][selectedFreq - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
       console.log('show ' + selectedCategory + ' ' + selectedFreq);
     }
     if (selectedCategory == 2) {
-      // $('#freq_month_point_activity_graph2').removeClass("hide");
+      $('#freq_month_historic_sold_activity').removeClass("hide");
       var chartData = historicalUnitsSoldCollection[selectedCategory - 1][selectedFreqMonth - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
       console.log('show ' + selectedCategory + ' ' + selectedFreqMonth);
     }
     if (selectedCategory == 3) {
-      // $('#freq_annual_point_activity_graph2').removeClass("hide");
+      $('#freq_annual_historic_sold_activity').removeClass("hide");
       var chartData = historicalUnitsSoldCollection[selectedCategory - 1][selectedFreqYear - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
