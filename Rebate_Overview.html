@@ -1684,8 +1684,7 @@
           </div>
 
           <!-- Historical units sold -->
-          <div
-            class="col-md-2 col-sm-2 col-xs-2 dashboard_freq half_top_margin hide"
+          <div class="col-md-2 col-sm-2 col-xs-2 dashboard_freq half_top_margin hide"
             id="points_to_earn_vendor_dropdownmenu">
             <div class="row">
               <label class="titled_component one_margin_left">Brand &nbsp;</label>
@@ -2071,7 +2070,7 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-            <h2 class="historical_header--js">Units Opportunities  </h2>
+            <h2 class="historical_header--js">Units Opportunities </h2>
             <h2><small id="daily_graph_i3_title"></small></h2>
             <ul class="nav navbar-right panel_toolbox">
               <li>&nbsp;</li>
@@ -2318,28 +2317,6 @@
     enabled: false
   };
 
-  // Line chart
-  // var ctx = document.getElementById("lineChartByBrand2");
-  // var barChartByBrand = new Chart(ctx, {
-  //   type: 'line',
-  //   data: {
-  //     labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11",],
-  //     datasets: [{
-  //       label: "Weekly Points",
-  //       backgroundColor: "rgba(38, 185, 154, 0.31)",
-  //       borderColor: "rgba(38, 185, 154, 0.7)",
-  //       pointBorderColor: "rgba(38, 185, 154, 0.7)",
-  //       pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
-  //       pointHoverBackgroundColor: "#fff",
-  //       pointHoverBorderColor: "rgba(220,220,220,1)",
-  //       pointBorderWidth: 1,
-  //       data: [131, 874, 366, 539, 200, 785, 227, 490, 1050, 850, 250]
-  //     }]
-  //   },
-  // });
-
-
-
 </script><!-- JQVMap -->
 
 <script>
@@ -2448,11 +2425,11 @@
         datasets: [
           {
             label: "Core i3",
-            data: [940,56,704,534,546,440,919]
+            data: [940, 56, 704, 534, 546, 440, 919]
           },
           {
             label: "Core i5",
-            data: [53,201,750,910,172,65,319]
+            data: [53, 201, 750, 910, 172, 65, 319]
           },
           {
             label: "Core i7",
@@ -2472,7 +2449,7 @@
           },
           {
             label: "Xeon",
-            data: [764, 231, 993, 572, 638, 438,436]
+            data: [764, 231, 993, 572, 638, 438, 436]
           }
         ]
       },
@@ -3363,6 +3340,31 @@
 <!-- gauge.js -->
 
 <script>
+  // main dashboard panel 
+  function chooseSoldOutstandingRadio() {
+    $('#sold_outstanding_container .radio_label').on('click', function (event) {
+      var val = $(this).find('input').val();
+      $("#sold_section").addClass("hide");
+      $("#outstanding_section").removeClass("hide");
+
+      console.log('render default');
+
+      if (val == 'CPS') {
+        $("#sold_section").removeClass("hide");
+        $("#outstanding_section").addClass("hide");
+
+        console.log('render CPS');
+      }
+      if (val == 'CPO') {
+        $("#sold_section").addClass("hide");
+        $("#outstanding_section").removeClass("hide");
+
+        console.log('render CPO');
+      }
+    });
+  };
+
+  // historical chart panel
   function chooseRadioButtons() {
     $('#dash_ratio_container .radio_label').on('click', function (event) {
       var val = $(this).find('input').val();
@@ -3413,112 +3415,12 @@
     });
   };
 
-  function chooseSoldOutstandingRadio() {
-    $('#sold_outstanding_container .radio_label').on('click', function (event) {
-      var val = $(this).find('input').val();
-      $("#sold_section").addClass("hide");
-      $("#outstanding_section").removeClass("hide");
-
-      console.log('render default');
-
-      if (val == 'CPS') {
-        $("#sold_section").removeClass("hide");
-        $("#outstanding_section").addClass("hide");
-
-        console.log('render CPS');
-      }
-      if (val == 'CPO') {
-        $("#sold_section").addClass("hide");
-        $("#outstanding_section").removeClass("hide");
-
-        console.log('render CPS');
-      }
-    });
-  };
-
+  // hide all charts
   function hideAllCharts() {
-    // hideChartCat1Vend1();
-    // hideChartCat1Vend2();
     hideChartCat1();
-    // hideEarnBarChartCat1();
-    // hideEarnBarChartCat2();
-    // hideEarnBarChartCat3();
-    // hideEarnBarChartCat4();
-    // hideEarnBarChartCat5();
-    // hideEarnBarChartCat6();
-    // hideEarnBarChartCat7();
+
     console.log('hide all charts fn');
   }
-
-  // function selectEarnBarChart() {
-  //   hideAllCharts();
-  //   $("#earn_graph_i3").removeClass("hide");
-  //   $("#earn_graph_i3").show();
-  // };
-
-  // function hideEarnBarChartCat1() {
-  //   $("#earn_graph_i3").addClass("hide");
-  // };
-
-  // function selectEarnBarChart2() {
-  //   hideAllCharts();
-  //   $("#earn_graph_i5").removeClass("hide");
-  //   $("#earn_graph_i5").show();
-  // };
-
-  // function hideEarnBarChartCat2() {
-  //   $("#earn_graph_i5").addClass("hide");
-  // };
-
-  // function selectEarnBarChart3() {
-  //   hideAllCharts();
-  //   $("#earn_graph_i7").removeClass("hide");
-  //   $("#earn_graph_i7").show();
-  // };
-
-  // function hideEarnBarChartCat3() {
-  //   $("#earn_graph_i7").addClass("hide");
-  // };
-
-  // function selectEarnBarChart4() {
-  //   hideAllCharts();
-  //   $("#earn_graph_i9").removeClass("hide");
-  //   $("#earn_graph_i9").show();
-  // };
-
-  // function hideEarnBarChartCat4() {
-  //   $("#earn_graph_i9").addClass("hide");
-  // };
-
-  // function selectEarnBarChart5() {
-  //   hideAllCharts();
-  //   $("#earn_graph_m3").removeClass("hide");
-  //   $("#earn_graph_m3").show();
-  // };
-
-  // function hideEarnBarChartCat5() {
-  //   $("#earn_graph_m3").addClass("hide");
-  // };
-
-  // function selectEarnBarChart6() {
-  //   hideAllCharts();
-  //   $("#earn_graph_pen").removeClass("hide");
-  //   $("#earn_graph_pen").show();
-  // };
-
-  // function hideEarnBarChartCat6() {
-  //   $("#earn_graph_pen").addClass("hide");
-  // };
-
-  // function selectEarnBarChart7() {
-  //   hideAllCharts();
-  //   $("#earn_graph_xeon").removeClass("hide");
-  //   $("#earn_graph_xeon").show();
-  // };
-
-  // function hideEarnBarChartCat7() {
-  //   $("#earn_graph_xeon").addClass("hide");
-  // };
 
 
   // historical units sold section
@@ -3529,10 +3431,10 @@
   }
 
   function initializeHistoricalSoldChart() {
-    var selectedFreq = $('#earn_point_activity_graph').children("option:selected").val();
+    var selectedFreq = $('#freq_historic_sold_activity').children("option:selected").val();
     var selectedFreqMonth = $('#freq_month_historic_sold_activity').children("option:selected").val();
     var selectedFreqYear = $('#freq_annual_historic_sold_activity').children("option:selected").val();
-    var selectedCategory = $('#brand_date_point_activity_graph').children("option:selected").val();
+    var selectedCategory = $('#earn_point_activity_graph').children("option:selected").val();
     var active = [
       $('#checkHistoricalSoldVend1').is(':checked'),
       $('#checkHistoricalSoldVend2').is(':checked'),
@@ -3591,19 +3493,21 @@
     console.log('update chart_sold function');
     console.log(selectedFreq - 1);
     console.log(selectedCategory - 1);
+    console.log(selectedFreqMonth - 1);
+    console.log(selectedFreqYear - 1);
   }
 
   function selecthistoricSoldChart() {
     //hide other charts except graph1
-    initializeSelectedChart();
+    initializeHistoricalSoldChart();
     $("select#freq_historic_sold_activity").change(initializeSelectedChart);
     $("select#freq_month_historic_sold_activity").change(initializeSelectedChart);
     $("select#freq_annual_historic_sold_activity").change(initializeSelectedChart);
     console.log('selecthistoricSoldChart depands on range');
   };
 
-  // historical units opportunities section
 
+  // historical units opportunities section
   function hideRangeCombo() {
     $('#freq_point_activity_graph2').addClass("hide");
     $('#freq_month_point_activity_graph2').addClass("hide");
@@ -3669,21 +3573,6 @@
       }
     }
 
-    // barChartBrandCollapse.data.labels.splice(0, barChartBrandCollapse.data.labels.length);
-    // for (var i = 0; i < chartData.labels.length; i++) {
-    //   barChartBrandCollapse.data.labels.push(chartData.labels[i]);
-    // }
-
-
-    // for (var i = 0; i < barChartBrandCollapse.data.datasets.length; i++) {
-    //   barChartBrandCollapse.data.datasets[i].data.splice(0, barChartBrandCollapse.data.datasets[i].data.length);
-    //   if (active[i]) {
-    //     for (var j = 0; j < chartData.datasets[i].data.length; j++) {
-    //       barChartBrandCollapse.data.datasets[i].data.push(chartData.datasets[i].data[j]);
-    //     }
-    //   }
-    // }
-
     lineChartBrand.update();
     // barChartBrandCollapse.update();
     console.log('update chart_auto function');
@@ -3713,129 +3602,13 @@
 
   };
 
-  // function selectDashboardChartVend1() {
-  //   //hide other charts except graph1
-  //   $("#no_chart_page").addClass("hide");
-  //   $("#daily_graph_i3_v1").removeClass("hide");
-  //   $("#weekly_graph_i3_v1").addClass("hide");
-  //   $("#monthly_graph_i3_v1").addClass("hide");
-  //   $("#daily_graph_i3_v1").show();
-
-  //   $("select#freq_point_activity_graph2").change(function () {
-  //     var selectedFreq = $(this).children("option:selected").val();
-  //     hideAllCharts();
-
-  //     if (selectedFreq == 1) {
-  //       $("#daily_graph_i3_v1").removeClass("hide");
-  //       $("#weekly_graph_i3_v1").addClass("hide");
-  //       $("#monthly_graph_i3_v1").addClass("hide");
-  //       $("#daily_graph_i3_v1").show();
-  //     }
-  //     if (selectedFreq == 2) {
-  //       $("#daily_graph_i3_v1").addClass("hide");
-  //       $("#weekly_graph_i3_v1").removeClass("hide");
-  //       $("#monthly_graph_i3_v1").addClass("hide");
-  //       $("#weekly_graph_i3_v1").show();
-  //     }
-  //     if (selectedFreq == 3) {
-  //       $("#daily_graph_i3_v1").addClass("hide");
-  //       $("#weekly_graph_i3_v1").addClass("hide");
-  //       $("#monthly_graph_i3_v1").removeClass("hide");
-  //       $("#monthly_graph_i3_v1").show();
-  //     }
-  //   });
-  // };
-
-  // function hideChartCat1Vend1() {
-  //   //hide chart1
-  //   $("#daily_graph_i3_v1").addClass("hide");
-  //   $("#weekly_graph_i3_v1").addClass("hide");
-  //   $("#monthly_graph_i3_v1").addClass("hide");
-  // };
-
-  // function selectDashboardChartVend2() {
-  //   //hide other charts except graph1
-  //   $("#no_chart_page").addClass("hide");
-  //   $("#daily_graph_i3_v2").removeClass("hide");
-  //   $("#weekly_graph_i3_v2").addClass("hide");
-  //   $("#monthly_graph_i3_v2").addClass("hide");
-  //   $("#daily_graph_i3_v2").show();
-
-  //   $("select#freq_point_activity_graph2").change(function () {
-  //     var selectedFreq = $(this).children("option:selected").val();
-  //     hideAllCharts();
-
-  //     if (selectedFreq == 1) {
-  //       $("#no_chart_page").addClass("hide");
-  //       $("#daily_graph_i3_v2").removeClass("hide");
-  //       $("#weekly_graph_i3_v2").addClass("hide");
-  //       $("#monthly_graph_i3_v2").addClass("hide");
-  //       $("#daily_graph_i3_v2").show();
-  //     }
-  //     if (selectedFreq == 2) {
-  //       $("#no_chart_page").addClass("hide");
-  //       $("#daily_graph_i3_v2").addClass("hide");
-  //       $("#weekly_graph_i3_v2").removeClass("hide");
-  //       $("#monthly_graph_i3_v2").addClass("hide");
-  //       $("#weekly_graph_i3_v2").show();
-  //     }
-  //     if (selectedFreq == 3) {
-  //       $("#no_chart_page").addClass("hide");
-  //       $("#daily_graph_i3_v2").addClass("hide");
-  //       $("#weekly_graph_i3_v2").addClass("hide");
-  //       $("#monthly_graph_i3_v2").removeClass("hide");
-  //       $("#monthly_graph_i3_v2").show();
-  //     }
-  //   });
-  // };
-
-  // function hideChartCat1Vend2() {
-  //   $("#daily_graph_i3_v2").addClass("hide");
-  //   $("#weekly_graph_i3_v2").addClass("hide");
-  //   $("#monthly_graph_i3_v2").addClass("hide");
-  // };
-
   function selectCategoryPerEarn() {
     $("select#earn_point_activity_graph").change(function () {
       var selectedCat = $(this).children("option:selected").val();
+      $("#freq_historic_sold_activity").val("1");
       hideAllCharts();
       chooseEarnVendorChbx();
-
-      if (selectedCat == 1) {
-        selectEarnBarChart();
-        chooseEarnVendorChbx();
-        console.log("selectedCat " + selectedCat);
-      }
-      else if (selectedCat == 2) {
-        selectEarnBarChart2();
-        chooseEarnVendorChbx2();
-        console.log("selectedCat " + selectedCat);
-      }
-      else if (selectedCat == 3) {
-        selectEarnBarChart3();
-        chooseEarnVendorChbx3();
-        console.log("selectedCat " + selectedCat);
-      }
-      // else if (selectedCat == 4) {
-      //   selectEarnBarChart4();
-      //   chooseEarnVendorChbx4();
-      //   console.log("selectedCat " + selectedCat);
-      // }
-      // else if (selectedCat == 5) {
-      //   selectEarnBarChart5();
-      //   chooseEarnVendorChbx5();
-      //   console.log("selectedCat " + selectedCat);
-      // }
-      // else if (selectedCat == 6) {
-      //   selectEarnBarChart6();
-      //   chooseEarnVendorChbx6();
-      //   console.log("selectedCat " + selectedCat);
-      // }
-      // else if (selectedCat == 7) {
-      //   selectEarnBarChart7();
-      //   chooseEarnVendorChbx7();
-      //   console.log("selectedCat " + selectedCat);
-      // }
+      initializeHistoricalSoldChart();
     });
   };
 
@@ -3846,168 +3619,8 @@
       hideAllCharts();
       chooseEarnVendorChbxNew();
       initializeSelectedChart();
-
     });
   };
-
-  // function selectVendorBrand() {
-  //   $("#daily_graph_i3").removeClass("hide");
-  //   $("#weekly_graph_i3").addClass("hide");
-  //   $("#monthly_graph_i3").addClass("hide");
-  //   $("#daily_graph_i3").show();
-
-  //   $("select#brand_date_point_vendor_chooser").change(function () {
-  //     var selectedFreq = $(this).children("option:selected").val();
-  //     $("#freq_point_activity_graph2").val("1");
-  //     $("#brand_date_point_activity_graph").val("1");
-  //     hideAllCharts();
-
-  //     if (selectedFreq == 1) {
-  //       selectDashboardChart();
-  //     }
-  //     else if (selectedFreq == 2) {
-  //       selectDashboardChartVend1();
-  //     }
-  //     else if (selectedFreq == 3) {
-  //       selectDashboardChartVend2();
-  //     }
-  //     else if (selectedFreq == 4) {
-  //       selectDashboardChart();
-  //     }
-  //     else if (selectedFreq == 5) {
-  //       selectDashboardChartVend1();
-  //     }
-  //     else if (selectedFreq == 6) {
-  //       selectDashboardChartVend2();
-  //     }
-  //   });
-  // };
-
-  function updateEarnVendors() {
-    var active = [
-      $('#checkHistoricalSoldVend1').is(':checked'),
-      $('#checkHistoricalSoldVend2').is(':checked'),
-      $('#checkHistoricalSoldVend3').is(':checked'),
-      $('#checkHistoricalSoldVend4').is(':checked'),
-      $('#checkHistoricalSoldVend5').is(':checked'),
-      $('#checkHistoricalSoldVend6').is(':checked'),
-      $('#checkHistoricalSoldVend7').is(':checked'),
-    ];
-    updateDatasetBC(active, earnVendorsData);
-    console.log($(this).attr('id') + $(this).is(":checked"));
-  }
-
-  function updateEarnVendors2() {
-    var active = [
-      $('#checkHistoricalSoldVend1').is(':checked'),
-      $('#checkHistoricalSoldVend2').is(':checked'),
-      $('#checkHistoricalSoldVend3').is(':checked'),
-      $('#checkHistoricalSoldVend4').is(':checked'),
-      $('#checkHistoricalSoldVend5').is(':checked'),
-      $('#checkHistoricalSoldVend6').is(':checked'),
-      $('#checkHistoricalSoldVend7').is(':checked'),
-    ];
-    updateDatasetBC2(active, earnVendorsData2);
-    console.log($(this).attr('id') + $(this).is(":checked"));
-  }
-
-  function updateEarnVendors3() {
-    var active = [
-      $('#checkHistoricalSoldVend1').is(':checked'),
-      $('#checkHistoricalSoldVend2').is(':checked'),
-      $('#checkHistoricalSoldVend3').is(':checked'),
-      $('#checkHistoricalSoldVend4').is(':checked'),
-      $('#checkHistoricalSoldVend5').is(':checked'),
-      $('#checkHistoricalSoldVend6').is(':checked'),
-      $('#checkHistoricalSoldVend7').is(':checked'),
-    ];
-    updateDatasetBC3(active, earnVendorsData3);
-    console.log($(this).attr('id') + $(this).is(":checked"));
-  }
-
-  function updateEarnVendors4() {
-    var active = [
-      $('#checkHistoricalSoldVend1').is(':checked'),
-      $('#checkHistoricalSoldVend2').is(':checked'),
-      $('#checkHistoricalSoldVend3').is(':checked'),
-      $('#checkHistoricalSoldVend4').is(':checked'),
-      $('#checkHistoricalSoldVend5').is(':checked'),
-      $('#checkHistoricalSoldVend6').is(':checked'),
-      $('#checkHistoricalSoldVend7').is(':checked'),
-    ];
-    updateDatasetBC4(active, earnVendorsData4);
-    console.log($(this).attr('id') + $(this).is(":checked"));
-  }
-
-  function updateEarnVendors5() {
-    var active = [
-      $('#checkHistoricalSoldVend1').is(':checked'),
-      $('#checkHistoricalSoldVend2').is(':checked'),
-      $('#checkHistoricalSoldVend3').is(':checked'),
-      $('#checkHistoricalSoldVend4').is(':checked'),
-      $('#checkHistoricalSoldVend5').is(':checked'),
-      $('#checkHistoricalSoldVend6').is(':checked'),
-      $('#checkHistoricalSoldVend7').is(':checked'),
-    ];
-    updateDatasetBC5(active, earnVendorsData5);
-    console.log($(this).attr('id') + $(this).is(":checked"));
-  }
-
-  function updateEarnVendors6() {
-    var active = [
-      $('#checkHistoricalSoldVend1').is(':checked'),
-      $('#checkHistoricalSoldVend2').is(':checked'),
-      $('#checkHistoricalSoldVend3').is(':checked'),
-      $('#checkHistoricalSoldVend4').is(':checked'),
-      $('#checkHistoricalSoldVend5').is(':checked'),
-      $('#checkHistoricalSoldVend6').is(':checked'),
-      $('#checkHistoricalSoldVend7').is(':checked'),
-    ];
-    updateDatasetBC6(active, earnVendorsData6);
-    console.log($(this).attr('id') + $(this).is(":checked"));
-  }
-
-  function updateEarnVendors7() {
-    var active = [
-      $('#checkHistoricalSoldVend1').is(':checked'),
-      $('#checkHistoricalSoldVend2').is(':checked'),
-      $('#checkHistoricalSoldVend3').is(':checked'),
-      $('#checkHistoricalSoldVend4').is(':checked'),
-      $('#checkHistoricalSoldVend5').is(':checked'),
-      $('#checkHistoricalSoldVend6').is(':checked'),
-      $('#checkHistoricalSoldVend7').is(':checked'),
-    ];
-    updateDatasetBC7(active, earnVendorsData7);
-    console.log($(this).attr('id') + $(this).is(":checked"));
-  }
-
-  // function updateEarnVendors_new() {
-  //   var active = [
-  //     $('#checkBrandDateVend1').is(':checked'),
-  //     $('#checkBrandDateVend2').is(':checked'),
-  //     $('#checkBrandDateVend3').is(':checked'),
-  //     $('#checkBrandDateVend4').is(':checked'),
-  //     $('#checkBrandDateVend5').is(':checked'),
-  //     $('#checkBrandDateVend6').is(':checked'),
-  //     $('#checkBrandDateVend7').is(':checked'),
-  //   ];
-  //   updateDatasetBC_New(active, dataBrandVendorsData);
-  //   console.log($(this).attr('id') + $(this).is(":checked"));
-  // }
-
-  // function updateBrandVendorsDataWeekI3() {
-  //   var active = [
-  //     $('#checkBrandDateVend1').is(':checked'),
-  //     $('#checkBrandDateVend2').is(':checked'),
-  //     $('#checkBrandDateVend3').is(':checked'),
-  //     $('#checkBrandDateVend4').is(':checked'),
-  //     $('#checkBrandDateVend5').is(':checked'),
-  //     $('#checkBrandDateVend6').is(':checked'),
-  //     $('#checkBrandDateVend7').is(':checked'),
-  //   ];
-  //   updateDatasetLCBrandWeekI3(active, brandVendorsDataWeekI3);
-  //   console.log($(this).attr('id') + $(this).is(":checked"));
-  // }
 
   function chooseEarnVendorChbxNew() {
     $('#date_brand_vendor_dd_menu').on('click', '#checkBrandDateVend1, #checkBrandDateVend2, #checkBrandDateVend3, #checkBrandDateVend4, #checkBrandDateVend5, #checkBrandDateVend6, #checkBrandDateVend7', initializeSelectedChart);
@@ -4040,7 +3653,7 @@
   };
 
   function chooseEarnVendorChbx() {
-    $('#earn_vendor_dd_menu').on('click', '#checkHistoricalSoldVend1, #checkHistoricalSoldVend2, #checkHistoricalSoldVend3, #checkHistoricalSoldVend4, #checkHistoricalSoldVend5, #checkHistoricalSoldVend6', updateEarnVendors);
+    $('#earn_vendor_dd_menu').on('click', '#checkHistoricalSoldVend1, #checkHistoricalSoldVend2, #checkHistoricalSoldVend3, #checkHistoricalSoldVend4, #checkHistoricalSoldVend5, #checkHistoricalSoldVend6', initializeHistoricalSoldChart);
 
     $('#earn_vendor_dd_menu').on('click', '#default_checkHistoricalSoldVend', function () {
       $('#checkHistoricalSoldVend1').prop('checked', true);
@@ -4050,112 +3663,22 @@
       $('#checkHistoricalSoldVend5').prop('checked', true);
       $('#checkHistoricalSoldVend6').prop('checked', true);
       $('#checkHistoricalSoldVend7').prop('checked', true);
-      updateEarnVendors();
-      updateEarnVendors2();
-      updateEarnVendors3();
-      updateEarnVendors4();
-      updateEarnVendors5();
-      updateEarnVendors6();
-      updateEarnVendors7();
-      console.log('click default');
+      initializeHistoricalSoldChart();
+      console.log('check default sold');
+    });
+
+    $('#earn_vendor_dd_menu').on('click', '#default_uncheckHistoricalSoldVend', function () {
+      $('#checkHistoricalSoldVend1').prop('checked', false);
+      $('#checkHistoricalSoldVend2').prop('checked', false);
+      $('#checkHistoricalSoldVend3').prop('checked', false);
+      $('#checkHistoricalSoldVend4').prop('checked', false);
+      $('#checkHistoricalSoldVend5').prop('checked', false);
+      $('#checkHistoricalSoldVend6').prop('checked', false);
+      $('#checkHistoricalSoldVend7').prop('checked', false);
+      initializeHistoricalSoldChart();
+      console.log('uncheck default sold');
     });
   };
-
-  // function chooseEarnVendorChbx2() {
-  //   $('#earn_vendor_dd_menu').on('click', '#checkHistoricalSoldVend1, #checkHistoricalSoldVend2, #checkHistoricalSoldVend3, #checkHistoricalSoldVend4, #checkHistoricalSoldVend5, #checkHistoricalSoldVend6', updateEarnVendors2);
-
-  //   $('#earn_vendor_dd_menu').on('click', '#default_checkHistoricalSoldVend', function () {
-  //     $('#checkHistoricalSoldVend1').prop('checked', true);
-  //     $('#checkHistoricalSoldVend2').prop('checked', true);
-  //     $('#checkHistoricalSoldVend3').prop('checked', true);
-  //     $('#checkHistoricalSoldVend4').prop('checked', true);
-  //     $('#checkHistoricalSoldVend5').prop('checked', true);
-  //     $('#checkHistoricalSoldVend6').prop('checked', true);
-  //     $('#checkHistoricalSoldVend7').prop('checked', true);
-  //     updateEarnVendors2();
-  //     console.log('click default');
-  //   });
-  // };
-
-  // function chooseEarnVendorChbx3() {
-  //   $('#earn_vendor_dd_menu').on('click', '#checkHistoricalSoldVend1, #checkHistoricalSoldVend2, #checkHistoricalSoldVend3, #checkHistoricalSoldVend4, #checkHistoricalSoldVend5, #checkHistoricalSoldVend6', updateEarnVendors3);
-
-  //   $('#earn_vendor_dd_menu').on('click', '#default_checkHistoricalSoldVend', function () {
-  //     $('#checkHistoricalSoldVend1').prop('checked', true);
-  //     $('#checkHistoricalSoldVend2').prop('checked', true);
-  //     $('#checkHistoricalSoldVend3').prop('checked', true);
-  //     $('#checkHistoricalSoldVend4').prop('checked', true);
-  //     $('#checkHistoricalSoldVend5').prop('checked', true);
-  //     $('#checkHistoricalSoldVend6').prop('checked', true);
-  //     $('#checkHistoricalSoldVend7').prop('checked', true);
-  //     updateEarnVendors3();
-  //     console.log('click default');
-  //   });
-  // };
-
-  // function chooseEarnVendorChbx4() {
-  //   $('#earn_vendor_dd_menu').on('click', '#checkHistoricalSoldVend1, #checkHistoricalSoldVend2, #checkHistoricalSoldVend3, #checkHistoricalSoldVend4, #checkHistoricalSoldVend5, #checkHistoricalSoldVend6', updateEarnVendors4);
-
-  //   $('#earn_vendor_dd_menu').on('click', '#default_checkHistoricalSoldVend', function () {
-  //     $('#checkHistoricalSoldVend1').prop('checked', true);
-  //     $('#checkHistoricalSoldVend2').prop('checked', true);
-  //     $('#checkHistoricalSoldVend3').prop('checked', true);
-  //     $('#checkHistoricalSoldVend4').prop('checked', true);
-  //     $('#checkHistoricalSoldVend5').prop('checked', true);
-  //     $('#checkHistoricalSoldVend6').prop('checked', true);
-  //     $('#checkHistoricalSoldVend7').prop('checked', true);
-  //     updateEarnVendors4();
-  //     console.log('click default');
-  //   });
-  // };
-
-  // function chooseEarnVendorChbx5() {
-  //   $('#earn_vendor_dd_menu').on('click', '#checkHistoricalSoldVend1, #checkHistoricalSoldVend2, #checkHistoricalSoldVend3, #checkHistoricalSoldVend4, #checkHistoricalSoldVend5, #checkHistoricalSoldVend6', updateEarnVendors5);
-
-  //   $('#earn_vendor_dd_menu').on('click', '#default_checkHistoricalSoldVend', function () {
-  //     $('#checkHistoricalSoldVend1').prop('checked', true);
-  //     $('#checkHistoricalSoldVend2').prop('checked', true);
-  //     $('#checkHistoricalSoldVend3').prop('checked', true);
-  //     $('#checkHistoricalSoldVend4').prop('checked', true);
-  //     $('#checkHistoricalSoldVend5').prop('checked', true);
-  //     $('#checkHistoricalSoldVend6').prop('checked', true);
-  //     $('#checkHistoricalSoldVend7').prop('checked', true);
-  //     updateEarnVendors5();
-  //     console.log('click default');
-  //   });
-  // };
-
-  // function chooseEarnVendorChbx6() {
-  //   $('#earn_vendor_dd_menu').on('click', '#checkHistoricalSoldVend1, #checkHistoricalSoldVend2, #checkHistoricalSoldVend3, #checkHistoricalSoldVend4, #checkHistoricalSoldVend5, #checkHistoricalSoldVend6', updateEarnVendors6);
-
-  //   $('#earn_vendor_dd_menu').on('click', '#default_checkHistoricalSoldVend', function () {
-  //     $('#checkHistoricalSoldVend1').prop('checked', true);
-  //     $('#checkHistoricalSoldVend2').prop('checked', true);
-  //     $('#checkHistoricalSoldVend3').prop('checked', true);
-  //     $('#checkHistoricalSoldVend4').prop('checked', true);
-  //     $('#checkHistoricalSoldVend5').prop('checked', true);
-  //     $('#checkHistoricalSoldVend6').prop('checked', true);
-  //     $('#checkHistoricalSoldVend7').prop('checked', true);
-  //     updateEarnVendors6();
-  //     console.log('click default');
-  //   });
-  // };
-
-  // function chooseEarnVendorChbx7() {
-  //   $('#earn_vendor_dd_menu').on('click', '#checkHistoricalSoldVend1, #checkHistoricalSoldVend2, #checkHistoricalSoldVend3, #checkHistoricalSoldVend4, #checkHistoricalSoldVend5, #checkHistoricalSoldVend6', updateEarnVendors7);
-
-  //   $('#earn_vendor_dd_menu').on('click', '#default_checkHistoricalSoldVend', function () {
-  //     $('#checkHistoricalSoldVend1').prop('checked', true);
-  //     $('#checkHistoricalSoldVend2').prop('checked', true);
-  //     $('#checkHistoricalSoldVend3').prop('checked', true);
-  //     $('#checkHistoricalSoldVend4').prop('checked', true);
-  //     $('#checkHistoricalSoldVend5').prop('checked', true);
-  //     $('#checkHistoricalSoldVend6').prop('checked', true);
-  //     $('#checkHistoricalSoldVend7').prop('checked', true);
-  //     updateEarnVendors7();
-  //     console.log('click default');
-  //   });
-  // };
 
   function updateDatasetBC(active, earnVendorsData) {
     barChart.data.labels.splice(0, barChart.data.labels.length);
@@ -4309,30 +3832,11 @@
     console.log('update chart_new function');
   }
 
-  // function updateDatasetLCBrandWeekI3(active, brandVendorsDataWeekI3) {
-  //   // lineChart_newChart.data.labels.splice(0,lineChart_newChart.data.labels.length);
-  //   lineChart_newChart.data.datasets[0].data.splice(0, lineChart_newChart.data.datasets[0].data.length);
-  //   lineChart_newChart.data.datasets[0].backgroundColor.splice(0, lineChart_newChart.data.datasets[0].backgroundColor.length);
-  //   lineChart_newChart.data.datasets[0].borderColor.splice(0, lineChart_newChart.data.datasets[0].borderColor.length);
-  //   for (var i = 0; i < active.length; i++) {
-  //     if (active[i]) {
-  //       lineChart_newChart.data.labels.push(brandVendorsDataWeekI3.labels[i]);
-  //       lineChart_newChart.data.datasets[0].data.push(brandVendorsDataWeekI3.datasets[0].data[i]);
-  //       lineChart_newChart.data.datasets[0].backgroundColor.push(brandVendorsDataWeekI3.datasets[0].backgroundColor[i]);
-  //       lineChart_newChart.data.datasets[0].borderColor.push(brandVendorsDataWeekI3.datasets[0].borderColor[i]);
-  //       console.log('update line_chart_new' + i);
-  //     }
-  //   }
-
-  //   lineChart_newChart.update();
-  //   console.log('update line_chart_new function');
-  // }
-
   function changeHistoricalHeader() {
     $('#dash_ratio_container .radio_label').on('click', function (event) {
       var historicalHeader = $('#daily_graph_i3 .historical_header--js');
       var val = $(this).find('input').val();
-      
+
       historicalHeader.text('Units Opportunities');
 
       if (val == 'PTD') {
@@ -4352,11 +3856,6 @@
       var collapseIcon = $(this).find('i');
       collapseIcon.toggleClass('fa-angle-down fa-angle-right');
     });
-    // $('#accordion .widget_summary--collapse-label').click(function () {
-    //   var changeIcon = $(this).closest('.widget_summary');
-    //   var collapseTable = $(changeIcon).next();
-    //   collapseTable.toggleClass('show');
-    // });
   });
 
   var showHistoric = document.querySelector('.historical-charts--js');
@@ -4369,18 +3868,10 @@
   });
 
   $(document).ready(function () {
-    // selectEarnBarChart();
-    // selectVendorBrand();
     chooseSoldOutstandingRadio();
     chooseRadioButtons();
     chooseEarnVendorChbxNew();
     chooseEarnVendorChbx();
-    // chooseEarnVendorChbx2();
-    // chooseEarnVendorChbx3();
-    // chooseEarnVendorChbx4();
-    // chooseEarnVendorChbx5();
-    // chooseEarnVendorChbx6();
-    // chooseEarnVendorChbx7();
     selectCategoryPerEarn();
     selectCategoryPerDate();
     hideAllCharts();
