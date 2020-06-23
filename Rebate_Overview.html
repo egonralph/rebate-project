@@ -3500,9 +3500,9 @@
   function selecthistoricSoldChart() {
     //hide other charts except graph1
     initializeHistoricalSoldChart();
-    $("select#freq_historic_sold_activity").change(initializeSelectedChart);
-    $("select#freq_month_historic_sold_activity").change(initializeSelectedChart);
-    $("select#freq_annual_historic_sold_activity").change(initializeSelectedChart);
+    $("select#freq_historic_sold_activity").change(initializeHistoricalSoldChart);
+    $("select#freq_month_historic_sold_activity").change(initializeHistoricalSoldChart);
+    $("select#freq_annual_historic_sold_activity").change(initializeHistoricalSoldChart);
     console.log('selecthistoricSoldChart depands on range');
   };
 
@@ -3653,7 +3653,7 @@
   };
 
   function chooseEarnVendorChbx() {
-    $('#earn_vendor_dd_menu').on('click', '#checkHistoricalSoldVend1, #checkHistoricalSoldVend2, #checkHistoricalSoldVend3, #checkHistoricalSoldVend4, #checkHistoricalSoldVend5, #checkHistoricalSoldVend6', initializeHistoricalSoldChart);
+    $('#earn_vendor_dd_menu').on('click', '#checkHistoricalSoldVend1, #checkHistoricalSoldVend2, #checkHistoricalSoldVend3, #checkHistoricalSoldVend4, #checkHistoricalSoldVend5, #checkHistoricalSoldVend6, checkHistoricalSoldVend7', initializeHistoricalSoldChart);
 
     $('#earn_vendor_dd_menu').on('click', '#default_checkHistoricalSoldVend', function () {
       $('#checkHistoricalSoldVend1').prop('checked', true);
