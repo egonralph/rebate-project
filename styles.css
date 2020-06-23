@@ -445,11 +445,11 @@ input[type="search"] {
     padding-bottom: 0.5em;
 }
 
-#points_to_date_freq_combobox, #points_to_date_category_combobox {
+#points_to_date_freq_combobox, #points_to_date_category_combobox, #points_to_earn_category_combobox, #historic_sold_freq_combobox {
     padding-right: 0;
 }
 
-#points_to_date_vendor_combobox {
+#points_to_date_vendor_combobox, #points_to_earn_vendor_dropdownmenu {
     margin-right: 0.4em;
     margin-left: -0.5em;
 }
