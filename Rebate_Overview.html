@@ -1685,7 +1685,7 @@
 
           <!-- Historical units sold -->
           <div
-            class="offset-md-2 col-md-2 offset-sm-2 col-sm-2 offset-xs-2 col-xs-2 dashboard_freq half_top_margin hide"
+            class="offset-md-2 col-md-2 col-sm-2 col-xs-2 dashboard_freq half_top_margin hide"
             id="points_to_earn_vendor_dropdownmenu">
             <div class="row">
               <label class="titled_component one_margin_left">Category &nbsp;</label>
@@ -3407,7 +3407,7 @@
         hideChartCat1();
         initializeHistoricalSoldChart();
         changeHistoricalHeader();
-
+        selecthistoricSoldChart();
         console.log('render PTE');
       }
     });
@@ -3525,7 +3525,7 @@
   function hideHistoricalSoldRangeCombo() {
     $('#freq_historic_sold_activity').addClass("hide");
     $('#freq_month_historic_sold_activity').addClass("hide");
-    $('#freq_annual_point_activity_graph2').addClass("hide");
+    $('#freq_annual_historic_sold_activity').addClass("hide");
   }
 
   function initializeHistoricalSoldChart() {
@@ -3592,6 +3592,15 @@
     console.log(selectedFreq - 1);
     console.log(selectedCategory - 1);
   }
+
+  function selecthistoricSoldChart() {
+    //hide other charts except graph1
+    initializeSelectedChart();
+    $("select#freq_historic_sold_activity").change(initializeSelectedChart);
+    $("select#freq_month_historic_sold_activity").change(initializeSelectedChart);
+    $("select#freq_annual_historic_sold_activity").change(initializeSelectedChart);
+    console.log('selecthistoricSoldChart depands on range');
+  };
 
   // historical units opportunities section
 
