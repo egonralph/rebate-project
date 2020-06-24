@@ -2319,23 +2319,6 @@
 
 </script><!-- JQVMap -->
 
-<script>
-  $(document).ready(function () {
-    $('#world-map-gdp').vectorMap({
-      map: 'world_en',
-      backgroundColor: null,
-      color: '#ffffff',
-      hoverOpacity: 0.7,
-      selectedColor: '#666666',
-      enableZoom: true,
-      showTooltip: true,
-      values: sample_data,
-      scaleColors: ['#E6F2F0', '#149B7E'],
-      normalizeFunction: 'polynomial'
-    });
-  });
-</script><!-- /JQVMap -->
-
 <!-- Skycons -->
 <script>
   $(document).ready(function () {
@@ -2742,100 +2725,6 @@
     ],
   ];
 
-  // Historical Units Sold chart
-  var ctx = document.getElementById("lineChartByBrand");
-  var lineChartBrand = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: [],
-      datasets: [
-        {
-          label: "Core i3",
-          backgroundColor: "rgba(255, 145, 67, 0.5)",
-          borderColor: "rgba(255, 145, 67, 0.7)",
-          pointBorderColor: "rgba(255, 145, 67, 0.7)",
-          pointBackgroundColor: "rgba(255, 145, 67, 0.7)",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointBorderWidth: 1,
-          showLine: true,
-          data: []
-        },
-        {
-          label: "Core i5",
-          backgroundColor: "rgba(155, 89, 182, 0.5)",
-          borderColor: "rgba(155, 89, 182, 0.7)",
-          pointBorderColor: "rgba(155, 89, 182, 0.7)",
-          pointBackgroundColor: "rgba(155, 89, 182, 0.7)",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointBorderWidth: 1,
-          showLine: true,
-          data: []
-        },
-        {
-          label: "Core i7",
-          backgroundColor: "rgba(231, 76, 60, 0.5)",
-          borderColor: "rgba(231, 76, 60, 0.7)",
-          pointBorderColor: "rgba(231, 76, 60, 0.7)",
-          pointBackgroundColor: "rgba(231, 76, 60, 0.7)",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointBorderWidth: 1,
-          showLine: true,
-          data: []
-        },
-        {
-          label: "Core i9",
-          backgroundColor: "rgba(23, 163, 184, 0.5)",
-          borderColor: "rgba(23, 163, 184, 0.7)",
-          pointBorderColor: "rgba(23, 163, 184, 0.7)",
-          pointBackgroundColor: "rgba(23, 163, 184, 0.7)",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointBorderWidth: 1,
-          showLine: true,
-          data: []
-        },
-        {
-          label: "Core m3",
-          backgroundColor: "rgba(40, 167, 69, 0.5)",
-          borderColor: "rgba(40, 167, 69, 0.7)",
-          pointBorderColor: "rgba(40, 167, 69, 0.7)",
-          pointBackgroundColor: "rgba(40, 167, 69, 0.7)",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointBorderWidth: 1,
-          showLine: true,
-          data: []
-        },
-        {
-          label: "Pentium",
-          backgroundColor: "rgba(255, 193, 7, 0.5)",
-          borderColor: "rgba(255, 193, 7, 0.7)",
-          pointBorderColor: "rgba(255, 193, 7, 0.7)",
-          pointBackgroundColor: "rgba(255, 193, 7, 0.7)",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointBorderWidth: 1,
-          showLine: true,
-          data: []
-        },
-        {
-          label: "Xeon",
-          backgroundColor: "rgba(52, 152, 219, 0.5)",
-          borderColor: "rgba(52, 152, 219, 0.7)",
-          pointBorderColor: "rgba(52, 152, 219, 0.7)",
-          pointBackgroundColor: "rgba(52, 152, 219, 0.7)",
-          pointHoverBackgroundColor: "#fff",
-          pointHoverBorderColor: "rgba(220,220,220,1)",
-          pointBorderWidth: 1,
-          showLine: true,
-          data: []
-        }
-      ]
-    },
-  });
 </script>
 <!-- end units sold chart -->
 
@@ -3166,9 +3055,11 @@
         ]
       }
     ],
-  ];
+  ]; 
+</script><!-- end units oustanding chart -->
 
-  // Historical Units Opportunities chart
+<!-- Rendering historical chart section-->
+<script>
   var ctx = document.getElementById("lineChartByBrand");
   var lineChartBrand = new Chart(ctx, {
     type: 'line',
@@ -3263,7 +3154,7 @@
     },
   });
 </script>
-<!-- end units oustanding chart -->
+<!-- end rendering historical charts section -->
 
 <!-- bootstrap-daterangepicker -->
 <script>
@@ -3865,6 +3756,9 @@
     var showHistoricPane = document.querySelector('.show-historical-pane');
     showHistoricPane.classList.toggle('hide');
     changeHistoricalHeader();
+    selectCategoryPerEarn();
+    selectCategoryPerDate();
+    selectDashboardChart();
   });
 
   $(document).ready(function () {
@@ -3872,9 +3766,6 @@
     chooseRadioButtons();
     chooseEarnVendorChbxNew();
     chooseEarnVendorChbx();
-    selectCategoryPerEarn();
-    selectCategoryPerDate();
     hideAllCharts();
-    selectDashboardChart();
   });
 </script>
