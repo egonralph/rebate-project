@@ -2086,7 +2086,11 @@
             <div class="clearfix">&nbsp;</div>
           </div>
 
-          <div class="x_content"><canvas height="80" width="200" id="lineChartByBrand"></canvas></div>
+          <div class="x_content">
+            <!-- <canvas height="80" width="200" id="lineChartByBrand"></canvas> -->
+            <canvas height="500" width="1500" class="circle_chart" id="lineChartByBrand"></canvas>
+          </div>
+          
         </div>
       </div>
 
@@ -2395,6 +2399,110 @@
     });
   });
 </script><!-- /Doughnut Chart -->
+
+<!-- Line Chart initialization -->
+<script>
+  $(document).ready(function () {
+    var options = {
+      legend: false,
+      responsive: false
+    };
+    var ctx = document.getElementById("lineChartByBrand");
+    /*var*/ lineChartBrand = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [
+          {
+            label: "Core i3",
+            backgroundColor: "rgba(255, 145, 67, 0.5)",
+            borderColor: "rgba(255, 145, 67, 0.7)",
+            pointBorderColor: "rgba(255, 145, 67, 0.7)",
+            pointBackgroundColor: "rgba(255, 145, 67, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [11, 74, 66, 139, 300, 685, 287]
+          },
+          {
+            label: "Core i5",
+            backgroundColor: "rgba(155, 89, 182, 0.5)",
+            borderColor: "rgba(155, 89, 182, 0.7)",
+            pointBorderColor: "rgba(155, 89, 182, 0.7)",
+            pointBackgroundColor: "rgba(155, 89, 182, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [111, 174, 166, 139, 200, 585, 387]
+          },
+          {
+            label: "Core i7",
+            backgroundColor: "rgba(231, 76, 60, 0.5)",
+            borderColor: "rgba(231, 76, 60, 0.7)",
+            pointBorderColor: "rgba(231, 76, 60, 0.7)",
+            pointBackgroundColor: "rgba(231, 76, 60, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [218, 4, 626, 319, 220, 855, 871]
+          },
+          {
+            label: "Core i9",
+            backgroundColor: "rgba(23, 163, 184, 0.5)",
+            borderColor: "rgba(23, 163, 184, 0.7)",
+            pointBorderColor: "rgba(23, 163, 184, 0.7)",
+            pointBackgroundColor: "rgba(23, 163, 184, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [23, 42, 76, 39, 20, 85, 87]
+          },
+          {
+            label: "Core m3",
+            backgroundColor: "rgba(40, 167, 69, 0.5)",
+            borderColor: "rgba(40, 167, 69, 0.7)",
+            pointBorderColor: "rgba(40, 167, 69, 0.7)",
+            pointBackgroundColor: "rgba(40, 167, 69, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [305, 459, 101, 220, 307, 799, 54]
+          },
+          {
+            label: "Pentium",
+            backgroundColor: "rgba(255, 193, 7, 0.5)",
+            borderColor: "rgba(255, 193, 7, 0.7)",
+            pointBorderColor: "rgba(255, 193, 7, 0.7)",
+            pointBackgroundColor: "rgba(255, 193, 7, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [267, 125, 739, 671, 16, 801, 351]
+          },
+          {
+            label: "Xeon",
+            backgroundColor: "rgba(52, 152, 219, 0.5)",
+            borderColor: "rgba(52, 152, 219, 0.7)",
+            pointBorderColor: "rgba(52, 152, 219, 0.7)",
+            pointBackgroundColor: "rgba(52, 152, 219, 0.7)",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointBorderWidth: 1,
+            showLine: true,
+            data: [49, 226, 931, 497, 840, 237, 369]
+          }
+        ]
+      },
+      options: options
+    });
+  });
+</script><!-- End Line Chart initialization-->
 
 <!-- units Sold chart -->
 <script>
@@ -3059,13 +3167,13 @@
 </script><!-- end units oustanding chart -->
 
 <!-- Rendering historical chart section-->
-<script>
+<!-- <script>
   function initHistoricalChart(){
     var ctx = document.getElementById("lineChartByBrand").getContext('2d');
     /*var*/ lineChartBrand = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: [],
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         datasets: [
           {
             label: "Core i3",
@@ -3077,7 +3185,7 @@
             pointHoverBorderColor: "rgba(220,220,220,1)",
             pointBorderWidth: 1,
             showLine: true,
-            data: []
+            data: [1,1,1,1,1,1,1]
           },
           {
             label: "Core i5",
@@ -3089,7 +3197,7 @@
             pointHoverBorderColor: "rgba(220,220,220,1)",
             pointBorderWidth: 1,
             showLine: true,
-            data: []
+            data: [2,2,2,2,2,2,2]
           },
           {
             label: "Core i7",
@@ -3101,7 +3209,7 @@
             pointHoverBorderColor: "rgba(220,220,220,1)",
             pointBorderWidth: 1,
             showLine: true,
-            data: []
+            data: [3,3,3,3,3,3,3]
           },
           {
             label: "Core i9",
@@ -3113,7 +3221,7 @@
             pointHoverBorderColor: "rgba(220,220,220,1)",
             pointBorderWidth: 1,
             showLine: true,
-            data: []
+            data: [4,4,4,4,4,4,4]
           },
           {
             label: "Core m3",
@@ -3125,7 +3233,7 @@
             pointHoverBorderColor: "rgba(220,220,220,1)",
             pointBorderWidth: 1,
             showLine: true,
-            data: []
+            data: [5,5,5,5,5,5,5]
           },
           {
             label: "Pentium",
@@ -3137,7 +3245,7 @@
             pointHoverBorderColor: "rgba(220,220,220,1)",
             pointBorderWidth: 1,
             showLine: true,
-            data: []
+            data: [6,6,6,6,6,6,6]
           },
           {
             label: "Xeon",
@@ -3149,13 +3257,13 @@
             pointHoverBorderColor: "rgba(220,220,220,1)",
             pointBorderWidth: 1,
             showLine: true,
-            data: []
+            data: [7,7,7,7,7,7,7]
           }
         ]
       },
     });
   }
-</script>
+</script> -->
 <!-- end rendering historical charts section -->
 
 <!-- bootstrap-daterangepicker -->
@@ -3265,7 +3373,7 @@
     $("#points_to_date_category_combobox").removeClass("hide");
     $("#points_to_date_freq_combobox").removeClass("hide");
     $("#points_to_date_vendor_combobox").removeClass("hide");
-    hideChartCat2();
+    // hideChartCat2();
     initializeSelectedChart();
     changeHistoricalHeader();
 
@@ -3285,7 +3393,7 @@
         $("#brand_date_point_vendor_chooser").val("1");
         $("#brand_date_point_activity_graph").val("1");
         $("#freq_point_activity_graph2").val("1");
-        hideChartCat2();
+        // hideChartCat2();
         initializeSelectedChart();
         changeHistoricalHeader();
 
@@ -3301,7 +3409,7 @@
         $("#earn_point_vendor_chooser").val("1");
         $("#earn_point_activity_graph").val("1");
         $("#freq_historic_sold_activity").val("1");
-        hideChartCat1();
+        // hideChartCat1();
         initializeHistoricalSoldChart();
         changeHistoricalHeader();
         selecthistoricSoldChart();
@@ -3312,7 +3420,7 @@
 
   // hide all charts
   function hideAllCharts() {
-    hideChartCat1();
+    // hideChartCat1();
 
     console.log('hide all charts fn');
   }
@@ -3345,24 +3453,25 @@
 
     // $("#daily_graph_i3").removeClass("hide");
     // $("#daily_graph_i3").show();
+    var chartData = null;
 
     if (selectedCategory == 1) {
       $('#freq_historic_sold_activity').removeClass("hide");
-      var chartData = historicalUnitsSoldCollection[selectedCategory - 1][selectedFreq - 1];
+      chartData = historicalUnitsSoldCollection[selectedCategory - 1][selectedFreq - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
       console.log('show ' + selectedCategory + ' ' + selectedFreq);
     }
     if (selectedCategory == 2) {
       $('#freq_month_historic_sold_activity').removeClass("hide");
-      var chartData = historicalUnitsSoldCollection[selectedCategory - 1][selectedFreqMonth - 1];
+      chartData = historicalUnitsSoldCollection[selectedCategory - 1][selectedFreqMonth - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
       console.log('show ' + selectedCategory + ' ' + selectedFreqMonth);
     }
     if (selectedCategory == 3) {
       $('#freq_annual_historic_sold_activity').removeClass("hide");
-      var chartData = historicalUnitsSoldCollection[selectedCategory - 1][selectedFreqYear - 1];
+      chartData = historicalUnitsSoldCollection[selectedCategory - 1][selectedFreqYear - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
       console.log('show ' + selectedCategory + ' ' + selectedFreqYear);
@@ -3424,29 +3533,30 @@
       $('#checkBrandDateVend7').is(':checked'),
     ];
 
-    hideAllCharts();
+    // hideAllCharts();
     hideRangeCombo();
 
     // $("#daily_graph_i3").removeClass("hide");
     // $("#daily_graph_i3").show();
+    var chartData = null;
 
     if (selectedCategory == 1) {
       $('#freq_point_activity_graph2').removeClass("hide");
-      var chartData = lineChartByBrandsCollection[selectedCategory - 1][selectedFreq - 1];
+      chartData = lineChartByBrandsCollection[selectedCategory - 1][selectedFreq - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
       console.log('show ' + selectedCategory + ' ' + selectedFreq);
     }
     if (selectedCategory == 2) {
       $('#freq_month_point_activity_graph2').removeClass("hide");
-      var chartData = lineChartByBrandsCollection[selectedCategory - 1][selectedFreqMonth - 1];
+      chartData = lineChartByBrandsCollection[selectedCategory - 1][selectedFreqMonth - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
       console.log('show ' + selectedCategory + ' ' + selectedFreqMonth);
     }
     if (selectedCategory == 3) {
       $('#freq_annual_point_activity_graph2').removeClass("hide");
-      var chartData = lineChartByBrandsCollection[selectedCategory - 1][selectedFreqYear - 1];
+      chartData = lineChartByBrandsCollection[selectedCategory - 1][selectedFreqYear - 1];
       $('#daily_graph_i3_title').text(chartData.title);
 
       console.log('show ' + selectedCategory + ' ' + selectedFreqYear);
@@ -3767,10 +3877,11 @@
 
   $(document).ready(function () {
     chooseSoldOutstandingRadio();
-    initHistoricalChart();
+    // initHistoricalChart();
     chooseRadioButtons();
     chooseEarnVendorChbxNew();
     chooseEarnVendorChbx();
     // hideAllCharts();
   });
 </script>
+
