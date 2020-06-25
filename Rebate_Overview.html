@@ -2087,8 +2087,7 @@
           </div>
 
           <div class="x_content">
-            <!-- <canvas height="80" width="200" id="lineChartByBrand"></canvas> -->
-            <canvas height="500" width="1500" class="circle_chart" id="lineChartByBrand"></canvas>
+            <canvas height="400" id="lineChartByBrand"></canvas>
           </div>
           
         </div>
@@ -2408,6 +2407,7 @@
       responsive: false
     };
     var ctx = document.getElementById("lineChartByBrand");
+    ctx.width  = window.innerWidth*(0.78); 
     /*var*/ lineChartBrand = new Chart(ctx, {
       type: 'line',
       data: {
@@ -3165,106 +3165,6 @@
     ],
   ]; 
 </script><!-- end units oustanding chart -->
-
-<!-- Rendering historical chart section-->
-<!-- <script>
-  function initHistoricalChart(){
-    var ctx = document.getElementById("lineChartByBrand").getContext('2d');
-    /*var*/ lineChartBrand = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-        datasets: [
-          {
-            label: "Core i3",
-            backgroundColor: "rgba(255, 145, 67, 0.5)",
-            borderColor: "rgba(255, 145, 67, 0.7)",
-            pointBorderColor: "rgba(255, 145, 67, 0.7)",
-            pointBackgroundColor: "rgba(255, 145, 67, 0.7)",
-            pointHoverBackgroundColor: "#fff",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointBorderWidth: 1,
-            showLine: true,
-            data: [1,1,1,1,1,1,1]
-          },
-          {
-            label: "Core i5",
-            backgroundColor: "rgba(155, 89, 182, 0.5)",
-            borderColor: "rgba(155, 89, 182, 0.7)",
-            pointBorderColor: "rgba(155, 89, 182, 0.7)",
-            pointBackgroundColor: "rgba(155, 89, 182, 0.7)",
-            pointHoverBackgroundColor: "#fff",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointBorderWidth: 1,
-            showLine: true,
-            data: [2,2,2,2,2,2,2]
-          },
-          {
-            label: "Core i7",
-            backgroundColor: "rgba(231, 76, 60, 0.5)",
-            borderColor: "rgba(231, 76, 60, 0.7)",
-            pointBorderColor: "rgba(231, 76, 60, 0.7)",
-            pointBackgroundColor: "rgba(231, 76, 60, 0.7)",
-            pointHoverBackgroundColor: "#fff",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointBorderWidth: 1,
-            showLine: true,
-            data: [3,3,3,3,3,3,3]
-          },
-          {
-            label: "Core i9",
-            backgroundColor: "rgba(23, 163, 184, 0.5)",
-            borderColor: "rgba(23, 163, 184, 0.7)",
-            pointBorderColor: "rgba(23, 163, 184, 0.7)",
-            pointBackgroundColor: "rgba(23, 163, 184, 0.7)",
-            pointHoverBackgroundColor: "#fff",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointBorderWidth: 1,
-            showLine: true,
-            data: [4,4,4,4,4,4,4]
-          },
-          {
-            label: "Core m3",
-            backgroundColor: "rgba(40, 167, 69, 0.5)",
-            borderColor: "rgba(40, 167, 69, 0.7)",
-            pointBorderColor: "rgba(40, 167, 69, 0.7)",
-            pointBackgroundColor: "rgba(40, 167, 69, 0.7)",
-            pointHoverBackgroundColor: "#fff",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointBorderWidth: 1,
-            showLine: true,
-            data: [5,5,5,5,5,5,5]
-          },
-          {
-            label: "Pentium",
-            backgroundColor: "rgba(255, 193, 7, 0.5)",
-            borderColor: "rgba(255, 193, 7, 0.7)",
-            pointBorderColor: "rgba(255, 193, 7, 0.7)",
-            pointBackgroundColor: "rgba(255, 193, 7, 0.7)",
-            pointHoverBackgroundColor: "#fff",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointBorderWidth: 1,
-            showLine: true,
-            data: [6,6,6,6,6,6,6]
-          },
-          {
-            label: "Xeon",
-            backgroundColor: "rgba(52, 152, 219, 0.5)",
-            borderColor: "rgba(52, 152, 219, 0.7)",
-            pointBorderColor: "rgba(52, 152, 219, 0.7)",
-            pointBackgroundColor: "rgba(52, 152, 219, 0.7)",
-            pointHoverBackgroundColor: "#fff",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointBorderWidth: 1,
-            showLine: true,
-            data: [7,7,7,7,7,7,7]
-          }
-        ]
-      },
-    });
-  }
-</script> -->
-<!-- end rendering historical charts section -->
 
 <!-- bootstrap-daterangepicker -->
 <script>
