@@ -36,146 +36,157 @@
   <!-- /top tiles -->
 
   <div class="row">
-    <div class="col-md-6 col-sm-6 col-xs-12">
-      <div class="x_panel tile fixed_height_360 overflow_hidden">
-        <div class="x_title">
-          <h2>Total Points To Date By Brand Category <i class="fa fa-question-circle superscript"
-              title="Total points earned this year">&nbsp;</i></h2>
-
-          <ul class="nav navbar-right panel_toolbox">
-            <li>&nbsp;</li>
-            <li class="dropdown">
-              <ul class="dropdown-menu" role="menu">
-                <li><em><a href="#">Settings 1</a></em></li>
-                <li><em><a href="#">Settings 2</a></em></li>
-              </ul>
-            </li>
-            <li>&nbsp;</li>
-          </ul>
-
-          <div class="clearfix">&nbsp;</div>
-        </div>
-
-        <div class="x_content">
-          <table class="table table-fixed no_margin_bottom">
-            <tbody>
-              <tr class="table_col_20">
-                <td class="no_border center">
-                  <em>
-                    <canvas height="160" class="circle_chart" id="canvas1" style="margin: 5px 5px 5px 0"
-                      width="160"></canvas>
-                  </em>
-                </td>
-
-                <td class="no_border circle_chart_table">
-                  <table id="points-to-date-by-brand-category-main-chart"
-                    class="table table-hover table-sm table-fixed no_margin_bottom">
-                    <thead>
-                      <tr>
-                        <th class="table_col_legend_label"></th>
-                        <th class="table_col_35">Brand</th>
-                        <th class="table_col_30">Units</th>
-                        <th class="table_col_25">Points</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="no_border">
-                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate1">
-                          </div>
-                        </td>
-                        <td class="no_border">Core i3</td>
-                        <td class="no_border">249</td>
-                        <td class="no_border">1894</td>
-                      </tr>
-                      <tr>
-                        <td class="no_border">
-                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate2">
-                          </div>
-                        </td>
-                        <td class="no_border">Core i5</td>
-                        <td class="no_border">674</td>
-                        <td class="no_border">6256</td>
-                      </tr>
-                      <tr>
-                        <td class="no_border">
-                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate3">
-                          </div>
-                        </td>
-                        <td class="no_border">Core i7</td>
-                        <td class="no_border">348</td>
-                        <td class="no_border">2561</td>
-                      </tr>
-                      <tr>
-                        <td class="no_border">
-                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate4">
-                          </div>
-                        </td>
-                        <td class="no_border">Core i9</td>
-                        <td class="no_border">22</td>
-                        <td class="no_border">220</td>
-                      </tr>
-                      <tr>
-                        <td class="no_border">
-                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate5">
-                          </div>
-                        </td>
-                        <td class="no_border">Core m3</td>
-                        <td class="no_border">35</td>
-                        <td class="no_border">35</td>
-                      </tr>
-                      <tr>
-                        <td class="no_border">
-                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate6">
-                          </div>
-                        </td>
-                        <td class="no_border">Pentium</td>
-                        <td class="no_border">59</td>
-                        <td class="no_border">354</td>
-                      </tr>
-                      <tr>
-                        <td class="no_border">
-                          <div class="date__by__brand__category__legend-rebate dbbcl-rebate7">
-                          </div>
-                        </td>
-                        <td class="no_border">Xeon</td>
-                        <td class="no_border">10</td>
-                        <td class="no_border">20</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="clearfix clearfix_small_height">&nbsp;</div>
+    <div class="panel panel-default" id="overall_point_section">
+      <div class="panel-heading panel-sticky">
+        <div class="row">
+          <div class="col-xs-12 overall_points_header_pane">
+            <h2 class="bold">Total Overall Points</h2>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="panel-body" id="overall_point_pane">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="x_panel tile fixed_height_360 overflow_hidden">
+            <div class="x_title">
+              <h2 class="overall_point_special_header">Points To Date By Brand Category <i class="fa fa-question-circle superscript"
+                  title="Total points earned this year">&nbsp;</i></h2>
 
-    <div class="col-md-6 col-sm-6 col-xs-12">
-      <div class="x_panel">
-        <div class="x_title">
-          <h2>Total Points To Date vs Missed <i class="fa fa-question-circle superscript"
-              title="Statement of all points earned and missed this year.">&nbsp;</i></h2>
-
-          <ul class="nav navbar-right panel_toolbox">
-            <li>&nbsp;</li>
-            <li class="dropdown">
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Settings 1</a></li>
-                <li><a href="#">Settings 2</a></li>
+              <ul class="nav navbar-right panel_toolbox">
+                <li>&nbsp;</li>
+                <li class="dropdown">
+                  <ul class="dropdown-menu" role="menu">
+                    <li><em><a href="#">Settings 1</a></em></li>
+                    <li><em><a href="#">Settings 2</a></em></li>
+                  </ul>
+                </li>
+                <li>&nbsp;</li>
               </ul>
-            </li>
-            <li>&nbsp;</li>
-          </ul>
 
-          <div class="clearfix">&nbsp;</div>
+              <div class="clearfix">&nbsp;</div>
+            </div>
+
+            <div class="x_content">
+              <table class="table table-fixed no_margin_bottom">
+                <tbody>
+                  <tr class="table_col_20">
+                    <td class="no_border center">
+                      <em>
+                        <canvas height="160" class="circle_chart" id="canvas1" style="margin: 5px 5px 5px 0"
+                          width="160"></canvas>
+                      </em>
+                    </td>
+
+                    <td class="no_border circle_chart_table">
+                      <table id="points-to-date-by-brand-category-main-chart"
+                        class="table table-hover table-sm table-fixed no_margin_bottom">
+                        <thead>
+                          <tr>
+                            <th class="table_col_legend_label"></th>
+                            <th class="table_col_35">Brand</th>
+                            <th class="table_col_30">Units</th>
+                            <th class="table_col_25">Points</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="no_border">
+                              <div class="date__by__brand__category__legend-rebate dbbcl-rebate1">
+                              </div>
+                            </td>
+                            <td class="no_border">Core i3</td>
+                            <td class="no_border">249</td>
+                            <td class="no_border">1894</td>
+                          </tr>
+                          <tr>
+                            <td class="no_border">
+                              <div class="date__by__brand__category__legend-rebate dbbcl-rebate2">
+                              </div>
+                            </td>
+                            <td class="no_border">Core i5</td>
+                            <td class="no_border">674</td>
+                            <td class="no_border">6256</td>
+                          </tr>
+                          <tr>
+                            <td class="no_border">
+                              <div class="date__by__brand__category__legend-rebate dbbcl-rebate3">
+                              </div>
+                            </td>
+                            <td class="no_border">Core i7</td>
+                            <td class="no_border">348</td>
+                            <td class="no_border">2561</td>
+                          </tr>
+                          <tr>
+                            <td class="no_border">
+                              <div class="date__by__brand__category__legend-rebate dbbcl-rebate4">
+                              </div>
+                            </td>
+                            <td class="no_border">Core i9</td>
+                            <td class="no_border">22</td>
+                            <td class="no_border">220</td>
+                          </tr>
+                          <tr>
+                            <td class="no_border">
+                              <div class="date__by__brand__category__legend-rebate dbbcl-rebate5">
+                              </div>
+                            </td>
+                            <td class="no_border">Core m3</td>
+                            <td class="no_border">35</td>
+                            <td class="no_border">35</td>
+                          </tr>
+                          <tr>
+                            <td class="no_border">
+                              <div class="date__by__brand__category__legend-rebate dbbcl-rebate6">
+                              </div>
+                            </td>
+                            <td class="no_border">Pentium</td>
+                            <td class="no_border">59</td>
+                            <td class="no_border">354</td>
+                          </tr>
+                          <tr>
+                            <td class="no_border">
+                              <div class="date__by__brand__category__legend-rebate dbbcl-rebate7">
+                              </div>
+                            </td>
+                            <td class="no_border">Xeon</td>
+                            <td class="no_border">10</td>
+                            <td class="no_border">20</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="clearfix clearfix_small_height">&nbsp;</div>
+            </div>
+          </div>
         </div>
 
-        <div class="x_content">
-          <div id="echart_mini_pie" style="height:280px;">&nbsp;</div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2 class="overall_point_special_header">Points To Date vs Missed <i class="fa fa-question-circle superscript"
+                  title="Statement of all points earned and missed this year.">&nbsp;</i></h2>
+
+              <ul class="nav navbar-right panel_toolbox">
+                <li>&nbsp;</li>
+                <li class="dropdown">
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Settings 1</a></li>
+                    <li><a href="#">Settings 2</a></li>
+                  </ul>
+                </li>
+                <li>&nbsp;</li>
+              </ul>
+
+              <div class="clearfix">&nbsp;</div>
+            </div>
+
+            <div class="x_content">
+              <div id="echart_mini_pie" style="height:280px;">&nbsp;</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2089,7 +2100,7 @@
           <div class="x_content">
             <canvas height="400" id="lineChartByBrand"></canvas>
           </div>
-          
+
         </div>
       </div>
 
@@ -2407,7 +2418,7 @@
       responsive: false
     };
     var ctx = document.getElementById("lineChartByBrand");
-    ctx.width  = window.innerWidth*(0.78); 
+    ctx.width = window.innerWidth * (0.78);
     /*var*/ lineChartBrand = new Chart(ctx, {
       type: 'line',
       data: {
@@ -3281,7 +3292,7 @@
 
     $('#dash_ratio_container .radio_label').on('click', function (event) {
       var val = $(this).find('input').val();
-     
+
 
       if (val == 'PTD') {
         $("#points_to_earn_category_combobox").addClass("hide");
@@ -3784,4 +3795,3 @@
     // hideAllCharts();
   });
 </script>
-
