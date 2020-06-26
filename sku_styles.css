@@ -553,6 +553,14 @@ input[type="search"] {
     z-index: 9;
 }
 
+.left-legend-panel {
+    width: 325px;
+}
+
+.right-legend-panel {
+    width: 70.5%;
+}
+
 #points-to-date-by-brand-category-main-chart td {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
