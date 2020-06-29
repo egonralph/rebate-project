@@ -10,8 +10,15 @@ Vendor_View_v2_1
 Vendor_View
 
 //intel pages
-Brand_Sku_Listing_intel.html
-Product_Incentives_intel.html
-Rebate_Overview_intel.html
-Rewards_intel.html
-Vendor_View_intel.html
+//Brand_Sku_Listing_intel.html
+//Product_Incentives_intel.html
+//Rebate_Overview_intel.html
+//Rewards_intel.html
+//Vendor_View_intel.html
+
+//common pages
+Brand_Sku_Listing.html
+Product_Incentives.html
+Rebate_Overview.html
+Rewards.html
+Vendor_View_v3.html
