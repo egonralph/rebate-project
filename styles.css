@@ -90,8 +90,12 @@ a.paginate_button, #datatable-buttons_paginate a.paginate_button {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+.dashboard__filter-historical {
+    margin-top: 0;
+}
+
 .dashboard__filter-rebate {
-    margin-top: 1.5em;
+    margin-top: -1.5em;
 }
 
 .dashboard_freq {
