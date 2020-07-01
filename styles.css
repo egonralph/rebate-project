@@ -891,7 +891,7 @@ ul.dropdown-menu>li:hover {
 }
 
 .widget_summary_left_panel.left-legend-panel {
-    width: 325px;
+    width: 300px;
 }
 
 .widget_summary_right_panel {
@@ -899,7 +899,7 @@ ul.dropdown-menu>li:hover {
 }
 
 .widget_summary_right_panel.right-legend-panel {
-    width: 70.5%;
+    width: 68.5%;
 }
 
 .widget_summary_table_left_panel {
