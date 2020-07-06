@@ -8,18 +8,18 @@
 
 <!-- page content -->
 <div class="row tile_count">
-  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>You Have
-        Earned <i class="fa fa-question-circle superscript"
+  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>Quarter
+        Earnings <i class="fa fa-question-circle superscript"
           title="These are the points you have earned this quarter">&nbsp;</i></b>
     </span>
-    <div class="count green"><span style="display: none;">&nbsp;</span>1447 <small>pts</small></div>
+    <div class="count green"><span style="display: none;">&nbsp;</span>1447 <small>$</small></div>
   </div>
 
-  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>More To
-        Earn <i class="fa fa-question-circle superscript"
+  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span
+      class="count_top"><b>Opportunities<i class="fa fa-question-circle superscript"
           title="These are the points you should still earn in this quarter">&nbsp;</i></b></span>
 
-    <div class="count red">2195 <small>pts</small></div>
+    <div class="count red">2195 <small>$</small></div>
   </div>
 
   <!-- <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>Pending To
@@ -28,11 +28,11 @@
         <div class="count orange">2195 <small>pts</small></div>
     </div> -->
 
-  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>Points To
-        Date <i class="fa fa-question-circle superscript"
+  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>Total
+        Earnings <i class="fa fa-question-circle superscript"
           title="Total points to earn this quarter">&nbsp;</i></b></span>
 
-    <div class="count">3642 <small>pts</small></div>
+    <div class="count">3642 <small>$</small></div>
   </div>
   <!-- /top tiles -->
 
@@ -166,7 +166,7 @@
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12">
-          <div class="x_panel">
+          <div class="x_panel" style="min-height: 25em;">
             <div class="x_title">
               <h2 class="special-header__overall">Points To Date vs Missed <i class="fa fa-question-circle superscript"
                   title="Statement of all points earned and missed this year.">&nbsp;</i></h2>
@@ -186,11 +186,11 @@
             </div>
 
             <div class="col-xs-6">
-              <div id="echart_mini_pie" style="height:280px;"></div>
+              <div id="echart_mini_pie" style="height:280px;" style="padding: 2em;"></div>
             </div>
 
             <div class="col-xs-6">
-              <canvas height="280" class="circle_chart" id="echart_full_pie"></canvas>
+              <canvas height="220" class="circle_chart" id="echart_full_pie" style="padding: 1em;"></canvas>
             </div>
           </div>
         </div>
@@ -272,7 +272,8 @@
                     <span class="fa-stack fa-1x">
                       <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                       <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                      <i class="fad fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                      <i class="fad fa-hand-pointer fa-stack-1x hand-pointer"
+                        data-fa-transform="shrink-2 down-3 right-2"></i>
                     </span>- Points
                   </li>
                   <li><i class="fad fa-hand-holding-usd" aria-hidden="true"></i> - Sold [%]</li>
@@ -307,7 +308,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 1894
                       </div>
                       <div data-toggle="tooltip" title="91.4% Sold / 8.6% Opportunities"><i
@@ -416,7 +418,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 6256
                       </div>
                       <div data-toggle="tooltip" title="90.9% Sold / 9.1% Opportunities"><i
@@ -616,7 +619,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 2561
                       </div>
                       <div data-toggle="tooltip" title="97.4% Sold / 2.6% Opportunities"><i
@@ -1005,7 +1009,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 220
                       </div>
                       <div data-toggle="tooltip" title="16.7% Sold / 83.3% Opportunities"><i
@@ -1079,7 +1084,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 35
                       </div>
                       <div data-toggle="tooltip" title="50% Sold / 50% Opportunities"><i class="fas fa-hand-holding-usd"
@@ -1161,7 +1167,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 354
                       </div>
                       <div data-toggle="tooltip" title="100% Sold / 0% Opportunities"><i class="fas fa-hand-holding-usd"
@@ -1244,7 +1251,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 20
                       </div>
                       <div data-toggle="tooltip" title="50% Sold / 50% Opportunities"><i class="fas fa-hand-holding-usd"
@@ -1331,7 +1339,8 @@
                     <span class="fa-stack fa-1x">
                       <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                       <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                      <i class="fad fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                      <i class="fad fa-hand-pointer fa-stack-1x hand-pointer"
+                        data-fa-transform="shrink-2 down-3 right-2"></i>
                     </span>- Points
                   </li>
                   <li><i class="fad fa-handshake" aria-hidden="true"></i> - Opportunities [%]</li>
@@ -1366,7 +1375,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 22
                       </div>
                       <div data-toggle="tooltip" title="8.6% Opportunities / 91.4% Sold"><i class="fas fa-handshake"
@@ -1446,7 +1456,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 32
                       </div>
                       <div data-toggle="tooltip" title="9.1% Opportunities / 90.9% Sold"><i class="fas fa-handshake"
@@ -1519,7 +1530,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 38
                       </div>
                       <div data-toggle="tooltip" title="2.6% Opportunities / 97.4% Sold"><i class="fas fa-handshake"
@@ -1585,7 +1597,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 66
                       </div>
                       <div data-toggle="tooltip" title="83.3% Opportunities / 16.7% Sold"><i class="fas fa-handshake"
@@ -1679,7 +1692,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 26
                       </div>
                       <div data-toggle="tooltip" title="50% Opportunities / 50% Sold"><i class="fas fa-handshake"
@@ -1752,7 +1766,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 0
                       </div>
                       <div data-toggle="tooltip" title="0% Opportunities / 100% Sold"><i class="fas fa-handshake"
@@ -1793,7 +1808,8 @@
                         <span class="fa-stack fa-1x">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye " data-fa-transform="shrink-8 up-2"></i>
-                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer" data-fa-transform="shrink-2 down-3 right-2"></i>
+                          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+                            data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>- 31
                       </div>
                       <div data-toggle="tooltip" title="50% Opportunities / 50% Sold"><i class="fas fa-handshake"
@@ -2403,7 +2419,7 @@
       itemGap: 20,
       textStyle: {
         color: 'rgba(30,144,255,0.8)',
-        fontSize: 15,
+        fontSize: 14,
         fontWeight: 'bolder'
       }
     },
@@ -2453,28 +2469,28 @@
       }
     },
     series: [{
-      name: '1',
+      name: 'Missed',
       type: 'pie',
       clockWise: false,
       radius: [105, 130],
       itemStyle: dataStyle,
       data: [{
         value: 68,
-        name: 'Missed'
+        name: '%'
       }, {
         value: 32,
         name: '',
         itemStyle: placeHolderStyle
       }]
     }, {
-      name: '2',
+      name: 'Earned',
       type: 'pie',
       clockWise: false,
       radius: [80, 105],
       itemStyle: dataStyle,
       data: [{
         value: 32,
-        name: 'Earned'
+        name: '%'
       }, {
         value: 68,
         name: '',
@@ -2483,30 +2499,6 @@
     }]
   });
 
-  // echartMFullPie
-  // $(document).ready(function () {
-
-  //   new Chart(document.getElementById("echart_full_pie"), {
-  //     type: 'doughnut',
-  //     data: {
-  //       labels: ["Missed", "Earned"],
-  //       datasets: [
-  //         {
-  //           label: "%",
-  //           backgroundColor: ["#3e95cd", "#8e5ea2"],
-  //           data: [68, 32]
-  //         }
-  //       ]
-  //     },
-  //     options: {
-  //       title: {
-  //         display: true,
-  //         text: 'PTS Comparison'
-
-  //       }
-  //     }
-  //   });
-  // });
 </script><!-- /page content -->
 
 <script>
@@ -2593,16 +2585,16 @@
           label: '%',
           data: [68, 32],
           backgroundColor: [
-            "#FF9143",
-            "#17a2b8",
+            "#1adbbb",
+            "#9B59B6",
           ],
           hoverBackgroundColor: [
-            "#f58738",
-            "#36CAAB",
+            "#09dbb8",
+            "#9748b8",
           ],
           hoverBorderColor: [
-            "#f58738",
-            "#36CAAB",
+            "#09dbb8",
+            "#9748b8",
           ]
         }]
       },
