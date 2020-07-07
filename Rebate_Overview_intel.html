@@ -230,7 +230,7 @@
 
             <div class="checkbox historical-charts">
               <label class="historical-charts--js">
-                <input name="showHistoricChbx" type="checkbox" value="showHistoric" />
+                <input name="showHistoricChbx" type="checkbox" value="showHistoric" id="showHistoricChbx"/>
                 Show historical charts
               </label>
             </div>
@@ -4025,9 +4025,9 @@
     });
   });
 
-  var showHistoric = document.querySelector('.historical-charts--js');
+  var showHistoric = document.querySelector('#showHistoricChbx');
 
-  showHistoric.addEventListener('click', () => {
+  showHistoric.addEventListener('change', () => {
     console.log('show/ hide historic chart');
     var showHistoricPane = document.querySelector('.panel-section__historical');
     showHistoricPane.classList.toggle('hide');

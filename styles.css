@@ -35,11 +35,6 @@ a.paginate_button, #datatable-buttons_paginate a.paginate_button {
     font-weight: 600;
 }
 
-.bullseye {
-    /* font-size: 10px;
-    margin-top: 0.4em; */
-}
-
 .center {
     text-align: center;
 }
@@ -345,12 +340,6 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
 
 .half_top_margin {
     margin-top: 0.5em;
-}
-
-.hand-pointer {
-    /* font-size: 14px;
-    margin-top: 0.8em;
-    margin-left: 0.17em; */
 }
 
 .header-pane__overall {
