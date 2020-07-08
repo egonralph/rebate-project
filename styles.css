@@ -363,10 +363,13 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
 }
 
 .infografic-legend__list {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     align-items: center;
     list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 0 0 17em
 }
 
 input[type="search"] {
@@ -563,6 +566,10 @@ input[type="search"] {
     z-index: 9;
 }
 
+.points-margin {
+    margin-top: -0.3em;
+}
+
 #points-to-date-by-brand-category-main-chart td {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -613,9 +620,12 @@ input[type="search"] {
     color: #fff;
     font-size: 13px;
     font-weight: 600;
-    display: flex;
-    justify-content: space-around;
+    /* display: flex;
+    justify-content: space-around; */
     align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0px 0 0 17em;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.50);
     z-index: 1;
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif */
@@ -891,7 +901,7 @@ ul.dropdown-menu>li:hover {
 }
 
 .widget_summary_left_panel.left-legend-panel {
-    width: 300px;
+    width: 96px;
 }
 
 .widget_summary_right_panel {
@@ -899,7 +909,7 @@ ul.dropdown-menu>li:hover {
 }
 
 .widget_summary_right_panel.right-legend-panel {
-    width: 68.5%;
+    width: 92%;
 }
 
 .widget_summary_table_left_panel {
