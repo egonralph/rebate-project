@@ -369,7 +369,7 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0 0 0 17em
+    padding: 0 0 0 17.3em
 }
 
 input[type="search"] {
