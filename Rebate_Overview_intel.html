@@ -8,31 +8,79 @@
 
 <!-- page content -->
 <div class="row tile_count">
-  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>Quarter
-        Earnings <i class="fa fa-question-circle superscript"
-          title="These are the points you have earned this quarter">&nbsp;</i></b>
-    </span>
-    <div class="count green"><span style="display: none;">&nbsp;</span><small>$</small> 1447</div>
+  <div class="col-md-3 col-sm-3 col-xs-3 tile_stats_count stats_count_container">
+    <div class="stats_count__pane stats_count__pane--special">
+      <div class="col-xs-12">
+        <b class="stats_count__vendor">Vendor</b>
+        <span class="stats_count__vendor">Net-On-Net</span>
+      </div>
+
+      <div class="col-xs-7">
+        <b class="stats_count__time">Start Time</b>
+        <span class="stats_count__time">01/01/2015</span>
+      </div>
+
+      <div class="col-xs-5">
+        <b class="stats_count__time">Current Time</b>
+        <span class="stats_count__time">10/07/2020</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-3 col-xs-3 tile_stats_count stats_count_container">
+    <div class="stats_count__pane">
+      <div class="col-xs-6 stats_count__icon-pane">
+        <i class="fad fa-money-bill-wave stats_count__icon"></i>
+      </div>
+
+      <div class="col-xs-6">
+        <span class="count_top">
+          <b>Quarter Earnings <i class="fa fa-question-circle superscript"
+              title="These are the points you have earned this quarter">&nbsp;</i></b>
+        </span>
+
+        <div class="count green">$1447</div>
+      </div>
+    </div>
   </div>
 
-  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span
-      class="count_top"><b>Opportunities<i class="fa fa-question-circle superscript"
-          title="These are the points you should still earn in this quarter">&nbsp;</i></b></span>
+  <div class="col-md-3 col-sm-3 col-xs-3 tile_stats_count stats_count_container">
+    <div class="stats_count__pane">
+      <div class="col-xs-6 stats_count__icon-pane">
+        <i class="fad fa-handshake stats_count__icon"></i>
+      </div>
 
-    <div class="count red"><small>$</small> 2195</div>
+      <div class="col-xs-6">
+        <span class="count_top">
+          <b>Opportunities<i class="fa fa-question-circle superscript"
+              title="These are the points you should still earn in this quarter">&nbsp;</i></b>
+        </span>
+
+        <div class="count red">$2195</div>
+      </div>
+    </div>
   </div>
 
-  <!-- <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>Pending To
+  <!-- <div class="col-md-3 col-sm-3 col-xs-3 tile_stats_count stats_count_container"><span class="count_top"><b>Pending To
                 Confirm <i class="fa fa-question-circle" title="">&nbsp;</i></b></span>
 
         <div class="count orange">2195 <small>pts</small></div>
     </div> -->
 
-  <div class="col-md-4 col-sm-4 col-xs-4 tile_stats_count stats_count_container"><span class="count_top"><b>Total
-        Earnings <i class="fa fa-question-circle superscript"
-          title="Total Earnings this quarter">&nbsp;</i></b></span>
+  <div class="col-md-3 col-sm-3 col-xs-3 tile_stats_count stats_count_container last-child">
+    <div class="stats_count__pane">
+      <div class="col-xs-6 stats_count__icon-pane">
+        <i class="fad fa-hand-holding-usd stats_count__icon"></i>
+      </div>
 
-    <div class="count"><small>$</small> 3642</div>
+      <div class="col-xs-6">
+        <span class="count_top">
+          <b>Total Earnings <i class="fa fa-question-circle superscript"
+              title="Total Earnings this quarter">&nbsp;</i></b>
+        </span>
+
+        <div class="count violet">$3642</div>
+      </div>
+    </div>
   </div>
   <!-- /top tiles -->
 
@@ -230,7 +278,7 @@
 
             <div class="checkbox historical-charts">
               <label class="historical-charts--js">
-                <input name="showHistoricChbx" type="checkbox" value="showHistoric" id="showHistoricChbx"/>
+                <input name="showHistoricChbx" type="checkbox" value="showHistoric" id="showHistoricChbx" />
                 Show historical charts
               </label>
             </div>
@@ -267,7 +315,8 @@
               <div class="w_left widget_summary_left_panel left-legend-panel"></div>
               <div class="w_center widget_summary_right_panel right-legend-panel">
                 <ul class="infografic-legend__list">
-                  <li class="one_margin_right"><i class="fad fa-cubes one_margin_right" aria-hidden="true"></i>Units</li>
+                  <li class="one_margin_right"><i class="fad fa-cubes one_margin_right" aria-hidden="true"></i>Units
+                  </li>
                   <li>
                     <span class="fa-stack fa-1x one_margin_right points-margin">
                       <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
@@ -302,7 +351,8 @@
                       role="progressbar" style="width: 91.43%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="249 Units"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>249
+                      <div data-toggle="tooltip" title="249 Units"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>249
                       </div>
                       <div data-toggle="tooltip" title="1894 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -412,7 +462,8 @@
                       class="progress-bar progress__bg-violet" role="progressbar" style="width:90.91%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="674 Units"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>674
+                      <div data-toggle="tooltip" title="674 Units"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>674
                       </div>
                       <div data-toggle="tooltip" title="6256 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -613,7 +664,8 @@
                       role="progressbar" style="width: 97.44%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="348 Units"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>348
+                      <div data-toggle="tooltip" title="348 Units"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>348
                       </div>
                       <div data-toggle="tooltip" title="2561 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -1003,7 +1055,8 @@
                       role="progressbar" style="width: 16.66%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="22 Units"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>22
+                      <div data-toggle="tooltip" title="22 Units"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>22
                       </div>
                       <div data-toggle="tooltip" title="220 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -1078,7 +1131,8 @@
                       class="progress-bar progress__bg-dark-green" role="progressbar" style="width: 50%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="35 Units"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>35
+                      <div data-toggle="tooltip" title="35 Units"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>35
                       </div>
                       <div data-toggle="tooltip" title="35 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -1088,8 +1142,8 @@
                             data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>35
                       </div>
-                      <div data-toggle="tooltip" title="50% Sold / 50% Opportunities"><i class="fas fa-hand-holding-usd one_margin_right"
-                          aria-hidden="true"></i>50%</div>
+                      <div data-toggle="tooltip" title="50% Sold / 50% Opportunities"><i
+                          class="fas fa-hand-holding-usd one_margin_right" aria-hidden="true"></i>50%</div>
                     </div>
                   </div>
                 </div>
@@ -1161,7 +1215,8 @@
                       class="progress-bar progress__bg-warning" role="progressbar" style="width: 100%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="59 Units"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>59
+                      <div data-toggle="tooltip" title="59 Units"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>59
                       </div>
                       <div data-toggle="tooltip" title="354 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -1171,8 +1226,8 @@
                             data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>354
                       </div>
-                      <div data-toggle="tooltip" title="100% Sold / 0% Opportunities"><i class="fas fa-hand-holding-usd one_margin_right"
-                          aria-hidden="true"></i>100%</div>
+                      <div data-toggle="tooltip" title="100% Sold / 0% Opportunities"><i
+                          class="fas fa-hand-holding-usd one_margin_right" aria-hidden="true"></i>100%</div>
                     </div>
                   </div>
                 </div>
@@ -1245,7 +1300,8 @@
                       role="progressbar" style="width: 50%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="10 Units"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>10
+                      <div data-toggle="tooltip" title="10 Units"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>10
                       </div>
                       <div data-toggle="tooltip" title="20 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -1255,8 +1311,8 @@
                             data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>20
                       </div>
-                      <div data-toggle="tooltip" title="50% Sold / 50% Opportunities"><i class="fas fa-hand-holding-usd one_margin_right"
-                          aria-hidden="true"></i>50%</div>
+                      <div data-toggle="tooltip" title="50% Sold / 50% Opportunities"><i
+                          class="fas fa-hand-holding-usd one_margin_right" aria-hidden="true"></i>50%</div>
                     </div>
                   </div>
                 </div>
@@ -1334,7 +1390,8 @@
               <div class="w_left widget_summary_left_panel left-legend-panel"></div>
               <div class="w_center widget_summary_right_panel right-legend-panel">
                 <ul class="infografic-legend__list">
-                  <li class="one_margin_right"><i class="fad fa-cubes one_margin_right" aria-hidden="true"></i>Units</li>
+                  <li class="one_margin_right"><i class="fad fa-cubes one_margin_right" aria-hidden="true"></i>Units
+                  </li>
                   <li>
                     <span class="fa-stack fa-1x one_margin_right points-margin">
                       <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
@@ -1369,7 +1426,8 @@
                       role="progressbar" style="width: 8.57%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="3 Units"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>3
+                      <div data-toggle="tooltip" title="3 Units"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>3
                       </div>
                       <div data-toggle="tooltip" title="22 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -1379,8 +1437,8 @@
                             data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>22
                       </div>
-                      <div data-toggle="tooltip" title="8.6% Opportunities / 91.4% Sold"><i class="fas fa-handshake one_margin_right"
-                          aria-hidden="true"></i>9%</div>
+                      <div data-toggle="tooltip" title="8.6% Opportunities / 91.4% Sold"><i
+                          class="fas fa-handshake one_margin_right" aria-hidden="true"></i>9%</div>
                     </div>
                   </div>
                 </div>
@@ -1450,7 +1508,8 @@
                       class="progress-bar progress__bg-violet" role="progressbar" style="width:9.09%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="2 Units"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>2
+                      <div data-toggle="tooltip" title="2 Units"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>2
                       </div>
                       <div data-toggle="tooltip" title="32 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -1460,8 +1519,8 @@
                             data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>32
                       </div>
-                      <div data-toggle="tooltip" title="9.1% Opportunities / 90.9% Sold"><i class="fas fa-handshake one_margin_right"
-                          aria-hidden="true"></i>9%</div>
+                      <div data-toggle="tooltip" title="9.1% Opportunities / 90.9% Sold"><i
+                          class="fas fa-handshake one_margin_right" aria-hidden="true"></i>9%</div>
                     </div>
                   </div>
                 </div>
@@ -1524,9 +1583,10 @@
                       role="progressbar" style="width: 2.56%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="1 Unit"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>1
+                      <div data-toggle="tooltip" title="1 Unit"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>1
                       </div>
-                      <div data-toggle="tooltip" title="38 Points"> 
+                      <div data-toggle="tooltip" title="38 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
                           <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
                           <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
@@ -1534,8 +1594,8 @@
                             data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>38
                       </div>
-                      <div data-toggle="tooltip" title="2.6% Opportunities / 97.4% Sold"><i class="fas fa-handshake one_margin_right"
-                          aria-hidden="true"></i>3%</div>
+                      <div data-toggle="tooltip" title="2.6% Opportunities / 97.4% Sold"><i
+                          class="fas fa-handshake one_margin_right" aria-hidden="true"></i>3%</div>
                     </div>
                   </div>
                 </div>
@@ -1591,7 +1651,8 @@
                       role="progressbar" style="width: 83.34%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="5 Units"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>5
+                      <div data-toggle="tooltip" title="5 Units"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>5
                       </div>
                       <div data-toggle="tooltip" title="66 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -1601,8 +1662,8 @@
                             data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>66
                       </div>
-                      <div data-toggle="tooltip" title="83.3% Opportunities / 16.7% Sold"><i class="fas fa-handshake one_margin_right"
-                          aria-hidden="true"></i>83%</div>
+                      <div data-toggle="tooltip" title="83.3% Opportunities / 16.7% Sold"><i
+                          class="fas fa-handshake one_margin_right" aria-hidden="true"></i>83%</div>
                     </div>
                   </div>
                 </div>
@@ -1686,7 +1747,8 @@
                       class="progress-bar progress__bg-dark-green" role="progressbar" style="width: 50%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="2 Units"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>2
+                      <div data-toggle="tooltip" title="2 Units"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>2
                       </div>
                       <div data-toggle="tooltip" title="26 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -1696,8 +1758,8 @@
                             data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>26
                       </div>
-                      <div data-toggle="tooltip" title="50% Opportunities / 50% Sold"><i class="fas fa-handshake one_margin_right"
-                          aria-hidden="true"></i>50%</div>
+                      <div data-toggle="tooltip" title="50% Opportunities / 50% Sold"><i
+                          class="fas fa-handshake one_margin_right" aria-hidden="true"></i>50%</div>
                     </div>
                   </div>
                 </div>
@@ -1760,7 +1822,8 @@
                       class="progress-bar progress__bg-warning" role="progressbar" style="width: 0%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="0 Unit"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>0
+                      <div data-toggle="tooltip" title="0 Unit"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>0
                       </div>
                       <div data-toggle="tooltip" title="0 Point">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -1770,8 +1833,8 @@
                             data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>0
                       </div>
-                      <div data-toggle="tooltip" title="0% Opportunities / 100% Sold"><i class="fas fa-handshake one_margin_right"
-                          aria-hidden="true"></i>0%</div>
+                      <div data-toggle="tooltip" title="0% Opportunities / 100% Sold"><i
+                          class="fas fa-handshake one_margin_right" aria-hidden="true"></i>0%</div>
                     </div>
                   </div>
                 </div>
@@ -1802,7 +1865,8 @@
                       role="progressbar" style="width: 50%;">
                     </div>
                     <div class="progress-bar_items">
-                      <div data-toggle="tooltip" title="1 Unit"><i class="fas fa-cubes one_margin_right" aria-hidden="true"></i>1
+                      <div data-toggle="tooltip" title="1 Unit"><i class="fas fa-cubes one_margin_right"
+                          aria-hidden="true"></i>1
                       </div>
                       <div data-toggle="tooltip" title="31 Points">
                         <span class="fa-stack fa-1x one_margin_right points-margin">
@@ -1812,8 +1876,8 @@
                             data-fa-transform="shrink-2 down-3 right-2"></i>
                         </span>31
                       </div>
-                      <div data-toggle="tooltip" title="50% Opportunities / 50% Sold"><i class="fas fa-handshake one_margin_right"
-                          aria-hidden="true"></i>50%</div>
+                      <div data-toggle="tooltip" title="50% Opportunities / 50% Sold"><i
+                          class="fas fa-handshake one_margin_right" aria-hidden="true"></i>50%</div>
                     </div>
                   </div>
                 </div>
