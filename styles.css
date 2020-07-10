@@ -751,9 +751,11 @@ input[type="search"] {
 }
 
 .stats_count__pane--special span.stats_count__vendor, .stats_count__vendor {
-    font-size: 11px;
+    margin-bottom: 0.5em;
+    font-size: 14px;
     display: block;
     text-align: left;
+    font-weight: 700;
 }
 
 .superscript {

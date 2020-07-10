@@ -11,7 +11,6 @@
   <div class="col-md-3 col-sm-3 col-xs-3 tile_stats_count stats_count_container">
     <div class="stats_count__pane stats_count__pane--special">
       <div class="col-xs-12">
-        <b class="stats_count__vendor">Vendor</b>
         <span class="stats_count__vendor">Net-On-Net</span>
       </div>
 
@@ -233,12 +232,12 @@
               <div class="clearfix">&nbsp;</div>
             </div>
 
-            <div class="col-xs-6">
+            <!-- <div class="col-xs-6">
               <div id="echart_mini_pie" style="height:280px;" style="padding: 2em;"></div>
-            </div>
+            </div> -->
 
-            <div class="col-xs-6">
-              <canvas height="220" class="circle_chart" id="echart_full_pie" style="padding: 1em;"></canvas>
+            <div class="col-xs-12">
+              <canvas height="160" width="160" class="circle_chart" id="echart_full_pie" style="padding: 1em;"></canvas>
             </div>
           </div>
         </div>
@@ -2472,96 +2471,96 @@
   };
 
   // echartMiniPie
-  var echartMiniPie = echarts.init(document.getElementById('echart_mini_pie'), theme);
+  // var echartMiniPie = echarts.init(document.getElementById('echart_mini_pie'), theme);
 
-  echartMiniPie.setOption({
-    title: {
-      text: 'Pts Comparison',
-      subtext: '',
-      x: 'center',
-      y: 'center',
-      itemGap: 20,
-      textStyle: {
-        color: 'rgba(30,144,255,0.8)',
-        fontSize: 14,
-        fontWeight: 'bolder'
-      }
-    },
-    tooltip: {
-      show: true,
-      formatter: function (params) {
-        console.log(params);
-        if (params.name !== '')
-          return params.seriesName + " <br/>" + params.name + ":" + params.value + "(" + params.percent + "%)";
-        else
-          return "";
+  // echartMiniPie.setOption({
+  //   title: {
+  //     text: 'Pts Comparison',
+  //     subtext: '',
+  //     x: 'center',
+  //     y: 'center',
+  //     itemGap: 20,
+  //     textStyle: {
+  //       color: 'rgba(30,144,255,0.8)',
+  //       fontSize: 14,
+  //       fontWeight: 'bolder'
+  //     }
+  //   },
+  //   tooltip: {
+  //     show: true,
+  //     formatter: function (params) {
+  //       console.log(params);
+  //       if (params.name !== '')
+  //         return params.seriesName + " <br/>" + params.name + ":" + params.value + "(" + params.percent + "%)";
+  //       else
+  //         return "";
 
-      }
-    },
-    legend: {
-      orient: 'vertical',
-      x: 0.5,
-      y: 0.5,
-      itemGap: 3,
-      data: ['Opportunities', 'Sold'],
+  //     }
+  //   },
+  //   legend: {
+  //     orient: 'vertical',
+  //     x: 0.5,
+  //     y: 0.5,
+  //     itemGap: 3,
+  //     data: ['Opportunities', 'Sold'],
 
-    },
-    toolbox: {
-      show: true,
-      feature: {
-        mark: {
-          show: true
-        },
-        dataView: {
-          show: false,
-          title: "Text View",
-          lang: [
-            "Text View",
-            "Close",
-            "Refresh",
-          ],
-          readOnly: false
-        },
-        restore: {
-          show: true,
-          title: "Restore"
-        },
-        saveAsImage: {
-          show: true,
-          title: "Save Image"
-        }
-      }
-    },
-    series: [{
-      name: 'Opportunities',
-      type: 'pie',
-      clockWise: false,
-      radius: [105, 130],
-      itemStyle: dataStyle,
-      data: [{
-        value: 68,
-        name: '%'
-      }, {
-        value: 32,
-        name: '',
-        itemStyle: placeHolderStyle
-      }]
-    }, {
-      name: 'Sold',
-      type: 'pie',
-      clockWise: false,
-      radius: [80, 105],
-      itemStyle: dataStyle,
-      data: [{
-        value: 32,
-        name: '%'
-      }, {
-        value: 68,
-        name: '',
-        itemStyle: placeHolderStyle
-      }]
-    }]
-  });
+  //   },
+  //   toolbox: {
+  //     show: true,
+  //     feature: {
+  //       mark: {
+  //         show: true
+  //       },
+  //       dataView: {
+  //         show: false,
+  //         title: "Text View",
+  //         lang: [
+  //           "Text View",
+  //           "Close",
+  //           "Refresh",
+  //         ],
+  //         readOnly: false
+  //       },
+  //       restore: {
+  //         show: true,
+  //         title: "Restore"
+  //       },
+  //       saveAsImage: {
+  //         show: true,
+  //         title: "Save Image"
+  //       }
+  //     }
+  //   },
+  //   series: [{
+  //     name: 'Opportunities',
+  //     type: 'pie',
+  //     clockWise: false,
+  //     radius: [105, 130],
+  //     itemStyle: dataStyle,
+  //     data: [{
+  //       value: 68,
+  //       name: '%'
+  //     }, {
+  //       value: 32,
+  //       name: '',
+  //       itemStyle: placeHolderStyle
+  //     }]
+  //   }, {
+  //     name: 'Sold',
+  //     type: 'pie',
+  //     clockWise: false,
+  //     radius: [80, 105],
+  //     itemStyle: dataStyle,
+  //     data: [{
+  //       value: 32,
+  //       name: '%'
+  //     }, {
+  //       value: 68,
+  //       name: '',
+  //       itemStyle: placeHolderStyle
+  //     }]
+  //   }]
+  // });
 
 </script><!-- /page content -->
 
@@ -2602,12 +2601,13 @@
 <!-- Font awesome v5 -->
 <script src="https://kit.fontawesome.com/d3400346f7.js" crossorigin="anonymous"></script>
 
-<script>
+<!-- <script>
   Chart.defaults.global.legend = {
     enabled: false
   };
 
-</script><!-- JQVMap -->
+</script> -->
+<!-- JQVMap -->
 
 <!-- Skycons -->
 <script>
@@ -2629,7 +2629,7 @@
   });
 </script><!-- /Skycons -->
 
-<!-- // echartMFullPie -->
+<!-- // chartFullPie -->
 <script>
   $(document).ready(function () {
     var options = {
@@ -2638,31 +2638,49 @@
     };
 
     fullPie = new Chart(document.getElementById("echart_full_pie"), {
-      type: 'pie',
+      type: 'doughnut',
       tooltipFillColor: "rgba(51, 51, 51, 0.55)",
       data: {
         labels: [
           "Opportunities",
           "Sold",
+          // "",
         ],
         datasets: [{
           label: '%',
           data: [68, 32],
+          borderWidth: 1,
+          weight: 1,
           backgroundColor: [
-            "#1adbbb",
-            "#9B59B6",
+            "#67a2db",
+            "#01407d",
+            // "#c9cdd1",
           ],
           hoverBackgroundColor: [
-            "#09dbb8",
-            "#9748b8",
+            "#5e9edb",
+            "#00386e",
+            // "#c9cdd1",
           ],
           hoverBorderColor: [
-            "#09dbb8",
-            "#9748b8",
+            "#5e9edb",
+            "#00386e",
+            //  "#c9cdd1",
           ]
         }]
       },
-      options: options
+      options: {
+        legend: { 
+          display: true,
+          position:'top',
+           },
+        title: {
+          display: true,
+          text: 'Sold vs Opportunities',
+          fontColor: 'rgba(30,144,255,0.8)',
+          position: 'bottom',
+        },
+        cutoutPercentage: 80
+      }
     });
   });
 
@@ -2673,7 +2691,8 @@
   $(document).ready(function () {
     var options = {
       legend: false,
-      responsive: false
+      responsive: false,
+      cutoutPercentage: 80
     };
 
     new Chart(document.getElementById("canvas1"), {
