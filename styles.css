@@ -350,10 +350,12 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
 
 .header-pane__overall {
     margin-top: -1.9em;
+    text-align: center;
 }
 
 .header-pane__historical, .header-pane__quarter {
     margin-top: -1.7em;
+    text-align: center;
 }
 
 .hidden {
@@ -696,6 +698,11 @@ input[type="search"] {
 
 .row:after {
     clear: both;
+}
+
+.section_main_header {
+    font-size: 20px;
+    color: #73879c;
 }
 
 .select-category-btn {

@@ -33,7 +33,13 @@
   <div class="col-md-2 col-sm-2 col-xs-2 tile_stats_count stats_count_container">
     <div class="stats_count__pane">
       <div class="col-xs-6 stats_count__icon-pane">
-        <i class="fad fa-money-bill-wave stats_count__icon"></i>
+        <!-- <i class="fad fa-money-bill-wave stats_count__icon"></i> -->
+        <span class="fa-stack fa-1x one_margin_right points-margin">
+          <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
+          <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
+          <i class="fad fa-hand-pointer fa-stack-1x hand-pointer"
+            data-fa-transform="shrink-2 down-3 right-2"></i>
+        </span>
       </div>
 
       <div class="col-xs-6">
@@ -43,6 +49,23 @@
         </span>
 
         <div class="count green">$1447</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-2 col-sm-2 col-xs-2 tile_stats_count stats_count_container">
+    <div class="stats_count__pane">
+      <div class="col-xs-6 stats_count__icon-pane">
+        <i class="fad fa-trophy stats_count__icon"></i>
+      </div>
+
+      <div class="col-xs-6">
+        <span class="count_top">
+          <b>QTD Attainment <i class="fa fa-question-circle superscript"
+              title="These are the points you have earned this quarter">&nbsp;</i></b>
+        </span>
+
+        <div class="count blue">32%</div>
       </div>
     </div>
   </div>
@@ -94,7 +117,7 @@
       <div class="panel-heading panel-sticky">
         <div class="row">
           <div class="col-xs-12 header-pane__overall">
-            <h2 class="bold">Total Overall Earnings</h2>
+            <h2 class="bold section_main_header">Total Overall Earnings</h2>
           </div>
         </div>
       </div>
@@ -256,7 +279,7 @@
     <div class="panel-heading panel-sticky">
       <div class="row">
         <div class="header-pane__quarter">
-          <h2 class="bold">Quarter Earnings</h2>
+          <h2 class="bold section_main_header">Quarter Earnings</h2>
         </div>
       </div>
     </div>
