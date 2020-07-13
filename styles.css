@@ -330,6 +330,12 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
     font-size: 12px;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .form-check-label {
     top: -3px;
 }

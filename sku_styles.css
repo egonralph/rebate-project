@@ -346,6 +346,12 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
     color: #3498DB;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .form-check-label {
     top: -3px;
 }
