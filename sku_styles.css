@@ -957,6 +957,11 @@ input[type="search"] {
     color: navy;
 }
 
+.tooltip-inner {
+    white-space: nowrap;
+    max-width: none;
+}
+
 ul.dropdown-menu>li:hover {
     background-color: #eeeeee;
 }

@@ -949,6 +949,11 @@ input[type="search"] {
     padding-right: 0 !important;
 }
 
+.tooltip-inner {
+    white-space: nowrap;
+    max-width: none;
+}
+
 ul.dropdown-menu>li:hover {
     background-color: #eeeeee;
 }
