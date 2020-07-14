@@ -361,6 +361,14 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
     margin-right: 0;
 }
 
+.half_margin_left {
+    margin-left: 0.5em;
+}
+
+.half_margin_right {
+    margin-right: 0.5em;
+}
+
 .half_top_margin {
     margin-top: 0.5em;
 }
@@ -369,8 +377,14 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
     margin-top: -3.5em;
 }
 
-.header-pane__historical, .header-pane__quarter {
+.header-pane__historical {
     margin-top: -1.7em;
+    text-align: center;
+}
+
+.header-pane__quarter {
+    margin-top: -2.3em;
+    text-align: center;
 }
 
 .hidden {
@@ -555,8 +569,10 @@ input[type="search"] {
 
 .panel-default>.panel-heading {
     color: #333333;
-    background-color: #f5f5f5;
-    border-color: #dddddd;
+    background: #f5f5f5;
+    border-color: #efefef;
+    background: -webkit-linear-gradient(to top, #e1e1e1, #fafafa);
+    background: linear-gradient(to top, #e1e1e1, #fafafa);
 }
 
 .panel-heading {
@@ -738,6 +754,10 @@ input[type="search"] {
 
 .progress-bar.progress__bg-warning {
     background-color: #ffc107;
+}
+
+.quater_earnings_icon {
+    font-size: 20px;
 }
 
 .qtd_earnings_icon {
