@@ -104,6 +104,7 @@ a.paginate_button, #datatable-buttons_paginate a.paginate_button {
 
 .dashboard__filter-rebate {
     margin-top: -1.5em;
+    margin-bottom: 0;
 }
 
 .dashboard_freq {
@@ -365,7 +366,7 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
 }
 
 .header-pane__overall {
-    margin-top: -1.9em;
+    margin-top: -3.5em;
 }
 
 .header-pane__historical, .header-pane__quarter {
@@ -381,7 +382,7 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
 }
 
 .infografic-legend {
-    height: 3em;
+    height: 2em;
 }
 
 .infografic-legend__list {
@@ -512,11 +513,11 @@ input[type="search"] {
 }
 
 .panel-body__overall {
-    height: 405px;
+    height: 385px;
 }
 
 .panel-body__historical {
-    height: 640px;
+    height: 610px;
 }
 
 .panel-body__quarter {
@@ -571,8 +572,14 @@ input[type="search"] {
     padding-top: 15px;
 }
 
+.panel-rounded {
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
 .panel-section__overall {
-    margin-top: 7em;
+    margin-top: 5.5em;
+    margin-bottom: 0.1em;
 }
 
 .panel-section__historical, .panel-section__quarter {
@@ -596,7 +603,7 @@ input[type="search"] {
 }
 
 .points-margin {
-    margin-top: -0.3em;
+    margin-top: -0.15em;
 }
 
 #points-to-date-by-brand-category-main-chart td {
@@ -731,6 +738,10 @@ input[type="search"] {
 
 .progress-bar.progress__bg-warning {
     background-color: #ffc107;
+}
+
+.qtd_earnings_icon {
+    font-size: 32px;
 }
 
 .radio+.historical-charts, .radio+.checkbox.historical-charts, .radio+.radio-units-charts {
@@ -951,6 +962,10 @@ input[type="search"] {
     padding-right: 0 !important;
 }
 
+.tile_count .tile_stats_count:not(:first-child) {
+    max-width: 18.75%;
+}
+
 .titled_component {
     text-align: left;
     font-weight: 600;
@@ -1013,4 +1028,8 @@ ul.dropdown-menu>li:hover {
 
 .x_content {
     float: inherit;
+}
+
+.x_panel.tile.fixed_height_360 {
+    margin-bottom: 0;
 }

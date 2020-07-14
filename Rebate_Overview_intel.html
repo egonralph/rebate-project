@@ -34,11 +34,11 @@
     <div class="stats_count__pane">
       <div class="col-xs-6 stats_count__icon-pane">
         <!-- <i class="fad fa-money-bill-wave stats_count__icon"></i> -->
-        <span class="fa-stack fa-1x one_margin_right points-margin">
-          <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-5"></i>
-          <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-8 up-2"></i>
-          <i class="fad fa-hand-pointer fa-stack-1x hand-pointer"
-            data-fa-transform="shrink-2 down-3 right-2"></i>
+        <span class="fa-stack fa-1x one_margin_right points-margin qtd_earnings_icon">
+          <i class="fal fa-braille fa-stack-1x braille" data-fa-transform="up-2"></i>
+          <i class="fad fa-bullseye fa-stack-1x bullseye" data-fa-transform="shrink-4 down-1"></i>
+          <i class="fas fa-hand-pointer fa-stack-1x hand-pointer"
+            data-fa-transform="shrink-2 down-7 right-2"></i>
         </span>
       </div>
 
@@ -243,7 +243,7 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="x_panel" style="min-height: 25em;">
             <div class="x_title">
-              <h2 class="special-header__overall">Sold vs Opportunities <i class="fa fa-question-circle superscript"
+              <h2 class="special-header__overall">Earnings vs Opportunities <i class="fa fa-question-circle superscript"
                   title="Statement of all points earned and missed this year.">&nbsp;</i></h2>
 
               <!-- <ul class="nav navbar-right panel_toolbox">
@@ -1957,7 +1957,7 @@
     <div class="panel-heading panel-sticky">
       <div class="row">
         <div class="header-pane__historical">
-          <h2 class="bold">Historical Panel</h2>
+          <h2 class="bold section_main_header">Historical Panel</h2>
         </div>
       </div>
     </div>
@@ -2675,7 +2675,7 @@
       data: {
         labels: [
           "Opportunities",
-          "Sold",
+          "Earnings",
           // "",
         ],
         datasets: [{
@@ -2706,7 +2706,7 @@
         },
         title: {
           display: true,
-          text: 'Sold vs Opportunities',
+          text: 'Earnings vs Opportunities',
           fontColor: 'rgba(30,144,255,0.8)',
           position: 'bottom',
         },
@@ -2731,7 +2731,14 @@
     var options = {
       legend: false,
       responsive: false,
-      cutoutPercentage: 80
+      cutoutPercentage: 80,
+      tooltips: {
+          callbacks: {
+            afterLabel: function (tooltipItem, data) {
+              return '%';
+            }
+          },
+        },
     };
 
     new Chart(document.getElementById("canvas1"), {
