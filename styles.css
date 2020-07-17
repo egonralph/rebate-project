@@ -363,7 +363,7 @@ table.dataTable.no-footer, #datatable-buttons.dataTable.no-footer {
 }
 
 .header-pane__historical {
-    margin-top: -1.7em;
+    margin-top: -3.5em !important;
     text-align: center;
 }
 
@@ -583,7 +583,11 @@ input[type="search"] {
     margin-bottom: 0.1em;
 }
 
-.panel-section__historical, .panel-section__quarter {
+.panel-section__historical {
+    margin-top: 5.5em !important; 
+}
+
+.panel-section__quarter {
     margin-top: 0;
 }
 
